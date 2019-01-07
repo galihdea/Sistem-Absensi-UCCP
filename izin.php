@@ -268,20 +268,93 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 					<!-- //header-ends -->
 						<div class="outter-wp">
-								<!--custom-widgets-->
-																								<!--/candile-->
-																
-														</div>
-																						<div class="candile"> 
-									
-
+											<!--/sub-heard-part-->
+											 <div class="sub-heard-part">
+													   <ol class="breadcrumb m-b-0">
+															<li><a href="karyawan.php">Home</a></li>
+															<li class="active">Izin</li>
+														</ol>
+											</div>	
+											<!--/sub-heard-part-->	
+												<!--/forms-->
+													<div class="forms-main">
 														
-													</div>
+																<!--/forms-inner-->
+													  				<div class="forms-inner">
+																	  
+																			  <!--/set-2-->
+																		<div class="set-1">
+																			<div class="graph-2 general">
+																				<h3 class="inner-tittle two">Pengajuan Izin</h3>
+																					<div class="grid-1">
+																							<div class="form-body">
+																									<form class="form-horizontal">
+																										
+																										
+																										<div class="form-group">
+																											<label for="selector1" class="col-sm-2 control-label">Jenis Izin</label>
+																											<div class="col-sm-8">
+																												<select name="selector1" id="selector1" class="form-control1" onchange="pilihForm(this.value)">
+																												<option value="" disabled selected style="display:none;">---Pilih Jenis Izin---</option>
+																												<option value="sakit">SAKIT</option>
+																												<option value="cuti">CUTI</option>
+																												<option value="izin">IZIN</option>
+																											</select></div>
+																										</div>
+																										<script>
+																											function pilihForm(form_param){
+																												let form_sakit = document.getElementById("form_sakit");
+																												let form_cuti = document.getElementById("form_cuti");
+																												let form_izin = document.getElementById("form_izin");
+																												//form_after.innerHTML='';
+																												switch(form_param){
+																													case "sakit":
+																														form_izin.innerHTML='';form_cuti.innerHTML='';
+																														//form_after.innerHTML='';
+																														form_sakit.innerHTML='<div class="form group"><label for="txtarea1" class="col-sm-2 control-label">Keterangan Sakit</label><div class="col-sm-8"><textarea name="txtarea1" id="ketSakit" cols="50" rows="4" class="form-control1"></textarea></div></div><br><div class="form-group"> <label for="exampleInputFile">Upload Surat Keterangan dokter</label> <input type="file" id="exampleInputFile"> <p class="help-block">Jika ada.</p> </div>';
+																														break;
+																													case "cuti":
+																														form_sakit.innerHTML='';form_izin.innerHTML='';
+																														form_cuti.innerHTML='<div class="col-md-12 form-group1 group-mail"><label class="control-label ">Dari</label><input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div><div class="col-md-12 form-group1 group-mail"><label class="control-label ">Sampai</label><input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div>';
+																														break;
+																													case "izin":
+																														form_sakit.innerHTML='';form_cuti.innerHTML='';
+																														//form_after.innerHTML='';
+																														form_izin.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label">Keterangan Izin</label><div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
+																														break;
+																												}
 
+																											}
+																										</script>
+																										<div id="form_sakit"></div>
+																										<div id="form_cuti"></div>
+																										<div id="form_izin"></div>
+																									
+																									</form>
+																								</form>
+																								<div class="submit"><input type="submit" onclick="myFunction()" value="Ajukan Izin" ></div>
+																								<div class="clearfix"></div>
+																								
+						
+						
+																							</form>
+																							</div>
 
-															
-															</div>
-															</div>
+																					</div>
+																				</div>
+																			</div>
+																			 <!--//set-2-->
+																			 <!--/set-3-->
+																			 
+																			<!--//set-3-->
+																			<!--/set-4-->
+																			 
+																		   <!--//set-4-->
+																		</div>
+																	<!--//forms-inner-->
+																</div> 
+														<!--//forms-->											   
+												</div>
 															 <!--footer section start-->
 										<footer>
 										   <p>&copy 2016 Augment . All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts.</a></p>
