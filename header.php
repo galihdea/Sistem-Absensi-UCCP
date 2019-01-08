@@ -1,4 +1,80 @@
-<div class="header-section">
+<!-- header-starts -->
+<?php
+	session_start();
+	include 'functions/koneksi.php';
+	//session_start();
+	if (!isset($_SESSION['id_pegawai'])){
+		header('Location: login.php');
+	}
+	$id = $_SESSION['id_pegawai'];
+	if ($_SESSION['jenis_user'] == "Admin"){
+		$ambilnama = $conn->query("SELECT * FROM admin WHERE id_admin='$id'");
+		$ambil = $ambilnama->fetch_array();
+		$nama = $ambil['nama_admin'];
+	}else if ($_SESSION['jenis_user'] == "Super Admin"){
+		$ambilnama = $conn->query("SELECT * FROM super_admin WHERE id_sadmin='$id'");
+		$ambil = $ambilnama->fetch_array();
+		$nama = $ambil['nama_sadmin'];
+	}else if ($_SESSION['jenis_user'] == "Pegawai"){
+		$ambilnama = $conn->query("SELECT * FROM pegawai WHERE id_pegawai='$id'");
+		$ambil = $ambilnama->fetch_array();
+		$nama = $ambil['nama_pegawai'];
+	}
+?>
+
+<head>
+<title>SAUCCP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Tambahan CSS -->
+<link href="css/tambahan.css" rel='stylesheet' type='text/css' />
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
+<!-- lined-icons -->
+<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+<!-- //lined-icons -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/amcharts.js"></script>	
+<script src="js/serial.js"></script>	
+<script src="js/light.js"></script>	
+<script src="js/radar.js"></script>	
+<link href="css/barChart.css" rel='stylesheet' type='text/css' />
+<link href="css/fabochart.css" rel='stylesheet' type='text/css' />
+<!--clock init-->
+<script src="js/css3clock.js"></script>
+<!--Easy Pie Chart-->
+<!--skycons-icons-->
+<script src="js/skycons.js"></script>
+
+<script src="js/jquery.easydropdown.js"></script>
+
+<!--//skycons-icons-->
+
+<!--js -->
+<link rel="stylesheet" href="css/vroom.css">
+<script type="text/javascript" src="js/vroom.js"></script>
+<script type="text/javascript" src="js/TweenLite.min.js"></script>
+<script type="text/javascript" src="js/CSSPlugin.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+</head> 
+<div class="page-container">
+   <!--/content-inner-->
+	<div class="left-content">
+	   <div class="inner-content">
+			<div class="header-section">
 						<!--menu-right-->
 						<div class="top_menu">
 						        <div class="main-search">
@@ -222,4 +298,6 @@
 						</div>
 						<!--//menu-right-->
 					<div class="clearfix"></div>
-				</div>
+			</div>
+					<!-- //header-ends -->
+	<div class="outter-wp margin25-10">
