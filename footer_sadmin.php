@@ -16,8 +16,8 @@
 			<div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
 			<!--/down-->
 							<div class="down">	
-									  <a href="admin.html"><img src="images/admin.jpg"></a>
-									  <a href="admin.html"><span class=" name-caret">Jasmin Leo</span></a>
+									  <a href="sadmin.php"><img src="images/admin.jpg"></a>
+									  <a href="sadmin.php"><span class=" name-caret">Jasmin Leo</span></a>
 									 <p>Super Admin</p>
 									<ul>
 										<li><a class="tooltips" href="#"><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>
