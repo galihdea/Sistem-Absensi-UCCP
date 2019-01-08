@@ -273,8 +273,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													            <!-- masukkan kode di sini -->
 													          
 
-  <h2><p align="center">HISTORI ABSEN</p></h2>            
-  <table class="table table-striped">
+																<div id="tabs" class="tabs">
+													            <h2 class="inner-tittle" style="text-align:center;">Histori Absen</h2>
+															<div class="graph">
+<table class="table table-striped">
     <thead>
       <tr>
         <th>ID</th>
@@ -315,7 +317,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <th>YES</th>
       </tr>
     </tbody>
-  </table>
+  </table>																					
+																					<!-- /content -->
+																				</div>
+																				<!-- /tabs -->
+																				
+																			</div>
   <nav align="center">
 												  <ul class="pagination">
 													<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
