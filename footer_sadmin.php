@@ -18,7 +18,7 @@
 							<div class="down">	
 									  <a href="admin.html"><img src="images/admin.jpg"></a>
 									  <a href="admin.html"><span class=" name-caret">Jasmin Leo</span></a>
-									 <p>Admin</p>
+									 <p>Super Admin</p>
 									<ul>
 										<li><a class="tooltips" href="#"><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>
 										</ul>
@@ -27,7 +27,8 @@
                            <div class="menu">
 									<ul id="menu" >
 										<li><a href="admin.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
-										 <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span>Kelola Pegawai</span> <!-- <span class="fa fa-angle-right" style="float: right"></span> --></a>
+										 <li id="menu-academico" ><a href="kelolapegawai.php"><i class="fa fa-table"></i> <span>Kelola Pegawai</span> <!-- <span class="fa fa-angle-right" style="float: right"></span> --></a>
+										 	<li id="menu-academico" ><a href="kelolaaadmin.php"><i class="fa fa-table"></i> <span>Kelola Admin</span> <!-- <span class="fa fa-angle-right" style="float: right"></span> --></a>
 										   <!-- <ul id="menu-academico-sub" >
 											<li id="menu-academico-avaliacoes" ><a href="tabs.html"> Tabs &amp; Panels</a></li>
 											<li id="menu-academico-boletim" ><a href="widget.html">Widgets</a></li>
@@ -35,8 +36,8 @@
 											
 										  </ul> -->
 										</li>
-										<li><a href="typography.html"><i class="lnr lnr-pencil"></i> <span>Kelola Approve</span></a></li>
-										 <li id="menu-academico" ><a href="#"><i class="fa fa-file-text-o"></i> <span>Lihat Log</span><!--  <span class="fa fa-angle-right" style="float: right"></span> --></a>
+										<li><a href="kelolaapprove.php"><i class="lnr lnr-pencil"></i> <span>Kelola Approve</span></a></li>
+										 <li id="menu-academico" ><a href="lihatlog.php"><i class="fa fa-file-text-o"></i> <span>Lihat Log</span><!--  <span class="fa fa-angle-right" style="float: right"></span> --></a>
 											 <!-- <ul id="menu-academico-sub" >
 												<li id="menu-academico-avaliacoes" ><a href="forms.html">Forms</a></li>
 												<li id="menu-academico-boletim" ><a href="validation.html">Validation Forms</a></li>
@@ -69,7 +70,7 @@
 
 										  </ul>
 									 </li> -->
-									<li><a href="kinerja.html"><i class="lnr lnr-chart-bars"></i> <span>Lihat Kinerja</span><!--  <span class="fa fa-angle-right" style="float: right"> --></span></a>
+									<li><a href="lihatkinerja.php"><i class="lnr lnr-chart-bars"></i> <span>Lihat Kinerja</span><!--  <span class="fa fa-angle-right" style="float: right"> --></span></a>
 									  <!-- <ul>
 										<li><a href="map.html"><i class="lnr lnr-map"></i> Maps</a></li>
 										<li><a href="graph.html"><i class="lnr lnr-apartment"></i> Graph Visualization</a></li>
