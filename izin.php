@@ -292,7 +292,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 																										
 																										
 																										<div class="form-group">
-																											<label for="selector1" class="col-sm-2 control-label">Jenis Izin</label>
+																											<label for="selector1" class="col-sm-2 control-label" style="text-align:left;">Jenis Izin</label>
 																											<div class="col-sm-8">
 																												<select name="selector1" id="selector1" class="form-control1" onchange="pilihForm(this.value)">
 																												<option value="" disabled selected style="display:none;">---Pilih Jenis Izin---</option>
@@ -311,16 +311,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 																													case "sakit":
 																														form_izin.innerHTML='';form_cuti.innerHTML='';
 																														//form_after.innerHTML='';
-																														form_sakit.innerHTML='<div class="form group"><label for="txtarea1" class="col-sm-2 control-label">Keterangan Sakit</label><div class="col-sm-8"><textarea name="txtarea1" id="ketSakit" cols="50" rows="4" class="form-control1"></textarea></div></div><br><div class="form-group"> <label for="exampleInputFile">Upload Surat Keterangan dokter</label> <input type="file" id="exampleInputFile"> <p class="help-block">Jika ada.</p> </div>';
+																														form_sakit.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Sakit</label><div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
 																														break;
 																													case "cuti":
 																														form_sakit.innerHTML='';form_izin.innerHTML='';
-																														form_cuti.innerHTML='<div class="col-md-12 form-group1 group-mail"><label class="control-label ">Dari</label><input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div><div class="col-md-12 form-group1 group-mail"><label class="control-label ">Sampai</label><input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div>';
+																														form_cuti.innerHTML='<div class="form-group"><label class="col-sm-2 control-label" style="text-align:left;">Dari</label><div class="col-sm-8"><input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div></div><div class="form-group"><label class="col-sm-2 control-label" style="text-align:left;">Sampai</label><div class="col-sm-8"><input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div></div>';
 																														break;
 																													case "izin":
 																														form_sakit.innerHTML='';form_cuti.innerHTML='';
 																														//form_after.innerHTML='';
-																														form_izin.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label">Keterangan Izin</label><div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
+																														form_izin.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Izin</label><div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
 																														break;
 																												}
 
@@ -343,14 +343,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 																					</div>
 																				</div>
 																			</div>
-																			 <!--//set-2-->
-																			 <!--/set-3-->
-																			 
-																			<!--//set-3-->
-																			<!--/set-4-->
-																			 
-																		   <!--//set-4-->
-																		</div>
 																	<!--//forms-inner-->
 																</div> 
 														<!--//forms-->											   
