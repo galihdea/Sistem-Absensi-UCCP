@@ -12,13 +12,13 @@
 		$_SESSION['id_pegawai'] = $hasil['id_luar'];
 		$_SESSION['jenis_user'] = $hasil['status'];
 		if($_SESSION['jenis_user']=='Super Admin'){
-			header('location:../sadmin.php');
+			header('location:../menu_dashboard.php');
 		}
 		elseif($_SESSION['jenis_user']=='Admin'){
-			header('location:../admin.php');
+			header('location:../menu_dashboard.php');
 		}
 		elseif($_SESSION['jenis_user']=='Pegawai'){
-			header('location:../karyawan.php');
+			header('location:../menu_dashboard.php');
 		}
 		else{
 			header('location:../login.php');
