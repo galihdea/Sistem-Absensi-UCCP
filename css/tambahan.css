@@ -5,3 +5,9 @@
 .marginl-20{
 	margin-left:-20px;
 }
+.left-round-border{
+	border-radius: 10px 0px 0px 10px;
+}
+.right-round-border{
+	border-radius: 0px 10px 10px 0px;
+}

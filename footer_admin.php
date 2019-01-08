@@ -30,7 +30,12 @@
 									<ul id="menu" >
 										<li><a href="admin.php"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
 										<li><a href="admin.php"><i class="fa fa-table"></i> <span>Kelola Pegawai</span></a></li>
-										<li><a href="admin.php"><i class="fa fa-tachometer"></i> <span>Kelola Approve</span></a></li>
+										<li id="menu-academico"><a href="#"><i class="fa fa-file-text-o"></i> <span>Approve Absensi</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+											<ul id="menu-academico-sub">
+												<li id="menu-academico-avaliacoes"><a href="admin.php">Cuti</a></li>
+												<li id="menu-academico-boletim"><a href="admin.php">Izin</a></li>
+											</ul>
+										</li>
 										<li><a href="admin.php"><i class="fa fa-tachometer"></i> <span>Lihat Log</span></a></li>
 										<li><a href="admin.php"><i class="fa fa-tachometer"></i> <span>Lihat Kinerja</span></a></li>	
 								  </ul>
