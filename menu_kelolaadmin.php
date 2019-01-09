@@ -28,7 +28,7 @@
 							<td>'.$user['username'].'</td> 
 							<td>'.$admin['nama_admin'].'</td>
 							<td>Lihat Ubah Hapus</td>  
-						</tr>';
+							</tr>';
 								$i++;
 							}
 						?>  
