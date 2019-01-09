@@ -57,6 +57,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <script src="js/jquery.easydropdown.js"></script>
 
+<!--Table-->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+
 <!--//skycons-icons-->
 
 <!--js -->
@@ -100,15 +112,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="profile_details_left">
 									<ul class="nofitications-dropdown">
 											<li class="dropdown note dra-down">
-													   <!-- <div id="dd" class="wrapper-dropdown-3" tabindex="1">
-													   																			<span>Italy</span><ul class="dropdown">
-													   																				<li><a class="deutsch">France</a></li>
-													   																				<li><a class="english"> Italy</a></li>
-													   																				<li><a class="espana">Brazil</a></li>
-													   																				<li><a class="russian">Usa</a></li>
-													   																			
-													   																			</ul>
-													   																		</div> -->
 																		<script type="text/javascript">
 			
 																	function DropDown(el) {
