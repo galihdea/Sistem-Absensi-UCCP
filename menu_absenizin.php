@@ -26,8 +26,6 @@
                                     <div class="grid-1">
                                         <div class="form-body">
                                             <form class="form-horizontal">
-
-
                                                 <div class="form-group">
                                                     <label for="selector1" class="col-sm-2 control-label" style="text-align:left;">Jenis
                                                         Izin</label>
@@ -43,43 +41,33 @@
                                                 </div>
                                                 <script>
                                                     function pilihForm(form_param){
-																									let form_sakit = document.getElementById("form_sakit");
-																									let form_cuti = document.getElementById("form_cuti");
-																									let form_izin = document.getElementById("form_izin");
-																									//form_after.innerHTML='';
-																									switch(form_param){
-																										case "sakit":
-																											form_izin.innerHTML='';form_cuti.innerHTML='';
-																											//form_after.innerHTML='';
-																											form_sakit.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Sakit</label><div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
-																											break;
-																										case "cuti":
-																											form_sakit.innerHTML='';form_izin.innerHTML='';
-																											form_cuti.innerHTML='<div class="form-group"><label class="col-sm-2 control-label" style="text-align:left;">Dari</label><div class="col-sm-8"><input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div></div><div class="form-group"><label class="col-sm-2 control-label" style="text-align:left;">Sampai</label><div class="col-sm-8"><input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div></div>';
-																											break;
-																										case "izin":
-																											form_sakit.innerHTML='';form_cuti.innerHTML='';
-																											//form_after.innerHTML='';
-																											form_izin.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Izin</label><div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
-																											break;
-																									}
+															let form_sakit = document.getElementById("form_sakit");
+															let form_cuti = document.getElementById("form_cuti");
+															let form_izin = document.getElementById("form_izin");
+															switch(form_param){
+															case "sakit":
+															    form_izin.innerHTML='';form_cuti.innerHTML='';
+																form_sakit.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Sakit</label><div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
+																break;
+															case "cuti":
+																form_sakit.innerHTML='';form_izin.innerHTML='';
+																form_cuti.innerHTML='<div class="form-group"><label class="col-sm-2 control-label" style="text-align:left;">Dari</label><div class="col-sm-8"><input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div></div><div class="form-group"><label class="col-sm-2 control-label" style="text-align:left;">Sampai</label><div class="col-sm-8"><input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div></div>';
+																break;
+															case "izin":
+																form_sakit.innerHTML='';form_cuti.innerHTML='';
+																form_izin.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Izin</label><div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
+																break;
+																}
 
-																								}
-																							</script>
+														}
+												</script>
                                                 <div id="form_sakit"></div>
                                                 <div id="form_cuti"></div>
                                                 <div id="form_izin"></div>
-
-                                            </form>
                                             </form>
                                             <div class="submit"><input type="submit" onclick="myFunction()" value="Ajukan Izin"></div>
                                             <div class="clearfix"></div>
-
-
-
-                                            </form>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
