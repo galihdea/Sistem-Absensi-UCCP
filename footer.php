@@ -7,7 +7,8 @@
 </div>
 <!--//content-inner-->
 <!--/sidebar-menu-->
-<div class="sidebar-menu">
+
+<div class="sidebar-menu posfixed">
     <header class="logo" style="background-color: #00C6D7;">
         <a href="#" class="sidebar-icon" style="margin-left:5px;"> <span class="fa fa-bars"></span> </a> <a href="index.html"> <span id="logo">
         <img src="assets/logo/logo-uccp (178 x 554).png" height="35px">
@@ -62,7 +63,6 @@
     </div>
 </div>
 <div class="clearfix"></div>
-</div>
 </div>
 <script>
     var toggle = true;
