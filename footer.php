@@ -7,7 +7,8 @@
 </div>
 <!--//content-inner-->
 <!--/sidebar-menu-->
-<div class="sidebar-menu">
+
+<div class="sidebar-menu posfixed">
     <header class="logo">
         <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="index.html"> <span id="logo">
                 <h1>SAUCCP</h1>
@@ -62,7 +63,6 @@
     </div>
 </div>
 <div class="clearfix"></div>
-</div>
 </div>
 <script>
     var toggle = true;
