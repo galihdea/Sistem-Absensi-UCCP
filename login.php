@@ -37,16 +37,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--clock init-->
 </head>
 
-<body>
+<body style="background-image:url(assets/images/blue-background.png);">
     <!--/login-->
 
-    <div class="error_page">
-        <!--/login-top-->
+    <div class="error_page" style="background-image:url(assets/images/blue-background.png);">
+
 
         <div class="error-top">
-            <h2 class="inner-tittle page">Augment</h2>
+            <!-- <h2 class="inner-tittle page"></h2> -->
             <div class="login">
-                <h3 class="inner-tittle t-inner">Login</h3>
+                <h3 class="inner-tittle t-inner"> <img src="assets/logo/Logo UCCP 2 (800x800).png" height="60px"></h3>
                 <form action="functions/login.php" method="POST">
                     <input name="username" type="text" class="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">
                     <input name="password" type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
@@ -54,10 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="clearfix"></div>
                 </form>
             </div>
-
-
         </div>
-
 
         <!--//login-top-->
     </div>
@@ -65,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--//login-->
     <!--footer section start-->
     <div class="footer">
-        <p>&copy 2016 Augment . All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts.</a></p>
+        <p> <a href="https://w3layouts.com/" target="_blank"></a></p>
     </div>
     <!--footer section end-->
     <!--/404-->

@@ -8,9 +8,9 @@
 <!--//content-inner-->
 <!--/sidebar-menu-->
 <div class="sidebar-menu">
-    <header class="logo">
-        <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="index.html"> <span id="logo">
-                <h1>SAUCCP</h1>
+    <header class="logo" style="background-color: #00C6D7;">
+        <a href="#" class="sidebar-icon" style="margin-left:5px;"> <span class="fa fa-bars"></span> </a> <a href="index.html"> <span id="logo">
+        <img src="assets/logo/logo-uccp (178 x 554).png" height="35px">
             </span>
             <!--<img id="logo" src="" alt="Logo"/>-->
         </a>
