@@ -28,11 +28,8 @@
 							<td>'.$user['username'].'</td> 
 							<td>'.$admin['nama_admin'].'</td>
 							<td>Lihat Ubah Hapus</td>  
-<<<<<<< HEAD
 							</tr>';
-=======
-						    </tr>';
->>>>>>> master
+						   
 								$i++;
 							}
 						?>  
