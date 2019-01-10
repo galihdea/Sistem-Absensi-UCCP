@@ -335,6 +335,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><a href="menu_dashboard.php">Home</a></li>
                             <li class="active" id="menu-header"></li>
                         </ol>
+                        <hr>
                     </div>
                     <!-- Penutup div outter wp berada di page masing-masing -->
                     <script>
@@ -342,6 +343,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             let menu_header = document.getElementById('menu-header');
                             //let sub_title = document.getElementsByClassName('inner-tittle').innerHTML;
                             //alert(sub_title);
-                            menu_header.innerHTML = page_header + '<br>';
+                            menu_header.innerHTML = page_header;
                         });
                     </script>
