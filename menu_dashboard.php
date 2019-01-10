@@ -2,6 +2,10 @@
 <html>
 <body>
 	<?php include 'header.php'; ?>
+	<script>
+        //Value untuk mengisi Home / ....
+        let page_header="Dashboard"
+    </script>
 	<!--custom-widgets-->
 		<div class="custom-widgets">
 		   <div class="row-one">

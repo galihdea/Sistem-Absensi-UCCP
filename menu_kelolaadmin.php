@@ -2,6 +2,10 @@
 <html>
 <body>
 	<?php include 'header.php'; ?>
+	<script>
+        //Value untuk mengisi Home / ....
+        let page_header="Kelola Pegawai"
+    </script>
 	<!--custom-widgets-->
 		<h3 class="inner-tittle two">Kelola Pegawai </h3>
 		<div class="graph">
@@ -28,11 +32,7 @@
 							<td>'.$user['username'].'</td> 
 							<td>'.$admin['nama_admin'].'</td>
 							<td>Lihat Ubah Hapus</td>  
-<<<<<<< HEAD
-							</tr>';
-=======
 						    </tr>';
->>>>>>> master
 								$i++;
 							}
 						?>  

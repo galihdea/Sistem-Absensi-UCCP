@@ -4,12 +4,10 @@
 <body>
     <?php include 'header.php'?>
     <!--/sub-heard-part-->
-    <div class="sub-heard-part">
-        <ol class="breadcrumb m-b-0">
-            <li><a href="#">Home</a></li>
-            <li class="active"> Izin</li>
-        </ol>
-    </div>
+    <script>
+        //Value untuk mengisi Home / ....
+        let page_header="Pengajuan Izin"
+    </script>
     <!--/sub-heard-part-->
     <!--/sub-heard-part-->
     <!--/forms-->

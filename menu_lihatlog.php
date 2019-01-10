@@ -2,6 +2,10 @@
 <html>
 <body>
 	<?php include 'header.php'; ?>
+	<script>
+        //Value untuk mengisi Home / ....
+        let page_header="Riwayat Absen"
+    </script>
 	<!--custom-widgets-->
 		<h3 class="inner-tittle two">Riwayat Absen </h3>
 		<div class="graph">

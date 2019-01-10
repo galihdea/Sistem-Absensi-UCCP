@@ -3,8 +3,11 @@
 
 <body>
     <?php include 'header.php'?>
-
-	<table id="example" class="table table-striped table-bordered" style="width:100%">
+    <script>
+        //Value untuk mengisi Home / ....
+        let page_header="Histori Karyawan"
+    </script>
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th>Name</th>

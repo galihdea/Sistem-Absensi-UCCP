@@ -2,6 +2,10 @@
 <html>
 <body>
 	<?php include 'header.php'; ?>
+	<script>
+        //Value untuk mengisi Home / ....
+        let page_header="Approval Cuti"
+    </script>
 	<!--custom-widgets-->
 		<h3 class="inner-tittle two">Cuti </h3>
 		<div class="graph">
