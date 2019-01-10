@@ -37,8 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 window.scrollTo(0, 1);
             }
         </script>
-        <!-- Tambahan CSS -->
-        <link href="css/tambahan.css" rel='stylesheet' type='text/css' />
+        
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
         <!-- Custom CSS -->
@@ -89,6 +88,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
+
+        <!-- Tambahan CSS -->
+        <link href="css/tambahan.css" rel='stylesheet' type='text/css' />
     </head>
     <div class="page-container">
         <!--/content-inner-->

@@ -1,17 +1,29 @@
-.margin25-10{
-	margin-top:25px; 
-	margin-left:10px;
+.margin25-10 {
+    margin-top: 25px;
+    margin-left: 10px;
 }
-.marginl-20{
-	margin-left:-20px;
+
+.marginl-20 {
+    margin-left: -20px;
 }
-.left-round-border{
-	border-radius: 10px 0px 0px 10px;
+
+.left-round-border {
+    border-radius: 10px 0px 0px 10px;
 }
-.right-round-border{
-	border-radius: 0px 10px 10px 0px;
+
+.right-round-border {
+    border-radius: 0px 10px 10px 0px;
 }
-.posfixed{
-	position: fixed !important;
+
+.posfixed {
+    position: fixed !important;
 }
- 
+
+.inner-tittle,
+.two,
+.graph,
+.grid-1,
+.login-pegawai,
+.dataTables_wrapper {
+    margin-left: 30px!important;
+}

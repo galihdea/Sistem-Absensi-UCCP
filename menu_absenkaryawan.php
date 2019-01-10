@@ -16,7 +16,7 @@
             <div id="tabs" class="tabs">
 
                 <!-- masukkan kode di sini -->
-                <div class="login">
+                <div class="login login-pegawai">
                     <!-- <h3 class="inner-tittle t-inner">DAFTAR HADIR HARI INI</h3> -->
 
                     <div class="buttons login">
