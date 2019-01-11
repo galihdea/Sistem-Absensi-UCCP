@@ -166,7 +166,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         });
                                     </script>
                                 </li>
-                                <li class="dropdown note">
+                            <!--     <li class="dropdown note">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
                                         class="fa fa-envelope-o"></i> <span class="badge">3</span></a>
                                     <ul class="dropdown-menu two first">
@@ -211,10 +211,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> -->
 
 
-                                <li class="dropdown note">
+                               <!--  <li class="dropdown note">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
                                         class="fa fa-tasks"></i> <span class="badge blue1">9</span></a>
                                     <ul class="dropdown-menu two">
@@ -274,15 +274,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             </div>
                                         </li>
                                     </ul>
-                                </li>
-
-                                <li class="dropdown note">
+                                </li> -->
+                                <!-- ini yang diubah biar cuma 3 notifikasi aja --> 
+                                <li class="dropdown note" style="margin-left:200px;">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
                                         class="fa fa-bell-o"></i> <span class="badge">5</span></a>
 
-                                    <ul class="dropdown-menu two">
+                                    <ul class="dropdown-menu two" style="height:300px;" >
                                         <li>
-                                            <div class="notification_header">
+                                            <div class="notification_header" >
                                                 <h3>You have 5 new notification</h3>
                                             </div>
                                         </li>
