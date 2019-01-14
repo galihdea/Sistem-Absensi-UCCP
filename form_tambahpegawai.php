@@ -29,9 +29,9 @@
 						<label for="selector1" class="col-sm-2 control-label">Divisi Pegawai</label>
 						<div class="col-sm-8">
 							<select name="divisipegawai" id="selector1" class="form-control1">
-								<option>A</option>
-								<option>B</option>
-								<option>C</option>
+								<option value="A">A</option>
+								<option value="B">B</option>
+								<option value="C">C</option>
 								</select>
 						</div>
 					</div>
@@ -39,9 +39,9 @@
 						<label for="selector1" class="col-sm-2 control-label">Status Pegawai</label>
 						<div class="col-sm-8">
 							<select name="statuspegawai" id="selector1" class="form-control1">
-								<option>Manager Divisi</option>
-								<option>Staf Divisi</option>
-								<option>Intern</option>
+								<option value="Manager Divisi">Manager Divisi</option>
+								<option value="Staf Divisi">Staf Divisi</option>
+								<option value="Intern">Intern</option>
 							</select>
 						</div>
 					</div>

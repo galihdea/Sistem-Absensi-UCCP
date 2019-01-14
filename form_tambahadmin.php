@@ -29,8 +29,8 @@
 						<label for="selector1" class="col-sm-2 control-label">Status Admin</label>
 						<div class="col-sm-8">
 							<select name="statusadmin" id="selector1" class="form-control1">
-								<option>Super Admin</option>
-								<option>Admin</option>
+								<option value="Super Admin">Super Admin</option>
+								<option value="Admin">Admin</option>
 							</select>
 						</div>
 					</div>
