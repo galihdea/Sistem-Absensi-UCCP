@@ -21,6 +21,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         function hideURLbar() {
             window.scrollTo(0, 1);
         }
+        //Fungsi loading!
+        function load_page() {
+            document.getElementById("load-page").style.display = "block";
+        }
     </script>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
@@ -35,9 +39,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- //lined-icons -->
     <script src="js/jquery-1.10.2.min.js"></script>
     <!--clock init-->
+    <!-- CSS Loading -->
+    <link href="css/css-loader.css" rel='stylesheet' type='text/css' />
 </head>
 
 <body style="background-image:url(assets/images/blue-background.png);">
+<div class="loader loader-default is-active" id="load-page" data-text="Loading..." style="display:none;">
+        </div>
     <!--/login-->
 
     <div class="error_page" style="background-image:url(assets/images/blue-background.png);">
@@ -50,7 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <form action="functions/login.php" method="POST">
                     <input name="username" type="text" class="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">
                     <input name="password" type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
-                    <div class="submit"><input type="submit" value="Login"></div>
+                    <div class="submit"><input type="submit" value="Login" onclick="load_page()"></div>
                     <div class="clearfix"></div>
                 </form>
             </div>
