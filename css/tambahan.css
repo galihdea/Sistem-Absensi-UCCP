@@ -19,6 +19,14 @@
     position: fixed !important;
 }
 
+.margin-form{
+	margin-left: 10px;
+}
+
+.ratakiri{
+	text-align: left !important;
+}
+
 .inner-tittle,
 .two,
 .graph,
