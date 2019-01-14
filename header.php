@@ -91,8 +91,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         <!-- Tambahan CSS -->
         <link href="css/tambahan.css" rel='stylesheet' type='text/css' />
+        <!-- CSS Loading -->
+        <link href="css/css-loader.css" rel='stylesheet' type='text/css' />
+
     </head>
     <div class="page-container">
+        <!-- Loading div -->
+        <div class="loader loader-default is-active" id="load-page" data-text="Loading..." style="display:none;">
+        </div>
         <!--/content-inner-->
         <div class="left-content">
             <div class="inner-content">
@@ -349,4 +355,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             //alert(sub_title);
                             menu_header.innerHTML = page_header;
                         });
+                        function load_page() {
+                            document.getElementById("load-page").style.display = "block";
+                        }
                     </script>

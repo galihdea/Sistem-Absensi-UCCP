@@ -60,7 +60,7 @@
                                 <div id="form_cuti"></div>
                                 <div id="form_izin"></div>
                             </form>
-                            <div class="submit"><input type="submit" onclick="myFunction()" value="Ajukan Izin"></div>
+                            <div class="submit"><input type="submit" onclick="load_page()" value="Ajukan Izin"></div>
                             <div class="clearfix"></div>
                         </div>
                     </div>
