@@ -37,13 +37,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 window.scrollTo(0, 1);
             }
         </script>
-        
+
+        <!-- Tambahan CSS -->
+        <link href="css/tambahan.css" rel='stylesheet' type='text/css' />        
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
         <!-- Custom CSS -->
         <link href="css/style.css" rel='stylesheet' type='text/css' />
         <!-- Graph CSS -->
-        <link href="css/font-awesome.css" rel="stylesheet">
+        <!--<link href="css/font-awesome.css" rel="stylesheet">-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <!-- jQuery -->
         <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
         <!-- lined-icons -->
@@ -89,8 +92,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
 
-        <!-- Tambahan CSS -->
-        <link href="css/tambahan.css" rel='stylesheet' type='text/css' />
         <!-- CSS Loading -->
         <link href="css/css-loader.css" rel='stylesheet' type='text/css' />
 
@@ -172,115 +173,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         });
                                     </script>
                                 </li>
-                            <!--     <li class="dropdown note">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
-                                        class="fa fa-envelope-o"></i> <span class="badge">3</span></a>
-                                    <ul class="dropdown-menu two first">
-                                        <li>
-                                            <div class="notification_header">
-                                                <h3>You have 3 new messages </h3>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="user_img"><img src="images/1.jpg" alt=""></div>
-                                                <div class="notification_desc">
-                                                    <p>Lorem ipsum dolor sit amet</p>
-                                                    <p><span>1 hour ago</span></p>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </a>
-                                        </li>
-                                        <li class="odd">
-                                            <a href="#">
-                                                <div class="user_img"><img src="images/in.jpg" alt=""></div>
-                                                <div class="notification_desc">
-                                                    <p>Lorem ipsum dolor sit amet </p>
-                                                    <p><span>1 hour ago</span></p>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="user_img"><img src="images/in1.jpg" alt=""></div>
-                                                <div class="notification_desc">
-                                                    <p>Lorem ipsum dolor sit amet </p>
-                                                    <p><span>1 hour ago</span></p>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="notification_bottom">
-                                                <a href="#">See all messages</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li> -->
-
-
-                               <!--  <li class="dropdown note">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
-                                        class="fa fa-tasks"></i> <span class="badge blue1">9</span></a>
-                                    <ul class="dropdown-menu two">
-                                        <li>
-                                            <div class="notification_header">
-                                                <h3>You have 9 pending task</h3>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="task-info">
-                                                    <span class="task-desc">Database update</span><span class="percentage">40%</span>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                                <div class="progress progress-striped active">
-                                                    <div class="bar yellow" style="width:40%;"></div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="task-info">
-                                                    <span class="task-desc">Dashboard done</span><span class="percentage">90%</span>
-                                                    <div class="clearfix"></div>
-                                                </div>
-
-                                                <div class="progress progress-striped active">
-                                                    <div class="bar green" style="width:90%;"></div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="task-info">
-                                                    <span class="task-desc">Mobile App</span><span class="percentage">33%</span>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                                <div class="progress progress-striped active">
-                                                    <div class="bar red" style="width: 33%;"></div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="task-info">
-                                                    <span class="task-desc">Issues fixed</span><span class="percentage">80%</span>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                                <div class="progress progress-striped active">
-                                                    <div class="bar  blue" style="width: 80%;"></div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="notification_bottom">
-                                                <a href="#">See all pending task</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li> -->
                                 <!-- ini yang diubah biar cuma 3 notifikasi aja --> 
                                 <li class="dropdown note" style="margin-left:200px;">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
@@ -339,13 +231,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="clearfix"></div>
                 </div>
                 <!-- //header-ends -->
-                <div class="outter-wp margin25-10">
+                <div class="outter-wp margin5-10">
                     <div class="sub-heard-part" style="font-size:20px;">
                         <ol class="breadcrumb m-b-0" style="padding: 0px 0px;">
                             <li><a href="menu_dashboard.php">Home</a></li>
                             <li class="active" id="menu-header"></li>
                         </ol>
-                        <hr>
+                        <hr style="border-width: 5px;">
                     </div>
                     <!-- Penutup div outter wp berada di page masing-masing -->
                     <script>

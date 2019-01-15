@@ -1,6 +1,10 @@
-.margin25-10 {
-    margin-top: 25px;
+.margin5-10 {
+    margin-top: 5px;
     margin-left: 10px;
+}
+
+.marginl20{
+	margin-left: 30px !important;
 }
 
 .marginl-20 {
@@ -25,6 +29,28 @@
 
 .ratakiri{
 	text-align: left !important;
+}
+
+.mini-btn{
+	border: 1px !important;
+	margin : 0px !important;
+	padding : 3px 8px !important;
+}
+.headerno, .header{
+	font-weight: bold;
+	color: #333 !important;
+}
+
+.headerno{
+	max-width: 6px;
+}
+
+.notabel, .isitabel{
+	vertical-align: middle !important;
+}
+
+.notabel{
+	text-align: right;
 }
 
 .inner-tittle,

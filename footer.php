@@ -34,9 +34,9 @@
     <!--//down-->
     <div class="menu">
         <ul id="menu">
-            <li><a href="menu_dashboard.php"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+            <li><a href="menu_dashboard.php"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
             <?php if ($_SESSION['jenis_user'] == "Super Admin"){?>
-            <li><a href="menu_kelolaadmin.php"><i class="fa fa-table"></i> <span>Kelola Admin</span></a></li>
+            <li><a href="menu_kelolaadmin.php"><i class="fas fa-table"></i> <span>Kelola Admin</span></a></li>
             <?php }?>
             <?php if ($_SESSION['jenis_user'] == "Super Admin" || $_SESSION['jenis_user'] == "Admin"){?>
             <li><a href="menu_kelolapegawai.php"><i class="fa fa-table"></i> <span>Kelola Pegawai</span></a></li>
