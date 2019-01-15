@@ -8,7 +8,7 @@
     </script>
 	<!--custom-widgets-->
 		<h3 class="inner-tittle two">Kelola Pegawai </h3>
-			<div align="right"><a href="form_tambahpegawai.php" onclick="load_page()" class="btn blue four">Add</a></div>
+		<div align="right"><a href="form_tambahpegawai.php" onclick="load_page()" class="btn blue four" style="padding: 10px 30px; margin-right:0px">Add</a></div><br>
 			<table id="example" class="table table-striped table-bordered" style="width:100%">
 				<thead> 
 					<tr> 
