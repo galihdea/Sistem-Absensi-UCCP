@@ -22,12 +22,12 @@
                     <h3 class="inner-tittle two">Pengajuan Izin</h3>
                     <div class="grid-1">
                         <div class="form-body">
-                            <form class="form-horizontal">
+                            <form method="POST" action="functions/absen_izin.php" class="form-horizontal">
                                 <div class="form-group">
                                     <label for="selector1" class="col-sm-2 control-label" style="text-align:left;">Jenis
                                         Izin</label>
                                     <div class="col-sm-8">
-                                        <select name="selector1" id="selector1" class="form-control1" onchange="pilihForm(this.value)">
+                                        <select name="izin" id="selector1" class="form-control1" onchange="pilihForm(this.value)">
                                             <option value="" disabled selected style="display:none;">---Pilih
                                                 Jenis Izin---</option>
                                             <option value="sakit">SAKIT</option>
@@ -43,15 +43,15 @@
 										switch(form_param){
 											case "sakit":
 										    form_izin.innerHTML='';form_cuti.innerHTML='';
-											form_sakit.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Sakit</label><div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
+											form_sakit.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Sakit</label><div class="col-sm-8"><textarea name="keterangan_sakit" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
 											break;
 										case "cuti":
 											form_sakit.innerHTML='';form_izin.innerHTML='';
-											form_cuti.innerHTML='<div class="form-group"><label class="col-sm-2 control-label" style="text-align:left;">Dari</label><div class="col-sm-8"><input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div></div><div class="form-group"><label class="col-sm-2 control-label" style="text-align:left;">Sampai</label><div class="col-sm-8"><input type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div></div>';
+											form_cuti.innerHTML='<div class="form-group"><label class="col-sm-2 control-label" style="text-align:left;">Dari</label><div class="col-sm-8"><input name="keterangan_cuti_awal" type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div></div><div class="form-group"><label class="col-sm-2 control-label" style="text-align:left;">Sampai</label><div class="col-sm-8"><input name="keterangan_cuti_akhir" type="date" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required=""></div></div>';
 											break;
 										case "izin":
 											form_sakit.innerHTML='';form_cuti.innerHTML='';
-											form_izin.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Izin</label><div class="col-sm-8"><textarea name="txtarea1" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
+											form_izin.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Izin</label><div class="col-sm-8"><textarea name="keterangan_izin" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
 											break;
 											}
 										}
