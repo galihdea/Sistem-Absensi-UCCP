@@ -10,25 +10,25 @@
 					<div class="form-group">
 						<label for="focusedinput" class="col-sm-2 control-label ratakiri">Username Admin</label>
 						<div class="col-sm-10">
-							<input name="username" type="text" class="form-control1" id="focusedinput" placeholder="Username">
+							<input name="username" type="text" class="form-control1" id="focusedinput" placeholder="Username" required>
 						</div>
 					</div>
 					<div class="form-group"> 
 						<label for="focusedinput" class="col-sm-2 control-label ratakiri">Password Admin</label>
 						<div class="col-sm-10">
-							<input name="password" type="password" class="form-control" id="focusedinput" placeholder="Password"> 
+							<input name="password" type="password" class="form-control" id="focusedinput" placeholder="Password" required> 
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="focusedinput" class="col-sm-2 control-label ratakiri">Nama Admin</label>
 						<div class="col-sm-10">
-							<input name="namaadmin" type="text" class="form-control1" id="focusedinput" placeholder="Nama">
+							<input name="namaadmin" type="text" class="form-control1" id="focusedinput" placeholder="Nama" required>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="selector1" class="col-sm-2 control-label ratakiri">Status Admin</label>
 						<div class="col-sm-10">
-							<select name="statusadmin" id="selector1" class="form-control1">
+							<select name="statusadmin" id="selector1" class="form-control1" required>
 								<option value="Super Admin">Super Admin</option>
 								<option value="Admin">Admin</option>
 							</select>
