@@ -2,7 +2,9 @@
 <html>
 
 <body>
-    <?php include 'header.php'?>
+<?php include 'header.php';
+	if ($_SESSION['jenis_user'] == "Pegawai"){
+?>
     <!--/sub-heard-part-->
     <script>
         //Value untuk mengisi Home / ....
@@ -77,7 +79,7 @@
         <p>&copy 2016 Augment . All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts.</a></p>
     </footer>
     <!--footer section end-->
-    <?php include 'footer.php';?>
+    <?php } include 'footer.php';?>
 </body>
 
 </html>

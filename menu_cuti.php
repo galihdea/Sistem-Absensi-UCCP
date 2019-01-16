@@ -1,13 +1,17 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-	<?php include 'header.php'; ?>
+<?php include 'header.php'; 
+	if ($_SESSION['jenis_user'] == "Super Admin" || $_SESSION['jenis_user'] == "Admin"){
+?>
 	<script>
         //Value untuk mengisi Home / ....
         let page_header="Approval Cuti"
     </script>
 	<!--custom-widgets-->
-		<h3 class="inner-tittle two" style="margin-bottom:5px;"><i class="fa fa-book"></i> &nbsp Approval Cuti </h3>
+		<h3 class="inner-tittle two" style="margin-bottom:5px;"><i class="fa fa-book"></i> &nbsp Approval Cuti &nbsp 
+			<a href="menu_izin.php" onclick="load_page()" data-toggle="tooltip" data-placement="bottom" title="Approval Izin"><i class="fa fa-caret-right"></i></a>
+		</h3>
 			<div style="margin-top:20px;">
 			<table id="example" class="table table-striped table-bordered" style="width:100%; font-size: 15px;">
 				<thead> 
@@ -45,6 +49,6 @@
 				</tbody> 
 			</table>
 			</div>
- <?php include 'footer.php'; ?>
+<?php } include 'footer.php'; ?>
 </body>
 </html>

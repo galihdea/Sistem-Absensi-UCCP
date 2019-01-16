@@ -103,6 +103,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <link href="css/css-loader.css" rel='stylesheet' type='text/css' />
 
     </head>
+	<div class="posfixed">
+		<header class="logo" style="background-color: #00C6D7;">
+		</header>
+	</div>
     <div class="page-container">
         <!-- Loading div -->
         <div class="loader loader-default is-active" id="load-page" data-text="Loading..." style="display:none;">
@@ -241,7 +245,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="outter-wp margin5-10">
                     <div class="sub-heard-part" style="font-size:20px;">
                         <ol class="breadcrumb m-b-0" style="padding: 0px 0px;">
-                            <li><a href="menu_dashboard.php">Home</a></li>
+                            <li><a href="menu_dashboard.php" onclick="load_page()">Home</a></li>
                             <li class="active" id="menu-header"></li>
                         </ol>
                         <hr style="border-width: 5px;">

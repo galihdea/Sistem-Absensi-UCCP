@@ -2,7 +2,9 @@
 <html>
 
 <body>
-    <?php include 'header.php'?>
+<?php include 'header.php';
+	if ($_SESSION['jenis_user'] == "Pegawai"){
+?>
     <script>
         //Value untuk mengisi Home / ....
         let page_header="Histori Karyawan"
@@ -43,7 +45,7 @@
 				</tbody> 
 			</table>
 			</div>
-    <?php include 'footer.php';?>
+<?php } include 'footer.php';?>
 </body>
 
 </html>
