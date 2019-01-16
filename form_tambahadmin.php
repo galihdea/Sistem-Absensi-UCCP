@@ -2,6 +2,10 @@
 <html>
 <body>
 	<?php include 'header.php'; ?>
+	<script>
+        //Value untuk mengisi Home / ....
+        let page_header="Tambah Admin"
+    </script>
 	<!--custom-widgets-->
 		<h3 class="inner-tittle two">Contoh Form Tambah Admin</h3>
 		<div class="grid-1">
