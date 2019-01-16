@@ -59,9 +59,10 @@
                                 <div id="form_sakit"></div>
                                 <div id="form_cuti"></div>
                                 <div id="form_izin"></div>
-                            </form>
-                            <div class="submit"><input type="submit" onclick="load_page()" value="Ajukan Izin"></div>
+                                <div class="submit"><input type="submit" onclick="load_page()" value="Ajukan Izin"></div>
                             <div class="clearfix"></div>
+                            </form>
+                            
                         </div>
                     </div>
                 </div>
