@@ -2,76 +2,101 @@
     margin-top: 5px;
     margin-left: 10px;
 }
-.marginl20{
-	margin-left: 30px !important;
+
+.marginl20 {
+    margin-left: 30px !important;
 }
+
 .marginl-20 {
     margin-left: -20px;
 }
+
 .left-round-border {
     border-radius: 10px 0px 0px 10px;
 }
+
 .right-round-border {
     border-radius: 0px 10px 10px 0px;
 }
+
 .posfixed {
     position: fixed !important;
 }
-.margin-form{
-	margin-left: 10px;
+
+.margin-form {
+    margin-left: 10px;
 }
-.ratakiri{
-	text-align: left !important;
+
+.ratakiri {
+    text-align: left !important;
 }
-.mini-btn{
-	border: 1px !important;
-	margin : 0px !important;
-	padding : 3px 8px !important;
+
+.mini-btn {
+    border: 1px !important;
+    margin: 0px !important;
+    padding: 3px 8px !important;
 }
-.headerno, .header{
-	font-weight: bold;
-	color: #333 !important;
+
+.headerno,
+.header {
+    font-weight: bold;
+    color: #333 !important;
 }
-.headerno{
-	width: 40px !important;
+
+.headerno {
+    width: 40px !important;
 }
-.notabel, .isitabel{
-	color: #333 !important;
-	vertical-align: middle !important;
+
+.notabel,
+.isitabel {
+    color: #333 !important;
+    vertical-align: middle !important;
 }
-.notabel{
-	text-align: right;
+
+.notabel {
+    text-align: right;
 }
-.bgred{
-	background-image: linear-gradient(90deg,#b30000,#ff0000) !important;
-	opacity: 0.7;
+
+.bgred {
+    background-image: linear-gradient(90deg, #b30000, #ff0000) !important;
+    opacity: 0.7;
 }
-.bgblue{
-	background-image: linear-gradient(90deg,#010198,#0101fe) !important;
-	opacity: 0.7;
+
+.bgblue {
+    background-image: linear-gradient(90deg, #010198, #0101fe) !important;
+    opacity: 0.7;
 }
-.bggreen{
-	background-image: linear-gradient(90deg,#009903,#00ff06) !important;
-	opacity: 0.7;
+
+.bggreen {
+    background-image: linear-gradient(90deg, #009903, #00ff06) !important;
+    opacity: 0.7;
 }
-.bgyellow{
-	background-image: linear-gradient(90deg,#b3b300,#ffff00) !important;
-	opacity: 0.7;
+
+.bgyellow {
+    background-image: linear-gradient(90deg, #b3b300, #ffff00) !important;
+    opacity: 0.7;
 }
-.bgorange{
-	background-image: linear-gradient(90deg,#b34700,#ff6600) !important;
-	opacity: 0.7;
+
+.bgorange {
+    background-image: linear-gradient(90deg, #b34700, #ff6600) !important;
+    opacity: 0.7;
 }
-tr.tabel:hover{
-	background-color: #ccccff !important;
+
+tr.tabel:hover {
+    background-color: #ccccff !important;
 }
-a:hover{
-	opacity:1;
+
+a:hover {
+    opacity: 1;
 }
-.row-one, .row-two, .row-three{
-	margin-bottom: 20px;
-	display: block;
+
+.row-one,
+.row-two,
+.row-three {
+    margin-bottom: 20px;
+    display: block;
 }
+
 .inner-tittle,
 .two,
 .graph,
@@ -79,4 +104,8 @@ a:hover{
 .login-pegawai,
 .dataTables_wrapper {
     margin-left: 30px!important;
+}
+
+.lihat-data{
+    text-align: left!important;
 }
