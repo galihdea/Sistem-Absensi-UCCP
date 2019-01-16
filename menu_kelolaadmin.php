@@ -35,8 +35,8 @@
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$admin['nama_admin'].'</td>
 						<td align="center" class="isitabel" style="max-width: 10px; padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">
 							<a class="btn blue four mini-btn bggreen" href="form_lihatadmin.php?id_admin='.$id_luar.'" data-toggle="tooltip" data-placement="bottom" title="Lihat"><i class="fa fa-eye"></i></a>
-							<a class="btn blue four mini-btn bgorange" href="" data-toggle="tooltip" data-placement="bottom" title="Ubah"><i class="fa fa-edit"></i></a>
-							<a class="btn blue four mini-btn bgred" href="#" data-toggle="tooltip" data-placement="bottom" title="Hapus"><i class="fa fa-trash-o"></i></a>
+							<a class="btn blue four mini-btn bgorange" href="form_ubahadmin.php?id_admin='.$id_luar.'" data-toggle="tooltip" data-placement="bottom" title="Ubah"><i class="fa fa-edit"></i></a>
+							<a class="btn blue four mini-btn bgred" href="functions/hapus_admin.php?id_admin='.$id_luar.'" data-toggle="tooltip" data-placement="bottom" title="Hapus"><i class="fa fa-trash-o"></i></a>
 						</td>  
 					</tr>';
 							$i++;

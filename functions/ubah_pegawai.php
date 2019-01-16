@@ -1,7 +1,7 @@
 <?php
 	include 'koneksi.php';
 
-	$id_pegawai = $_POST['id_pegawai'];
+	$id_pegawai = $_GET['id_pegawai'];
 	$nama = $_POST['namapegawai'];
 	$divisi = $_POST['divisipegawai'];
 	$jabatan = $_POST['jabatanpegawai'];
