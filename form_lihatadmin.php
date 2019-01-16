@@ -23,10 +23,7 @@
 						<label for="focusedinput" class="col-sm-2 control-label ratakiri">Nama Admin</label>
 						<label class="col-sm-3 control-label lihat-data" id="nama-admin"><?php echo $lihat['nama_admin'];?></label>
 					</div>
-					<div class="form-group">
-						<label for="selector1" class="col-sm-2 control-label ratakiri">Status Admin</label>
-						<label class="col-sm-3 control-label lihat-data" id="stat-admin"><?php echo $lihat['status_admin'];?></label>
-					</div>
+					
 					<div  align="right">
 						<button type="submit" class="btn btn-default">Kembali</button>
 					</div>
