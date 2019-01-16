@@ -14,7 +14,7 @@
 		<h3 class="inner-tittle two">Contoh Form Ubah Pegawai</h3>
 		<div class="grid-1">
 			<div class="form-body">
-				<form method="POST" action="functions/ubah_pegawai.php<?php echo $id_pegawai;?>" class="form-horizontal">
+				<form method="POST" action="functions/ubah_pegawai.php?id_pegawai=<?php echo $id_pegawai;?>" class="form-horizontal">
 					<div class="form-group">
 						<label for="focusedinput" class="col-sm-2 control-label">Username Pegawai</label>
 						<div class="col-sm-8">
