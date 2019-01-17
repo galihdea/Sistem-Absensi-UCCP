@@ -15,10 +15,10 @@
 			<table id="example" class="table table-striped table-bordered" style="width:100%; font-size: 15px;">
 				<thead> 
 					<tr> 
-						<th class="headerno">No</th> 
-						<th class="header">Username</th> 
-						<th class="header">Nama Pegawai</th> 
-						<th class="header">Aksi</th> 
+						<th class="header">Tanggal</th> 
+						<th class="header">Status Absen</th> 
+						<th class="header">Status Acc</th> 
+						<th class="header">Keterangan</th> 
 					</tr> 
 				</thead> 
 				<tbody> 
