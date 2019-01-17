@@ -68,8 +68,8 @@
 		</a>
 		<div class="col-sm-2"></div>
 	</div>
-	<!--Dashboard Pegawai-->	
-	<?php } if ($_SESSION['jenis_user'] == "Pegawai"){?>
+	<!--Dashboard Pegawai Belum Absen-->	
+	<?php } if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_absen == "Boleh"){?>
 	<div class="col-sm-12">
 		<div class="col-sm-2"></div>
 		<a href="menu_absenkaryawan.php" onclick="load_page()">
@@ -107,6 +107,26 @@
 			</div>
 			<div class="col-sm-12">
 				<p class="dashboard-detail">Klik disini..</p>
+			</div>
+		</div>
+		</a>
+		<div class="col-sm-2"></div>
+	</div>
+	<!--Dashboard Pegawai Sudah Absen-->	
+	<?php } if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_absen == "Tidak"){?>
+	<div class="col-sm-12">
+		<div class="col-sm-2"></div>
+		<a>
+		<div class="col-sm-8 bggreen2 dashboard" align="center" style="margin-bottom: 10px;">
+			<div class="col-sm-3">
+				<i class="fa fa-check-circle" style="margin: 20px 0px !important; font-size:70px; margin:10px; color:white;"></i>
+			</div>
+			<div class="col-sm-6">
+				<p style="font-size:20px; margin:10px 0px 0px 5px; color:white; text-align:left;">Absen</p>
+				<p style="font-size:40px; margin:5px; color:white; text-align:left;">Berhasil!!</p>
+			</div>
+			<div class="col-sm-3">
+				<p style="font-size:60px; margin:12px; color:white;">99</p>
 			</div>
 		</div>
 		</a>

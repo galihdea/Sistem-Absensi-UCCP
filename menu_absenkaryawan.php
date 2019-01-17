@@ -3,7 +3,6 @@
 
 <body>
 <?php include 'header.php';
-	echo $boleh_absen;
 	if ($_SESSION['jenis_user'] == "Pegawai"){
 ?>
     <!--/sub-heard-part-->
