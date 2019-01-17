@@ -20,6 +20,15 @@
 		$ambil = $ambilnama->fetch_array();
 		$nama = $ambil['nama_pegawai'];
 	}
+    $id_user = $_SESSION['id_user'];
+    $querycekabsen = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND (status_acc='Approved' OR status_acc='Pending') AND tanggal=CURDATE()");
+    if(mysqli_num_rows($querycekabsen)>0){
+        $boleh_absen = "Tidak";
+    }
+    else{
+        $boleh_absen = "Boleh";
+    }
+
 ?>
 
     <head>
