@@ -53,8 +53,8 @@
 						</td>  
 					</tr>';
 						}else{	
-							echo '<a onclick="return konfirmasi1()" class="btn blue four mini-btn bggreen" href="#" data-toggle="tooltip" data-placement="bottom" title="Approvad"><i class="fa fa-check"></i></a>
-							<a onclick="return konfirmasi2()" class="btn blue four mini-btn bgred" href="#" data-toggle="tooltip" data-placement="bottom" title="Decline"><i class="fa fa-times"></i></a>
+							echo '<a onclick="return konfirmasi1()" class="btn blue four mini-btn bggreen" href="functions/ubah_status_acc_cuti.php?status=Approved&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Approved"><i class="fa fa-check"></i></a>
+							<a onclick="return konfirmasi2()" class="btn blue four mini-btn bgred" href="functions/ubah_status_acc_cuti.php?status=Decline&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Decline"><i class="fa fa-times"></i></a>
 						</td>  
 					</tr>';
 						}
