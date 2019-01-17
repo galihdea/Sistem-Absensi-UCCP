@@ -25,7 +25,7 @@
 				<tbody> 
 					<?php
 						$i = 1;
-						$ambil_daftar_pegawai = $conn->query("SELECT * FROM absensi WHERE status_absensi='Cuti' ORDER BY id_absensi DESC");
+						$ambil_daftar_pegawai = $conn->query("SELECT * FROM absensi WHERE status_absensi='cuti' ORDER BY id_absensi DESC");
 						while($pegawai=$ambil_daftar_pegawai->fetch_array()){
 							$id_user = $absensi['id_user'];
 							$ambil_user = $conn->query("SELECT * FROM user WHERE id_user='$id_user'");
