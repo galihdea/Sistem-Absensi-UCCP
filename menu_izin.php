@@ -19,6 +19,7 @@
 						<th class="headerno">No</th> 
 						<th class="header">Nama Pegawai</th> 
 						<th class="header">Keterangan</th> 
+						<th class="header">Status</th> 
 						<th class="header">Aksi</th> 
 					</tr> 
 				</thead> 
@@ -26,8 +27,8 @@
 					<?php
 						$i = 1;
 						$ambil_daftar_pegawai = $conn->query("SELECT * FROM absensi WHERE status_absensi='izin' ORDER BY id_absensi DESC");
-						while($pegawai=$ambil_daftar_pegawai->fetch_array()){
-							$id_user = $absensi['id_user'];
+						while($pegawaiuser=$ambil_daftar_pegawai->fetch_array()){
+							$id_user = $pegawaiuser['id_user'];
 							$ambil_user = $conn->query("SELECT * FROM user WHERE id_user='$id_user'");
 							$user = $ambil_user->fetch_array();
 							$id_pegawai = $user['id_luar'];
@@ -36,13 +37,27 @@
 							echo '<tr class="tabel"> 
 						<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$i.'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td> 
-						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$absensi['keterangan'].'</td>
-						<td align="center" class="isitabel" style="max-width: 10px; padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">
-							<a class="btn blue four mini-btn bggreen" href="#" data-toggle="tooltip" data-placement="bottom" title="Lihat"><i class="fa fa-eye"></i></a>
-							<a class="btn blue four mini-btn bgorange" href="#" data-toggle="tooltip" data-placement="bottom" title="Ubah"><i class="fa fa-edit"></i></a>
-							<a class="btn blue four mini-btn bgred" href="#" data-toggle="tooltip" data-placement="bottom" title="Hapus"><i class="fa fa-trash-o"></i></a>
+						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['keterangan'].'</td>
+						<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;">';
+						if ($pegawaiuser['status_acc']=="Approved" ){
+							echo '<a style="width:70px;" class="btn blue four mini-btn bggreen"> Approvad</a>';
+						}elseif ($pegawaiuser['status_acc']=="Decline" ){
+							echo '<a style="width:70px;" class="btn blue four mini-btn bgred"> Decline</a>';
+						}elseif ($pegawaiuser['status_acc']=="Pending" ){
+							echo '<a style="width:70px;" class="btn blue four mini-btn bgorange"> Pending</a>';
+						}
+						echo '</td>
+						<td align="center" class="isitabel" style="max-width: 10px; padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">';
+						if ($pegawaiuser['status_acc'] !="Pending"){
+							echo '<a class="btn blue four mini-btn bgblue" href="#" data-toggle="tooltip" data-placement="bottom" title="Done">Done</a>
 						</td>  
 					</tr>';
+						}else{	
+							echo '<a onclick="return konfirmasi1()" class="btn blue four mini-btn bggreen" href="#" data-toggle="tooltip" data-placement="bottom" title="Approvad"><i class="fa fa-check"></i></a>
+							<a onclick="return konfirmasi2()" class="btn blue four mini-btn bgred" href="#" data-toggle="tooltip" data-placement="bottom" title="Decline"><i class="fa fa-times"></i></a>
+						</td>  
+					</tr>';
+						}
 							$i++;
 						}
 					?>  
@@ -52,3 +67,16 @@
 <?php } include 'footer.php'; ?>
 </body>
 </html>
+
+<script type="text/javascript">
+	function konfirmasi1(){
+		tanya = confirm('Apakah anda yakin untuk mengubah status menjadi "Approvad" ?');
+		if (tanya == true) return true;
+		else return false;
+    }
+	function konfirmasi2(){
+		tanya = confirm('Apakah anda yakin untuk mengubah status menjadi "Decline" ?');
+		if (tanya == true) return true;
+		else return false;
+    }
+</script>
