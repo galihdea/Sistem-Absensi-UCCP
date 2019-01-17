@@ -67,16 +67,3 @@
 <?php } include 'footer.php'; ?>
 </body>
 </html>
-
-<script type="text/javascript">
-	function konfirmasi1(){
-		tanya = confirm('Apakah anda yakin untuk mengubah status menjadi "Approvad" ?');
-		if (tanya == true) return true;
-		else return false;
-    }
-	function konfirmasi2(){
-		tanya = confirm('Apakah anda yakin untuk mengubah status menjadi "Decline" ?');
-		if (tanya == true) return true;
-		else return false;
-    }
-</script>
