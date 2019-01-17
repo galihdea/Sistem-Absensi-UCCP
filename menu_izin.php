@@ -40,7 +40,7 @@
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['keterangan'].'</td>
 						<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;">';
 						if ($pegawaiuser['status_acc']=="Approved" ){
-							echo '<a style="width:70px;" class="btn blue four mini-btn bggreen"> Approvad</a>';
+							echo '<a style="width:70px;" class="btn blue four mini-btn bggreen"> Approved</a>';
 						}elseif ($pegawaiuser['status_acc']=="Decline" ){
 							echo '<a style="width:70px;" class="btn blue four mini-btn bgred"> Decline</a>';
 						}elseif ($pegawaiuser['status_acc']=="Pending" ){
@@ -53,8 +53,8 @@
 						</td>  
 					</tr>';
 						}else{	
-							echo '<a onclick="return konfirmasi1()" class="btn blue four mini-btn bggreen" href="functions/ubah_status_acc_izin.php?status=Approved&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Approved"><i class="fa fa-check"></i></a>
-							<a onclick="return konfirmasi2()" class="btn blue four mini-btn bgred" href="functions/ubah_status_acc_izin.php?status=Decline&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Decline"><i class="fa fa-times"></i></a>
+							echo '<a onclick="return konfirmasi1()" class="btn blue four mini-btn bggreen" href="#" data-toggle="tooltip" data-placement="bottom" title="Approved"><i class="fa fa-check"></i></a>
+							<a onclick="return konfirmasi2()" class="btn blue four mini-btn bgred" href="#" data-toggle="tooltip" data-placement="bottom" title="Decline"><i class="fa fa-times"></i></a>
 						</td>  
 					</tr>';
 						}
