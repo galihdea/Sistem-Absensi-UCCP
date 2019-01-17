@@ -2,10 +2,10 @@
 -- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: 07 Jan 2019 pada 08.04
--- Versi Server: 10.1.28-MariaDB
--- PHP Version: 5.6.32
+-- Host: localhost
+-- Generation Time: Jan 17, 2019 at 04:37 AM
+-- Server version: 5.7.19
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `absensi`
+-- Table structure for table `absensi`
 --
 
 CREATE TABLE `absensi` (
@@ -33,13 +33,31 @@ CREATE TABLE `absensi` (
   `id_user` int(11) NOT NULL,
   `status_absensi` varchar(191) NOT NULL,
   `status_acc` varchar(191) NOT NULL,
-  `keterangan` varchar(191) NOT NULL
+  `keterangan` varchar(191) DEFAULT NULL,
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `ip_address` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `absensi`
+--
+
+INSERT INTO `absensi` (`id_absensi`, `id_user`, `status_absensi`, `status_acc`, `keterangan`, `tanggal`, `ip_address`) VALUES
+(1, 5, 'izin', 'Approved', '. . .', '0000-00-00 00:00:00', NULL),
+(2, 1, 'cuti', 'Approved', 'Jalan jalan', '0000-00-00 00:00:00', NULL),
+(3, 6, 'cuti', 'Decline', 'mager', '0000-00-00 00:00:00', NULL),
+(4, 1, 'cuti', 'Approved', 'aaaaa', '2019-01-14 17:00:00', NULL),
+(5, 5, 'izin', 'Decline', 'k', '2019-01-17 03:20:26', NULL),
+(6, 1, 'masuk', 'Approved', NULL, '2019-01-17 03:40:00', NULL),
+(7, 1, 'sakit', 'Approved', 'MRiang', '2019-01-17 03:41:21', NULL),
+(8, 1, 'cuti', 'Pending', '2019-01-18 - 2019-01-18', '2019-01-17 03:42:44', NULL),
+(9, 1, 'izin', 'Pending', '', '2019-01-17 03:43:02', NULL),
+(10, 1, 'masuk', 'Approved', NULL, '2019-01-17 03:56:48', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -48,10 +66,17 @@ CREATE TABLE `admin` (
   `nama_admin` varchar(191) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `user_admin`, `nama_admin`) VALUES
+(1, 'admin1', 'DeX');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pegawai`
+-- Table structure for table `pegawai`
 --
 
 CREATE TABLE `pegawai` (
@@ -63,16 +88,18 @@ CREATE TABLE `pegawai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pegawai`
+-- Dumping data for table `pegawai`
 --
 
 INSERT INTO `pegawai` (`id_pegawai`, `user_pegawai`, `nama_pegawai`, `divisi_pegawai`, `jabatan_pegawai`) VALUES
-(1, '24010314130080', 'Galih Dea Pratama', 'IT', 'Intern');
+(1, '24010314130080', 'Galih Dea Pratama', 'IT', 'Intern'),
+(2, 'admin2', 'DeX999', 'C', 'Intern'),
+(3, '24010314130079', 'Deoxys', 'B', 'Intern');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `super_admin`
+-- Table structure for table `super_admin`
 --
 
 CREATE TABLE `super_admin` (
@@ -81,10 +108,17 @@ CREATE TABLE `super_admin` (
   `nama_sadmin` varchar(191) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `super_admin`
+--
+
+INSERT INTO `super_admin` (`id_sadmin`, `user_sadmin`, `nama_sadmin`) VALUES
+(1, 'presdir', 'Bu Fitri');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -96,11 +130,15 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `status`, `id_luar`) VALUES
-(1, '24010314130080', '081d29b9330707cc21a1bf4132f7d3f7', 'Winner', 1);
+(1, '24010314130080', 'adb24d1db374242c77182e77036cc3fd', 'Pegawai', 1),
+(2, 'presdir', '1c8a462f469d40485156325672b6e76d', 'Super Admin', 1),
+(4, 'admin1', 'e00cf25ad42683b3df678c61f42c6bda', 'Admin', 1),
+(5, 'admin2', 'c84258e9c39059a89ab77d846ddab909', 'Pegawai', 2),
+(6, '24010314130079', 'abce7884af85af7b7c19ba304b5b8ead', 'Pegawai', 3);
 
 --
 -- Indexes for dumped tables
@@ -144,25 +182,31 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pegawai`
 --
 ALTER TABLE `pegawai`
-  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `super_admin`
 --
 ALTER TABLE `super_admin`
-  MODIFY `id_sadmin` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_sadmin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

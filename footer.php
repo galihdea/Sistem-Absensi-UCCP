@@ -49,9 +49,9 @@
             <li><a onclick="load_page()" href="menu_lihatlog.php"><i class="fa fa-list-ul"></i> <span>Lihat Riwayat Absensi</span></a></li>
             <li><a onclick="load_page()" href="menu_lihatkinerja.php"><i class="fa fa-bars"></i> <span>Lihat Riwayat Kinerja</span></a></li>
             <?php } if ($_SESSION['jenis_user'] == "Pegawai"){?>
-            <li id="menu-academico"><a href="#"><i class="fa fa-table"></i> <span> Absensi</span> <span class="fa fa-angle-right"
-                        style="float: right"></span></a>
+            <li id="menu-academico"><a href="#"><i class="fa fa-table"></i> <span> Absensi</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                 <ul id="menu-academico-sub">
+			<?php } if ($_SESSION['jenis_user'] == "Pegawai"){?>
                     <li id="menu-academico-avaliacoes"><a onclick="load_page()" href="menu_absenkaryawan.php"> Masuk</a></li>
                     <li id="menu-academico-boletim"><a onclick="load_page()" href="menu_absenizin.php">Izin</a></li>
                     <li id="menu-academico-avaliacoes"><a onclick="load_page()" href="menu_historikaryawan.php">Lihat Histori</a></li>
@@ -83,4 +83,13 @@
 
         toggle = !toggle;
     });
+	
+	//var boleh_absen = <?php echo $boleh_absen;?>;
+	//if (boleh_absen == "Boleh"){
+	//	document.getElementById("demo").innerHTML = "Boleh";
+	//}else if (boleh_absen == "Tidak"){
+		//document.getElementById("demo").innerHTML = "Tidak";
+	//}else{
+		//document.getElementById("demo").innerHTML = "??";
+	//}
 </script>
