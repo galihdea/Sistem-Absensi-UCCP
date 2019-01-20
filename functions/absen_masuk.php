@@ -1,7 +1,20 @@
 <?php
 	session_start();
 	include 'koneksi.php';
-	$ip_address = $_SERVER["REMOTE_ADDR"];
+	
+	if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
+    {
+      $ip_address=$_SERVER['HTTP_CLIENT_IP'];
+    }
+    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))   //to check ip is pass from proxy
+    {
+      $ip_address=$_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+    else
+    {
+      $ip_address=$_SERVER['REMOTE_ADDR'];
+    }
+    
 	$id_user = $_SESSION['id_user'];
 	$id_pegawai = $_SESSION['id_pegawai'];
 	$querypegawai = $conn->query("SELECT * FROM user WHERE status='Pegawai' AND id_luar='$id_pegawai'");
