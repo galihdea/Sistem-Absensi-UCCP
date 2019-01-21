@@ -50,7 +50,7 @@ echo tanggal_indo('2016-03-20'); // 20 Maret 2016
 		$tanggal_cuti_awal = tanggal_indo($_POST['keterangan_cuti_awal']);
 		$tanggal_cuti_akhir = tanggal_indo($_POST['keterangan_cuti_akhir']);
 		$keterangan_cuti = $_POST['keterangan_cuti_ket'];
-		$keterangan = $keterangan_cuti.", mulai dari ".$tanggal_cuti_awal." sampai dengan ".$tanggal_cuti_akhir;
+		$keterangan = $keterangan_cuti." (".$tanggal_cuti_awal." - ".$tanggal_cuti_akhir." )";
 		$acc = "Pending";
 	}
 	$queryizin = $conn->query("INSERT INTO absensi (id_user,status_absensi,status_acc,keterangan,ip_address,dibaca) VALUES ('$id_user','$izin','$acc','$keterangan','$ip_address','$dibaca')");
