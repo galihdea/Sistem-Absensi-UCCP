@@ -49,8 +49,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             }
         </script>
 
-        <!-- Tambahan CSS -->
-        <link href="css/tambahan.css" rel='stylesheet' type='text/css' />        
+
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
         <!-- Custom CSS -->
@@ -112,7 +111,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         <!-- CSS Loading -->
         <link href="css/css-loader.css" rel='stylesheet' type='text/css' />
-
+        <!-- Tambahan CSS -->
+        <link href="css/tambahan.css" rel='stylesheet' type='text/css' />
     </head>
 	<div class="posfixed">
 		<header class="logo" style="background-color: #00C6D7;">
