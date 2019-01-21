@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 17, 2019 at 04:37 AM
+-- Generation Time: Jan 21, 2019 at 04:28 AM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.7
 
@@ -35,24 +35,24 @@ CREATE TABLE `absensi` (
   `status_acc` varchar(191) NOT NULL,
   `keterangan` varchar(191) DEFAULT NULL,
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `ip_address` varchar(15) DEFAULT NULL
+  `ip_address` varchar(15) DEFAULT NULL,
+  `dibaca` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `absensi`
 --
 
-INSERT INTO `absensi` (`id_absensi`, `id_user`, `status_absensi`, `status_acc`, `keterangan`, `tanggal`, `ip_address`) VALUES
-(1, 5, 'izin', 'Approved', '. . .', '0000-00-00 00:00:00', NULL),
-(2, 1, 'cuti', 'Approved', 'Jalan jalan', '0000-00-00 00:00:00', NULL),
-(3, 6, 'cuti', 'Decline', 'mager', '0000-00-00 00:00:00', NULL),
-(4, 1, 'cuti', 'Approved', 'aaaaa', '2019-01-14 17:00:00', NULL),
-(5, 5, 'izin', 'Decline', 'k', '2019-01-17 03:20:26', NULL),
-(6, 1, 'masuk', 'Approved', NULL, '2019-01-17 03:40:00', NULL),
-(7, 1, 'sakit', 'Approved', 'MRiang', '2019-01-17 03:41:21', NULL),
-(8, 1, 'cuti', 'Pending', '2019-01-18 - 2019-01-18', '2019-01-17 03:42:44', NULL),
-(9, 1, 'izin', 'Pending', '', '2019-01-17 03:43:02', NULL),
-(10, 1, 'masuk', 'Approved', NULL, '2019-01-17 03:56:48', NULL);
+INSERT INTO `absensi` (`id_absensi`, `id_user`, `status_absensi`, `status_acc`, `keterangan`, `tanggal`, `ip_address`, `dibaca`) VALUES
+(1, 5, 'masuk', 'Approved', '. . .', '0000-00-00 00:00:00', NULL, 'dibaca'),
+(3, 6, 'cuti', 'Decline', 'mager', '0000-00-00 00:00:00', NULL, 'dibaca'),
+(5, 5, 'izin', 'Decline', 'k', '2019-01-17 03:20:26', NULL, ''),
+(14, 1, 'cuti', 'Decline', '2019-01-11 - 2019-01-26', '2019-01-17 05:10:21', '::1', ''),
+(15, 1, 'sakit', 'Approved', 'Mager', '2019-01-17 05:13:24', '::1', ''),
+(18, 6, 'izin', 'Decline', 'Mager Juga', '2019-01-21 03:04:38', '::1', 'belum'),
+(19, 6, 'izin', 'Decline', 'Males gan', '2019-01-21 03:53:17', '::1', 'belum'),
+(20, 6, 'cuti', 'Pending', '2019-01-21 - 2019-03-21', '2019-01-21 03:54:11', '::1', 'belum'),
+(21, 1, 'masuk', 'Approved', NULL, '2019-01-21 04:18:41', '10.101.47.167', NULL);
 
 -- --------------------------------------------------------
 
@@ -182,7 +182,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `admin`
