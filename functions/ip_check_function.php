@@ -5,7 +5,6 @@
 		$ambil = json_decode(file_get_contents($alamat_ambil));
 		$output = array(
 			"ip_address" => $ambil->ip,
-			"host_name" => $ambil->hostname,
 			"reg_code" => $ambil->region_code,
 			"reg_name" => $ambil->region_name,
 			"kota" => $ambil->city,
