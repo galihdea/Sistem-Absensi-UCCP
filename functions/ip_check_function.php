@@ -11,7 +11,7 @@
 			"kota" => $ambil->city,
 			"bujur" => $ambil->latitude,
 			"lintang" => $ambil->longitude,
-		)
+		);
 
 		return $output;
 	}
