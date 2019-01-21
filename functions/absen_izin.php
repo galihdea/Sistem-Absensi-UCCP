@@ -17,6 +17,7 @@
     }
 
 	$izin = $_POST['izin'];
+	$dibaca = 'belum';
 	if($izin=='sakit'){
 		$keterangan = $_POST['keterangan_sakit'];
 		$acc = "Approved";
@@ -29,7 +30,7 @@
 		$keterangan = $_POST['keterangan_cuti_awal']. " - ".$_POST['keterangan_cuti_akhir'];
 		$acc = "Pending";
 	}
-	$queryizin = $conn->query("INSERT INTO absensi (id_user,status_absensi,status_acc,keterangan,ip_address) VALUES ('$id_user','$izin','$acc','$keterangan','$ip_address')");
+	$queryizin = $conn->query("INSERT INTO absensi (id_user,status_absensi,status_acc,keterangan,ip_address,dibaca) VALUES ('$id_user','$izin','$acc','$keterangan','$ip_address','$dibaca')");
 
 	if($queryizin){
 		header('location:../menu_dashboard.php');

@@ -28,7 +28,9 @@
     else{
         $boleh_absen = "Boleh";
     }
-
+    $read = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND DATE(tanggal)=CURDATE()");
+    $ambil = $read->fetch_array();
+    $dibaca = $ambil['dibaca'];
 ?>
 
     <head>
