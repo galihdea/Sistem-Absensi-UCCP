@@ -41,7 +41,7 @@
 						</div>
 					</div>
 					<div  align="right">
-						<a href="menu_kelolaadmin.php" class="btn blue four bgred">Back</a>
+						<a href="menu_kelolaadmin.php" class="btn blue four bgred tombol-back">Cancel</a>
 						<button type="submit" class="btn btn-default">Submit</button>
 					</div>
 				</form>

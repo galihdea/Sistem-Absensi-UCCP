@@ -49,6 +49,7 @@
 							</select>
 						</div>
 					</div>
+                    <a href="menu_kelolapegawai.php" class="btn blue four bgred tombol-back">Cancel</a>
 					<button type="submit" class="btn btn-default">Submit</button>
 				</form>
 			</div>

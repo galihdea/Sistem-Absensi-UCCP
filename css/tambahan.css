@@ -157,3 +157,7 @@ a:hover {
 .lihat-data{
     text-align: left!important;
 }
+
+.tombol-back{
+    padding:6px 12px!important;
+}
