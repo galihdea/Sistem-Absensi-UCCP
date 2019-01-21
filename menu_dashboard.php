@@ -121,12 +121,12 @@
 	</div>
 	<!--Dashboard Pegawai Sudah Absen-->	
 	<?php } 
-		if ($dibaca == "dibaca"){
+		if ($status_acc == "Approved"){
 			$warna = 'bggreen2';
 			$tulisan = 'Berhasil!!!';
-		}elseif ($dibaca == "belum"){
+		}elseif ($status_acc == "Pending"){
 			$warna = 'bgorange2';
-			$tulisan = "Pending!!!";
+			$tulisan = 'Pending!!!';
 		};
 		if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_absen == "Tidak"){?>
 	<div class="col-sm-12">

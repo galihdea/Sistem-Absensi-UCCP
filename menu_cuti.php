@@ -19,9 +19,10 @@
 						<th class="headerno">No</th> 
 						<th class="header">Nama Pegawai</th> 
 						<th class="header">Tanggal</th>
+						<th class="header">Lokasi</th> 
 						<th class="header">Status</th> 
 						<th class="header">Aksi</th> 
-					</tr> 
+					</tr>
 				</thead> 
 				<tbody> 
 					<?php

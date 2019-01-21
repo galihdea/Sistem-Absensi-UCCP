@@ -28,9 +28,10 @@
     else{
         $boleh_absen = "Boleh";
     }
-    $read = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND DATE(tanggal)=CURDATE()");
+    $read = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND DATE(tanggal)=CURDATE() ORDER BY id_absensi DESC");
     $ambil = $read->fetch_array();
     $dibaca = $ambil['dibaca'];
+    $status_acc = $ambil['status_acc'];
 ?>
 
     <head>
