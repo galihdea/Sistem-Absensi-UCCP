@@ -89,7 +89,7 @@
 				<p style="font-size:40px; margin:5px; color:white; text-align:left;">Masuk</p>
 			</div>
 			<div class="col-sm-3">
-				<p style="font-size:60px; margin:12px; color:white;">99</p>
+				<p style="font-size:60px; margin:12px; color:white;"><?php echo $jumlahmasuk;?></p>
 			</div>
 			<div class="col-sm-12">
 				<p class="dashboard-detail">Klik disini..</p>
@@ -110,7 +110,7 @@
 				<p style="font-size:40px; margin:5px; color:white; text-align:left;">Tidak Masuk</p>
 			</div>
 			<div class="col-sm-3">
-				<p style="font-size:60px; margin:12px; color:white;">99</p>
+				<p style="font-size:60px; margin:12px; color:white;"><?php echo $jumlahmasuk;?></p>
 			</div>
 			<div class="col-sm-12">
 				<p class="dashboard-detail">Klik disini..</p>
