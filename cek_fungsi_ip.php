@@ -17,5 +17,8 @@
 
     $ambilLah = ambilIP($ip_address);
 
-    echo $ambilLah;
+    foreach($mbilLah as $key => $value)
+	{
+  		echo $key." punya nilai". $value;
+	}
 ?>
