@@ -17,16 +17,22 @@
 						<th class="headerno">No</th> 
 						<th class="header">Nama Pegawai</th> 
 						<th class="header">Status</th> 
-						<th class="header">Aksi</th> 
+						<th class="header">Keterangan</th> 
+						<th class="header">Tanggal Absen</th> 
+						<th class="header">Lokasi</th> 
 					</tr> 
 				</thead> 
 				<tbody> 
 					<?php
 						$i = 1;
-						$ambil_daftar_pegawai = $conn->query("SELECT * FROM pegawai");
-						while($pegawai=$ambil_daftar_pegawai->fetch_array()){
-							$id_luar = $pegawai['id_pegawai'];
-							$ambil_user_pegawai = $conn->query("SELECT * FROM user WHERE id_luar='$id_luar' AND status='Pegawai' ");
+						$ambil_daftar_absen = $conn->query("SELECT * FROM absensi WHERE status_acc='Approved' ORDER BY id_absensi DESC");
+						while($pegawaiuser=$ambil_daftar_pegawai->fetch_array())
+							$id_user = $pegawaiuser['id_user'];
+							$ambil_user = $conn->query("SELECT * FROM user WHERE id_user='$id_user'");
+							$user = $ambil_user->fetch_array();
+							$id_pegawai = $user['id_luar'];
+							$ambil_pegawai = $conn->query("SELECT * FROM pegawai WHERE id_pegawai='$id_pegawai'");
+							$pegawai = $ambil_pegawai->fetch_array();
 							$user = $ambil_user_pegawai->fetch_array();
 							echo '<tr class="tabel"> 
 						<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$i.'</td> 
@@ -38,8 +44,6 @@
 							<a class="btn blue four mini-btn bgred" href="#" data-toggle="tooltip" data-placement="bottom" title="Hapus"><i class="fa fa-trash-o"></i></a>
 						</td>  
 					</tr>';
-							$i++;
-						}
 					?>  
 				</tbody> 
 			</table>

@@ -19,6 +19,7 @@
 						<th class="headerno">No</th> 
 						<th class="header">Nama Pegawai</th> 
 						<th class="header">Keterangan</th> 
+						<th class="header">Lokasi</th> 
 						<th class="header">Status</th> 
 						<th class="header">Aksi</th> 
 					</tr> 
@@ -38,6 +39,9 @@
 						<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$i.'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['keterangan'].'</td>
+						<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;"> 
+							<a style="width:70px;" class="btn blue four mini-btn bggreen"> View</a> 
+						</td>
 						<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;">';
 						if ($pegawaiuser['status_acc']=="Approved" ){
 							echo '<a style="width:70px;" class="btn blue four mini-btn bggreen"> Approved</a>';
