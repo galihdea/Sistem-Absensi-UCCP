@@ -1,7 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-	<?php include 'header.php'; ?>
+	<?php include 'header.php'; 
+		$querypegawai = $conn->query("SELECT * FROM pegawai");
+		$jumlahpegawai = mysqli_num_rows($querypegawai);
+		$querymasuk = $conn->query("SELECT * FROM absensi WHERE status_absensi='masuk' AND DATE(tanggal)=CURDATE()");
+		$jumlahmasuk = mysqli_num_rows($querymasuk);
+		$querytidakmasuk = $conn->query("SELECT * FROM absensi WHERE (status_absensi='izin' OR status_absensi='cuti') AND status_acc='Approved' AND DATE(tanggal)=CURDATE()");
+		$jumlahtidakmasuk = mysqli_num_rows($querytidakmasuk);
+	?>
 	<script>
         //Value untuk mengisi Home / ....
         let page_header="..."
@@ -20,7 +27,7 @@
 				<p style="font-size:40px; margin:5px; color:white; text-align:left;">Pegawai</p>
 			</div>
 			<div class="col-sm-3">
-				<p style="font-size:60px; margin:12px; color:white;">99</p>
+				<p style="font-size:60px; margin:12px; color:white;"><?php echo $jumlahpegawai;?></p>
 			</div>
 			<div class="col-sm-12">
 				<p class="dashboard-detail">Lihat Pegawai..</p>
@@ -41,7 +48,7 @@
 				<p style="font-size:40px; margin:5px; color:white; text-align:left;">Masuk</p>
 			</div>
 			<div class="col-sm-3">
-				<p style="font-size:60px; margin:12px 0px; color:white;">99</p>
+				<p style="font-size:60px; margin:12px 0px; color:white;"><?php echo $jumlahmasuk;?></p>
 			</div>
 			<div class="col-sm-12">
 				<p class="dashboard-detail">Lihat Daftar Absen..</p>
@@ -59,7 +66,7 @@
 				<p style="font-size:40px; margin:5px; color:white; text-align:left;">Absen</p>
 			</div>
 			<div class="col-sm-3">
-				<p style="font-size:60px; margin:12px 0px; color:white;">99</p>
+				<p style="font-size:60px; margin:12px 0px; color:white;"><?php echo $jumlahtidakmasuk;?></p>
 			</div>
 			<div class="col-sm-12">
 				<p class="dashboard-detail">Lihat Pengajuan Absen..</p>
