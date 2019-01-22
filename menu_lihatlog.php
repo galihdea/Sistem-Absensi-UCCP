@@ -26,7 +26,7 @@
 					<?php
 						$i = 1;
 						$ambil_daftar_absen = $conn->query("SELECT * FROM absensi WHERE status_acc='Approved' ORDER BY id_absensi DESC");
-						while($pegawaiuser=$ambil_daftar_pegawai->fetch_array())
+						while($pegawaiuser=$ambil_daftar_pegawai->fetch_array()){
 							$id_user = $pegawaiuser['id_user'];
 							$ambil_user = $conn->query("SELECT * FROM user WHERE id_user='$id_user'");
 							$user = $ambil_user->fetch_array();
@@ -35,15 +35,15 @@
 							$pegawai = $ambil_pegawai->fetch_array();
 							$user = $ambil_user_pegawai->fetch_array();
 							echo '<tr class="tabel"> 
-						<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$i.'</td> 
-						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$user['username'].'</td> 
+						<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$i.'</td>  
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td>
-						<td align="center" class="isitabel" style="max-width: 10px; padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">
-							<a class="btn blue four mini-btn bggreen" href="#" data-toggle="tooltip" data-placement="bottom" title="Lihat"><i class="fa fa-eye"></i></a>
-							<a class="btn blue four mini-btn bgorange" href="#" data-toggle="tooltip" data-placement="bottom" title="Ubah"><i class="fa fa-edit"></i></a>
-							<a class="btn blue four mini-btn bgred" href="#" data-toggle="tooltip" data-placement="bottom" title="Hapus"><i class="fa fa-trash-o"></i></a>
-						</td>  
-					</tr>';
+						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['status_absensi'].'</td>
+						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['keterangan'].'</td>
+						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['tanggal'].'</td>
+						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['ip_address'].'</td>  
+						</tr>';
+						$i++;
+						}
 					?>  
 				</tbody> 
 			</table>
