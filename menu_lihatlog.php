@@ -33,7 +33,7 @@
 							$id_pegawai = $user['id_luar'];
 							$ambil_pegawai = $conn->query("SELECT * FROM pegawai WHERE id_pegawai='$id_pegawai'");
 							$pegawai = $ambil_pegawai->fetch_array();
-							$user = $ambil_user_pegawai->fetch_array();
+							$user = $ambil_user->fetch_array();
 							echo '<tr class="tabel"> 
 						<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$i.'</td>  
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td>
