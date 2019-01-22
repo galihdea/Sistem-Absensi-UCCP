@@ -54,7 +54,7 @@ echo tanggal_indo('2016-03-20'); // 20 Maret 2016
 		$acc = "Pending";
 	}
 	$querycekizinhariini = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND DATE(tanggal)=CURDATE() AND status_acc='Approved' AND (status_absensi=='izin' OR status_absensi='sakit' OR status_absensi='masuk')");
-	if(mysqli_num_rows($querycekizinhariini)>0){
+	if(mysqli_num_rows($querycekizinhariini)>0&&(($izin=='izin')||($izin=='sakit'))){
 		header('location:../menu_absenizin.php');
 	}
 	$queryizin = $conn->query("INSERT INTO absensi (id_user,status_absensi,status_acc,keterangan,ip_address,dibaca) VALUES ('$id_user','$izin','$acc','$keterangan','$ip_address','$dibaca')");
