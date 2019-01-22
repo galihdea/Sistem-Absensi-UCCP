@@ -26,7 +26,7 @@
 					<?php
 						$i = 1;
 						$ambil_daftar_absen = $conn->query("SELECT * FROM absensi WHERE status_acc='Approved' ORDER BY id_absensi DESC");
-						while($pegawaiuser=$ambil_daftar_pegawai->fetch_array()){
+						while($pegawaiuser=$ambil_daftar_absen->fetch_array()){
 							$id_user = $pegawaiuser['id_user'];
 							$ambil_user = $conn->query("SELECT * FROM user WHERE id_user='$id_user'");
 							$user = $ambil_user->fetch_array();
