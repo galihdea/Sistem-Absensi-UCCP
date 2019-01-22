@@ -43,6 +43,7 @@
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['ip_address'].'</td>  
 						</tr>';
 						$i++;
+						//$i++;
 						}
 					?>  
 				</tbody> 
