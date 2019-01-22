@@ -23,21 +23,15 @@
 				</thead> 
 				<tbody> 
 					<?php
+						$iduser = $_SESSION['id_user'];
 						$i = 1;
-						$ambil_daftar_pegawai = $conn->query("SELECT * FROM pegawai");
-						while($pegawai=$ambil_daftar_pegawai->fetch_array()){
-							$id_luar = $pegawai['id_pegawai'];
-							$ambil_user_pegawai = $conn->query("SELECT * FROM user WHERE id_luar='$id_luar' AND status='Pegawai' ");
-							$user = $ambil_user_pegawai->fetch_array();
+						$ambil_daftar_absen = $conn->query("SELECT * FROM absensi WHERE id_user='$iduser' ORDER BY tanggal DESC");
+						while($absen=$ambil_daftar_absen->fetch_array()){
 							echo '<tr class="tabel"> 
-						<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$i.'</td> 
-						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$user['username'].'</td> 
-						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td>
-						<td align="center" class="isitabel" style="max-width: 10px; padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">
-							<a class="btn blue four mini-btn bggreen" href="#" data-toggle="tooltip" data-placement="bottom" title="Lihat"><i class="fa fa-eye"></i></a>
-							<a class="btn blue four mini-btn bgorange" href="#" data-toggle="tooltip" data-placement="bottom" title="Ubah"><i class="fa fa-edit"></i></a>
-							<a class="btn blue four mini-btn bgred" href="#" data-toggle="tooltip" data-placement="bottom" title="Hapus"><i class="fa fa-trash-o"></i></a>
-						</td>  
+						<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$absen['tanggal'].'</td> 
+						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$absen['status_absensi'].'</td> 
+						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$absen['status_acc'].'</td>
+						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$absen['keterangan'].'</td>  
 					</tr>';
 							$i++;
 						}
