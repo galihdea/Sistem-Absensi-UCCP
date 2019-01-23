@@ -30,8 +30,17 @@
     }
     $read = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND DATE(tanggal)=CURDATE() ORDER BY id_absensi DESC");
     $ambil = $read->fetch_array();
-    $dibaca = $ambil['dibaca'];
     $status_acc = $ambil['status_acc'];
+
+    $query_izin = $conn->query("SELECT * FROM absensi WHERE dibaca='belum' AND status_absensi='izin' AND DATE(tanggal)=CURDATE()");
+    $ambil_izin = $query_izin->fetch_array();
+    $jml_izin = mysqli_num_rows($query_izin);
+
+    $query_cuti = $conn->query("SELECT * FROM absensi WHERE dibaca='belum' AND status_absensi='cuti'");
+    $ambil_cuti = $query_cuti->fetch_array();
+    $jml_cuti = mysqli_num_rows($query_cuti);
+
+    $jml_total = $jml_izin + $jml_cuti;  
 ?>
 
     <head>
@@ -199,48 +208,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <!-- ini yang diubah biar cuma 3 notifikasi aja --> 
                                 <li class="dropdown note" style="margin-left:200px;">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
-                                        class="fa fa-bell"></i> <span class="badge">5</span></a>
+                                        class="fa fa-bell"></i> <span class="badge"><?php echo $jml_total;?></span></a>
 
-                                    <ul class="dropdown-menu two" style="height:300px;" >
+                                    <ul class="dropdown-menu two" style="height:auto;" >
                                         <li>
                                             <div class="notification_header" >
-                                                <h3>You have 5 new notification</h3>
+                                                <h3>Anda memiliki <?php echo $jml_total;?> notifikasi</h3>
                                             </div>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="menu_izin.php">
                                                 <div class="user_img"><img src="images/in.jpg" alt=""></div>
                                                 <div class="notification_desc">
-                                                    <p>Lorem ipsum dolor sit amet</p>
-                                                    <p><span>1 hour ago</span></p>
+                                                    <p>Anda memiliki <?php echo $jml_izin;?> notifikasi izin</p>
+                                                    <p><span></span>></p>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </a>
                                         </li>
                                         <li class="odd">
-                                            <a href="#">
-                                                <div class="user_img"><img src="images/in5.jpg" alt=""></div>
+                                            <a href="menu_cuti.php">
+                                                <div class="user_img"><img src="images/in.jpg" alt=""></div>
                                                 <div class="notification_desc">
-                                                    <p>Lorem ipsum dolor sit amet </p>
-                                                    <p><span>1 hour ago</span></p>
+                                                    <p>Anda memiliki <?php echo $jml_cuti;?> notifikasi cuti</p>
+                                                    <p><span></span>></p>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="user_img"><img src="images/in8.jpg" alt=""></div>
-                                                <div class="notification_desc">
-                                                    <p>Lorem ipsum dolor sit amet </p>
-                                                    <p><span>1 hour ago</span></p>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="notification_bottom">
-                                                <a href="#">See all notification</a>
-                                            </div>
                                         </li>
                                     </ul>
                                 </li>
