@@ -12,13 +12,13 @@
 			<div class="form-body">
 				<form method="POST" action="functions/reset_password.php" class="form-horizontal">
 					<div class="form-group">
-						<label for="focusedinput" class="col-sm-2 control-label">Username Pegawai</label>
+						<label for="focusedinput" class="col-sm-2 control-label">Username</label>
 						<div class="col-sm-8">
 							<input name="username" type="text" class="form-control1" id="focusedinput" placeholder="Username" disabled>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="focusedinput" class="col-sm-2 control-label">Nama Pegawai</label>
+						<label for="focusedinput" class="col-sm-2 control-label">Nama</label>
 						<div class="col-sm-8">
 							<input name="namapegawai" type="text" class="form-control1" id="focusedinput" placeholder="Nama" disabled>
 						</div>

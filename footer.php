@@ -23,10 +23,12 @@
         <a href="admin_dashboard.php"><span class=" name-caret">
                 <?php echo $nama;?></span></a>
         <p>
-            <?php echo $_SESSION['jenis_user'];?>
+            <?php echo $_SESSION['jenis_user'];
+                $id_us = $_SESSION['id_user'];
+            ?>
         </p>
         <ul>
-            <li><a onclick="load_page()" class="tooltips" href="menu_dashboard.php"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
+            <li><a onclick="load_page()" class="tooltips" href="form_profile.php?id_user=<?php echo $id_us;?>"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
             <li><a onclick="load_page()" class="tooltips" href="logout.php"><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>
         </ul>
     </div>

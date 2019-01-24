@@ -2,9 +2,21 @@
 <html>
 <body>
 	<?php include 'header.php'; 
-		/* $id_pegawai = $_GET['id_pegawai'];
-		$querylihat = $conn->query("SELECT * FROM pegawai WHERE id_pegawai='$id_pegawai'");
-		$lihat = $querylihat->fetch_array(); */
+		 $id_user = $_GET['id_user'];
+		$querylihat = $conn->query("SELECT * FROM user WHERE id_user='$id_user'");
+		$lihat = $querylihat->fetch_array();
+		$id_luar = $lihat['id_luar'];
+		if($lihat['status']=='Pegawai'){
+			$queryambil = "SELECT * FROM pegawai WHERE id_pegawai='$id_luar'";
+		} 
+		elseif($lihat['status']=='Admin'){
+			$queryambil = "SELECT * FROM admin WHERE id_admin='$id_luar'";	
+		}
+		elseif($lihat['status']=='Super Admin'){
+			$queryambil = "SELECT * FROM super_admin WHERE id_sadmin='$id_luar'";	
+		}
+		$ambilAja = $conn->query($queryambil);
+		$ambil = $ambilAja->fetch_array();
 	?>
 	<script>
         //Value untuk mengisi Home / ....
@@ -17,22 +29,41 @@
 				<form action="menu_kelolapegawai.php" class="form-horizontal">
 					<div class="form-group">
 						<label for="focusedinput" class="col-sm-2 control-label lihat-data">Username</label>
-						<label class="col-sm-3 control-label lihat-data" id="user-pegawai"><!-- <?php echo $lihat['user_pegawai'];?> --></label>
+						<label class="col-sm-3 control-label lihat-data" id="user-pegawai"> <?php echo $lihat['username'];?></label>
 					</div>
+				
+				<!-- untuk pegawai -->
+				<?php	if($lihat['status']=='Pegawai'){ ?>
 					<div class="form-group">
 						<label for="focusedinput" class="col-sm-2 control-label lihat-data">Nama</label>
-						<label class="col-sm-3 control-label lihat-data" id="nama-pegawai"><!-- <?php echo $lihat['nama_pegawai'];?> --></label>
+						<label class="col-sm-3 control-label lihat-data" id="nama-pegawai"> <?php echo $ambil['nama_pegawai'];?></label>
 					</div>
 					<div class="form-group">
 						<label for="selector1" class="col-sm-2 control-label lihat-data">Divisi</label>
-						<label class="col-sm-3 control-label lihat-data" id="div-pegawai"><!-- <?php echo $lihat['divisi_pegawai'];?> --></label>
+						<label class="col-sm-3 control-label lihat-data" id="div-pegawai"> <?php echo $ambil['divisi_pegawai'];?> </label>
 					</div>
 					<div class="form-group">
 						<label for="selector1" class="col-sm-2 control-label lihat-data">Jabatan</label>
-						<label class="col-sm-3 control-label lihat-data" id="stat-pegawai"><!-- <?php echo $lihat['jabatan_pegawai'];?> --></label>
+						<label class="col-sm-3 control-label lihat-data" id="stat-pegawai"> <?php echo $ambil['jabatan_pegawai'];?> </label>
 					</div>
+				<?php	} ?>
+
+					<!-- untuk admin -->
+				<?php	if($lihat['status']=='Admin'){ ?>
+					<div class="form-group">
+						<label for="focusedinput" class="col-sm-2 control-label lihat-data">Nama</label>
+						<label class="col-sm-3 control-label lihat-data" id="nama-pegawai"> <?php echo $ambil['nama_admin'];?> </label>
+					</div>
+				<?php	} ?>
+				<?php	if($lihat['status']=='Super Admin'){ ?>
+					<div class="form-group">
+						<label for="focusedinput" class="col-sm-2 control-label lihat-data">Nama</label>
+						<label class="col-sm-3 control-label lihat-data" id="nama-pegawai"> <?php echo $ambil['nama_sadmin'];?> </label>
+					</div>
+				<?php	} ?>
+
 					<a href="menu_dashboard.php" button type="submit" class="btn btn-default">Kembali</button> </a>
-					<a href="form_resetpassword.php" button type="submit" class="btn btn-default">Reset Password</button> </a>
+					<a href="form_resetpassword.php?id_user=<?php echo $id_user;?>" button type="submit" class="btn btn-default">Reset Password</button> </a>
 				</form>
 			</div>
 		</div>
