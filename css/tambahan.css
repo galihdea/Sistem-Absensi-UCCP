@@ -161,3 +161,12 @@ a:hover {
 .tombol-back{
     padding:6px 12px!important;
 }
+
+@media (min-width: 768px){
+    .col-sm-3_5{
+        width: 32.83%;
+        float: left;
+        position: relative;
+        min-height: 1px;
+    }
+}
