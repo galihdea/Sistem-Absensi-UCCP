@@ -71,7 +71,7 @@ include 'functions/ip_check_function.php';
 					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Kota</label>
 					<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[3].'</label>
 					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Lokasi</label>
-					<a href="https://www.google.com/maps/search/?api=1&query='.$latlon.'"><label for="focusedinput" class="col-sm-10 control-label ratakiri" style="cursor: pointer;">Lihat di Google Maps</label></a>
+					<a href="https://www.google.com/maps/search/?api=1&query='.$latlon.'" target="_blank"><label for="focusedinput" class="col-sm-10 control-label ratakiri" style="cursor: pointer;">Lihat di Google Maps</label></a>
 				</div>
 				<!-- Modal footer -->
 		        <div class="modal-footer">
