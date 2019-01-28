@@ -33,7 +33,7 @@ include 'functions/ip_check_function.php';
 							$id_absensi = $pegawaiuser['id_absensi'];
 							$id_user = $pegawaiuser['id_user'];
 							$dataip = ambilIP($pegawaiuser['ip_address']);
-							var_dump($dataip);
+							//var_dump($dataip);
 							$j = 0;
 							foreach($dataip AS $key => $value){
 								$data[$j] = $value;
