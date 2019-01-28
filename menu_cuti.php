@@ -63,7 +63,7 @@ include 'functions/ip_check_function.php';
 	        
 	        <!-- Modal body -->
 	        <form method="POST" action="" class="form-horizontal">
-				<div class="form-group" style="margin-top: 15px;margin-left: 15px;margin-right: 15px;">
+				<div class="form-group" style="margin-top: 15px;margin-left: 15px;margin-right: 15px;margin-bottom: 15px">
 					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Alamat IP</label>
 					<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[0].'</label>
 					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Provinsi</label>
@@ -71,7 +71,7 @@ include 'functions/ip_check_function.php';
 					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Kota</label>
 					<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[3].'</label>
 					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Lokasi</label>
-					<a href="https://www.google.com/maps/search/?api=1&query='.$latlon.'"><label for="focusedinput" class="col-sm-10 control-label ratakiri">Lihat di Google Maps</label></a>
+					<a href="https://www.google.com/maps/search/?api=1&query='.$latlon.'"><label for="focusedinput" class="col-sm-10 control-label ratakiri" style="cursor: pointer;">Lihat di Google Maps</label></a>
 				</div>
 				<!-- Modal footer -->
 		        <div class="modal-footer">
