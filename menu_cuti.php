@@ -59,7 +59,6 @@ include 'functions/ip_check_function.php';
 	        <!-- Modal Header -->
 	        <div class="modal-header">
 	          <h4 class="modal-title">Detail Lokasi</h4>
-	          <button type="button" class="close" data-dismiss="modal">&times;</button>
 	        </div>
 	        
 	        <!-- Modal body -->
