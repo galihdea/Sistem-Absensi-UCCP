@@ -39,7 +39,7 @@
 	<div class="col-sm-12">
 		<div class="col-sm-2"></div>
 		<a href="menu_lihatlog.php" onclick="load_page()">
-		<div class="col-sm-4 bggreen2 dashboard" align="center" style="width: 32.83%;">
+		<div class="col-sm-3_5 col-xs-12 bggreen2 dashboard" align="center">
 			<div class="col-sm-3">
 				<i class="fa fa-check-circle" style="margin: 20px 0px !important; font-size:70px; margin:10px; color:white;"></i>
 			</div>
@@ -57,7 +57,7 @@
 		</a>
 		<div class="col-sm-1" style="margin:0px; padding: 0px; width:1%;"> &nbsp </div>
 		<a href="menu_cuti.php" onclick="load_page()">
-		<div class="col-sm-4 bgred2 dashboard" align="center" style="width: 32.83%;">
+		<div class="col-sm-3_5 col-xs-12 bgred2 dashboard" align="center">
 			<div class="col-sm-3">
 				<i class="fa fa-minus-circle" style="margin: 20px 0px !important; font-size:70px; margin:10px; color:white;"></i>
 			</div>
