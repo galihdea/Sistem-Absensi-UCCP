@@ -53,18 +53,18 @@ include 'functions/ip_check_function.php';
 							<a style="width:70px;" class="btn blue four mini-btn bgwhite" data-toggle="modal" data-target="#myModal'.$id_absensi.'"> View</a> 
 							<!-- The Modal -->
 	  <div class="modal fade" id="myModal'.$id_absensi.'">
-	    <div class="modal-dialog">
+	    <div class="modal-dialog"> 
 	      <div class="modal-content">
 	      
 	        <!-- Modal Header -->
 	        <div class="modal-header">
-	          <h4 class="modal-title">Filter</h4>
+	          <h4 class="modal-title">Detail Lokasi</h4>
 	          <button type="button" class="close" data-dismiss="modal">&times;</button>
 	        </div>
 	        
 	        <!-- Modal body -->
 	        <form method="POST" action="" class="form-horizontal">
-				<div class="form-group">
+				<div class="form-group" style="margin-top: 15px;margin-left: 15px;margin-right: 15px;">
 					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Alamat IP</label>
 					<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[0].'</label>
 					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Provinsi</label>
