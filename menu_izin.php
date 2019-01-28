@@ -2,6 +2,7 @@
 <html>
 <body>
 <?php include 'header.php'; 
+include 'functions/ip_check_function.php';
 	if ($_SESSION['jenis_user'] == "Super Admin" || $_SESSION['jenis_user'] == "Admin"){
 ?>
 	<script>
@@ -29,7 +30,16 @@
 						$i = 1;
 						$ambil_daftar_pegawai = $conn->query("SELECT * FROM absensi WHERE status_absensi='izin' AND CURDATE()=DATE(tanggal) ORDER BY id_absensi DESC");
 						while($pegawaiuser=$ambil_daftar_pegawai->fetch_array()){
+							$id_absensi = $pegawaiuser['id_absensi'];
 							$id_user = $pegawaiuser['id_user'];
+							$dataip = ambilIP($pegawaiuser['ip_address']);
+							//var_dump($dataip);
+							$j = 0;
+							foreach($dataip AS $key => $value){
+								$data[$j] = $value;
+								$j++;
+							}
+							$latlon = $data[4].",".$data[5];
 							$ambil_user = $conn->query("SELECT * FROM user WHERE id_user='$id_user'");
 							$user = $ambil_user->fetch_array();
 							$id_pegawai = $user['id_luar'];
@@ -40,6 +50,40 @@
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['keterangan'].'</td>
 						<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;"> 
+							<a style="width:70px;" class="btn blue four mini-btn bggreen" data-toggle="modal" data-target="#myModal'.$id_absensi.'"> View</a> 
+							<!-- The Modal -->
+	  <div class="modal fade" id="myModal'.$id_absensi.'">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	      
+	        <!-- Modal Header -->
+	        <div class="modal-header">
+	          <h4 class="modal-title">Filter</h4>
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        </div>
+	        
+	        <!-- Modal body -->
+	        <form method="POST" action="" class="form-horizontal">
+				<div class="form-group">
+					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Alamat IP</label>
+					<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[0].'</label>
+					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Provinsi</label>
+					<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[2].'</label>
+					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Kota</label>
+					<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[3].'</label>
+					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Lokasi</label>
+					<a href="https://www.google.com/maps/search/?api=1&query='.$latlon.'"><label for="focusedinput" class="col-sm-10 control-label ratakiri">Lihat di Google Maps</label></a>
+				</div>
+				<!-- Modal footer -->
+		        <div class="modal-footer">
+		          	<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		        </div>
+			</form>
+	        
+	      </div>
+	    </div>
+	  </div>
+	</div>
 							<a style="width:70px;" class="btn blue four mini-btn bgwhite"> View</a> 
 						</td>
 						<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;">';

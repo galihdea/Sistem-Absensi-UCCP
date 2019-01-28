@@ -206,9 +206,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     </script>
                                 </li>
                                 <!-- ini yang diubah biar cuma 3 notifikasi aja --> 
-                                <li class="dropdown note" style="margin-left:200px;">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i
-                                        class="fa fa-bell"></i> <span class="badge"><?php echo $jml_total;?></span></a>
+                                <li class="dropdown note" style="margin-left:200px; <?php if ($_SESSION['jenis_user'] == "Pegawai") echo "visibility: hidden;"?>">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i> <span class="badge"><?php echo $jml_total;?></span></a>
 
                                     <ul class="dropdown-menu two" style="height:auto;" >
                                         <li>
@@ -221,7 +220,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <div class="user_img"><img src="images/in.jpg" alt=""></div>
                                                 <div class="notification_desc">
                                                     <p>Anda memiliki <?php echo $jml_izin;?> notifikasi izin</p>
-                                                    <p><span></span>></p>
+                                                    <p><span></span></p>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </a>
