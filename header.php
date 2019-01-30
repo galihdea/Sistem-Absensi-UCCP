@@ -41,6 +41,49 @@
     $jml_cuti = mysqli_num_rows($query_cuti);
 
     $jml_total = $jml_izin + $jml_cuti;  
+
+    //notif tanggal
+    function waktu_lalu($timestamp){
+        $selisih = strtotime("+7 hours") - strtotime($timestamp) ;
+     
+        $detik = $selisih ;
+        $menit = round($selisih / 60 );
+        $jam = round($selisih / 3600 );
+        $hari = round($selisih / 86400 );
+        $minggu = round($selisih / 604800 );
+        $bulan = round($selisih / 2419200 );
+        $tahun = round($selisih / 29030400 );
+     
+        if ($detik <= 60) {
+            $waktu = $detik.' detik yang lalu';
+        } else if ($menit <= 60) {
+            $waktu = $menit.' menit yang lalu';
+        } else if ($jam <= 24) {
+            $waktu = $jam.' jam yang lalu';
+        } else if ($hari <= 7) {
+            $waktu = $hari.' hari yang lalu';
+        } else if ($minggu <= 4) {
+            $waktu = $minggu.' minggu yang lalu';
+        } else if ($bulan <= 12) {
+            $waktu = $bulan.' bulan yang lalu';
+        } else {
+            $waktu = $tahun.' tahun yang lalu';
+        }   
+        return $waktu;
+    }
+    $tanggal_izin = $conn->query('SELECT MAX(tanggal) as waktu FROM `absensi` where status_absensi="izin" AND status_acc="pending" AND dibaca="belum" AND DATE(tanggal)=CURDATE()');
+    $tanggal = $tanggal_izin->fetch_array();
+    if (($tanggal['waktu'])!=NULL)
+        $notif_izin = waktu_lalu($tanggal['waktu']);
+    else
+        $notif_izin = " ";
+
+    $tanggal_cuti = $conn->query('SELECT MAX(tanggal) as waktu FROM `absensi` where status_absensi="cuti" AND status_acc="pending" AND dibaca="belum"');
+    $tanggal = $tanggal_cuti->fetch_array();
+    if (($tanggal['waktu'])!=NULL)
+        $notif_cuti =  waktu_lalu($tanggal['waktu']);
+    else
+        $notif_cuti = " ";
 ?>
 
     <head>
@@ -220,7 +263,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <div class="user_img"><img src="images/in.jpg" alt=""></div>
                                                 <div class="notification_desc">
                                                     <p>Anda memiliki <?php echo $jml_izin;?> notifikasi izin</p>
-                                                    <p><span></span></p>
+                                                    <p><span><?php echo $notif_izin;?></span></p>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </a>
@@ -230,7 +273,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <div class="user_img"><img src="images/in.jpg" alt=""></div>
                                                 <div class="notification_desc">
                                                     <p>Anda memiliki <?php echo $jml_cuti;?> notifikasi cuti</p>
-                                                    <p><span></span>></p>
+                                                    <p><span><?php echo $notif_cuti;?></span></p>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </a>

@@ -62,11 +62,12 @@
 					</div>
 				<?php	} ?>
 
-					<a href="menu_dashboard.php" button type="submit" class="btn btn-default">Kembali</button> </a>
-					<a href="form_resetpassword.php?id_user=<?php echo $id_user;?>" button type="submit" class="btn btn-default">Reset Password</button> </a>
+					<a href="menu_dashboard.php" button type="submit" class="btn btn-default" style="margin-left: 0px !important">Kembali</button> </a>
+					<a data-toggle="modal" data-target="#modalResetPass" button type="submit" class="btn btn-default">Reset Password</button> </a>
 				</form>
 			</div>
 		</div>
+ <?php include 'form_resetpassword.php'; ?>
  <?php include 'footer.php'; ?>
 </body>
 </html>

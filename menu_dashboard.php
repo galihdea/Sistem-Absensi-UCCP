@@ -16,10 +16,6 @@
 	<!--Dashboard Admin and Super Admin-->
 	<?php if ($_SESSION['jenis_user'] == "Super Admin" || $_SESSION['jenis_user'] == "Admin"){?>
 	<div class="col-sm-12">
-		<?php $tanggal_cuti = $conn->query('SELECT MAX(tanggal) as waktu FROM `absensi` where status_absensi="izin" AND status_acc="pending" AND dibaca="belum"');
-                                                        $tanggal = $tanggal_cuti->fetch_array();
-                                                        echo date("h:i", time()/*-strtotime($tanggal['waktu'])*/);
-                                                    ?> 
 		<div class="col-sm-2"></div>
 		<a href="menu_kelolapegawai.php" onclick="load_page()">
 		<div class="col-sm-8 bgblue2 dashboard" align="center" style="margin-bottom: 10px;">
