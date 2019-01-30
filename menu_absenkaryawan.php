@@ -24,7 +24,7 @@
                     <div class="buttons login">
                     </div>
                     <form method="POST" action="functions/absen_masuk.php">
-                        <input name="username" type="text" class="text" value="Masukkan id anda" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}">
+                        <input name="username" type="text" class="text" value="Masukkan username anda" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">
                         <input name="password" type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
 
                         <div class="submit"><input type="submit" onclick="load_page()" value="Hadir"></div>
