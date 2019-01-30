@@ -6,6 +6,7 @@
 		$querylihat = $conn->query("SELECT * FROM pegawai WHERE id_pegawai='$id_pegawai'");
 		$lihat = $querylihat->fetch_array();
 	 ?>
+    <script src="js/validator.js">//script validasi form. Source: http://1000hz.github.io/bootstrap-validator/</script>
 	<script>
         //Value untuk mengisi Home / ....
         let page_header="Ubah Pegawai"
@@ -14,7 +15,7 @@
 		<h3 class="inner-tittle two">Contoh Form Ubah Pegawai</h3>
 		<div class="grid-1">
 			<div class="form-body">
-				<form method="POST" action="functions/ubah_pegawai.php?id_pegawai=<?php echo $id_pegawai;?>" class="form-horizontal">
+				<form method="POST" action="functions/ubah_pegawai.php?id_pegawai=<?php echo $id_pegawai;?>" class="form-horizontal" data-toggle="validator" role="form">
 					<div class="form-group">
 						<label for="focusedinput" class="col-sm-2 control-label">Username Pegawai</label>
 						<div class="col-sm-8">
@@ -25,7 +26,7 @@
 					<div class="form-group">
 						<label for="focusedinput" class="col-sm-2 control-label">Nama Pegawai</label>
 						<div class="col-sm-8">
-							<input name="namapegawai" type="text" class="form-control1" id="focusedinput" placeholder="Nama" value="<?php echo $lihat['nama_pegawai'];?>" required>
+							<input name="namapegawai" type="text" class="form-control1" id="inputName" placeholder="Nama" value="<?php echo $lihat['nama_pegawai'];?>" required>
 						</div>
 					</div>
 					<div class="form-group">
