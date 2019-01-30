@@ -50,7 +50,7 @@ include 'functions/ip_check_function.php';
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['keterangan'].'</td>
 						<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;"> 
-							<a style="width:70px;" class="btn blue four mini-btn bgwhite" data-toggle="modal" data-target="#myModal'.$id_absensi.'"> View</a> 
+							<a style="width:70px;" class="btn blue four mini-btn bglblue" data-toggle="modal" data-target="#myModal'.$id_absensi.'"> View</a> 
 							<!-- The Modal -->
 	  <div class="modal fade" id="myModal'.$id_absensi.'">
 	    <div class="modal-dialog"> 
@@ -98,9 +98,13 @@ include 'functions/ip_check_function.php';
 							echo '<a style="cursor:default;" class="btn blue four mini-btn bgblue" href="#" data-toggle="tooltip" data-placement="bottom" title="Done">Done</a>
 						</td>  
 					</tr>';
-						}else{	
-							echo '<a onclick="return konfirmasi1()" class="btn blue four mini-btn bggreen" href="functions/ubah_status_acc_cuti.php?status=Approved&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Approved"><i class="fa fa-check"></i></a>
-							<a onclick="return konfirmasi2()" class="btn blue four mini-btn bgred" href="functions/ubah_status_acc_cuti.php?status=Decline&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Decline"><i class="fa fa-times"></i></a>
+						}else{
+							$t1 = "'untuk mengubah status menjadi `Approved`?'";
+							$t2 = "'untuk mengubah status menjadi `Decline`?'";
+							$tanya = 'onclick="return konfirmasi('.$t1.')"';	
+							echo '<a '.$tanya.' class="btn blue four mini-btn bggreen" href="functions/ubah_status_acc_cuti.php?status=Approved&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Approved"><i class="fa fa-check"></i></a>';
+							$tanya = 'onclick="return konfirmasi('.$t2.')"';
+							echo '<a '.$tanya.' class="btn blue four mini-btn bgred" href="functions/ubah_status_acc_cuti.php?status=Decline&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Decline"><i class="fa fa-times"></i></a>
 						</td>  
 					</tr>';
 						}

@@ -310,14 +310,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         function load_page() {
                             document.getElementById("load-page").style.display = "block";
                         }
-                        function konfirmasi1(){
-	                    	tanya = confirm('Apakah anda yakin untuk mengubah status menjadi "Approved" ?');
-		                    if (tanya == true) return true;
-		                    else return false;
-                        }
-	                    function konfirmasi2(){
-		                    tanya = confirm('Apakah anda yakin untuk mengubah status menjadi "Decline" ?');
-		                    if (tanya == true) return true;
-		                    else return false;
+                        function konfirmasi(ask){
+                            var asking = 'Apakah anda yakin untuk'+ask;
+                            tanya = confirm(asking);
+                            if (tanya == true) return true;
+                            else return false;
                         }
                     </script>

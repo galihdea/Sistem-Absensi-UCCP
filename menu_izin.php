@@ -50,7 +50,7 @@ include 'functions/ip_check_function.php';
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['keterangan'].'</td>
 						<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;"> 
-							<a style="width:70px;" class="btn blue four mini-btn bggreen" data-toggle="modal" data-target="#myModal'.$id_absensi.'"> View</a> 
+							<a style="width:70px;" class="btn blue four mini-btn bglblue" data-toggle="modal" data-target="#myModal'.$id_absensi.'"> View</a> 
 							<!-- The Modal -->
 	  <div class="modal fade" id="myModal'.$id_absensi.'">
 	    <div class="modal-dialog">
@@ -84,7 +84,6 @@ include 'functions/ip_check_function.php';
 	    </div>
 	  </div>
 	</div>
-							<a style="width:70px;" class="btn blue four mini-btn bgwhite"> View</a> 
 						</td>
 						<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;">';
 						if ($pegawaiuser['status_acc']=="Approved" ){

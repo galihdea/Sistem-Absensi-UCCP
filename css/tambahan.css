@@ -73,8 +73,8 @@
 }
 
 .bglblue {
-    background: #00C6D7;
-    color: #fff;
+    background: #00C6D7 !important;
+    color: #fff !important;
     font-size: 1em;
     outline: none;
     border: none;

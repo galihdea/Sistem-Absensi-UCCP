@@ -139,10 +139,10 @@
 			<div class="col-sm-6">
 				<p style="font-size:20px; margin:10px 0px 0px 5px; color:white; text-align:left;">Absen</p>
 				<p style="font-size:40px; margin:5px; color:white; text-align:left;"><?php echo $tulisan;?></p>
-			</div>
+			</div><!-- 
 			<div class="col-sm-3">
 				<p style="font-size:60px; margin:12px; color:white;">99</p>
-			</div>
+			</div> -->
 		</div>
 		</a>
 		<div class="col-sm-2"></div>
