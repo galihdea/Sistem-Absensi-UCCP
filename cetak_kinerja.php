@@ -10,7 +10,7 @@
 <html>
 <head>
 	<title>Cetak Kinerja Pegawai</title>
-
+	<script type="text/javascript">window.print()</script>
 </head>
 <body>
 	<table width="100%">
@@ -68,4 +68,3 @@
 	</table>
 </body>
 </html>
-<script type="text/javascript">window.print();</script>
