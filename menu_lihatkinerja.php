@@ -17,9 +17,16 @@ if ($_SESSION['jenis_user'] == "Super Admin" || $_SESSION['jenis_user'] == "Admi
     <h3 class="inner-tittle two" style="margin-bottom:5px;"><i class="fa fa-list-ul"></i> &nbsp Riwayat Kinerja</h3>
     <div class="container">
         <!-- Button to Open the Modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-            Filter
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"style=" margin-right: 5px;">
+            <i class="fa fa-filter"></i>
+            &nbspFilter
         </button>
+        <a href="" onclick="load_page()">
+        <button type="button" class="btn btn-success" style="margin-left: 5px;">
+            <i class="fa fa-print"></i>
+            &nbspPrint
+        </button>
+        </a>
 
         <!-- The Modal -->
         <div class="modal fade" id="myModal">
