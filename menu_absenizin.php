@@ -33,7 +33,7 @@
                                             <option value="" disabled selected style="display:none;">---Pilih
                                                 Jenis Izin---</option>
                                             <option value="sakit">SAKIT</option>
-                                            <option value="cuti">CUTI</option>
+                                            <!-- <option value="cuti">CUTI</option> -->
                                             <option value="izin">IZIN</option>
                                         </select></div>
                                 </div>
@@ -43,7 +43,7 @@
 										let form_cuti = document.getElementById("form_cuti");
 										let form_izin = document.getElementById("form_izin");
 										switch(form_param){
-											case "sakit":
+										case "sakit":
 										    form_izin.innerHTML='';form_cuti.innerHTML='';
 											form_sakit.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Sakit</label><div class="col-sm-8"><textarea name="keterangan_sakit" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div></div>';
 											break;
@@ -74,11 +74,6 @@
         <!--//forms-->
     </div>
     <!--//outer-wp-->
-    <!--footer section start-->
-    <footer>
-        <p>&copy 2016 Augment . All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts.</a></p>
-    </footer>
-    <!--footer section end-->
     <?php } include 'footer.php';?>
 </body>
 
