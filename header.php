@@ -316,4 +316,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             if (tanya == true) return true;
                             else return false;
                         }
+                        function validate_date() {
+                            let date01 = Date.parse(document.getElementById('date-01').value);
+                            let date02 = Date.parse(document.getElementById('date-02').value);
+                            let sekarang = new Date().getTime();
+                            if (date02-date01<0){//Tidak boleh izin dari besok ke kemarin
+                                alert("tolong isi tanggal yang valid!")
+                            }
+                            else if(date01-sekarang<=0-86400000){//Tidak boleh izin dari kemarin. Utk kolom dari
+                                alert("Tidak boleh izin dari tanggal kemarin")
+                            }
+                            else{
+                                load_page();
+                            }
+                        }
                     </script>
