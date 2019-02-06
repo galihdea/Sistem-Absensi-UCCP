@@ -7,10 +7,13 @@
 
 	}
 	else{
+		$upload_image = $_FILES['gambar']['name'];
 		$image = $_FILES['gambar']['tmp_name'];
 		$image = addslashes(file_get_contents($image));
-		$query_simpan = $conn->query("UPDATE user SET gambar='$image' WHERE id_user='$id_user'");
+		$query_simpan = $conn->query("UPDATE user SET gambar='$image',nama_gambar='$upload_image' WHERE id_user='$id_user'");
 		if($query_simpan){
+			$folder = "../images/";
+			move_uploaded_file($image, "../images/".$upload_image);
 			$loco = 'location:../form_profile.php?id_user='.$id_user.'';
 			header($loco);
 		}
