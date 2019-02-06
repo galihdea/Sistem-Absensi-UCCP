@@ -64,6 +64,7 @@
 					<td>' . $kinerja_huruf . '</td>  
 					</tr>';
         		$i++;
+        	}
 		?>
 	</table>
 </body>
