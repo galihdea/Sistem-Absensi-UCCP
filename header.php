@@ -260,7 +260,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         </li>
                                         <li>
                                             <a href="menu_izin.php">
-                                                <div class="user_img"><img src="images/in.jpg" alt=""></div>
+                                                <div class="user_img"><img src="images/izin.png" alt=""></div>
                                                 <div class="notification_desc">
                                                     <p>Anda memiliki <?php echo $jml_izin;?> notifikasi izin</p>
                                                     <p><span><?php echo $notif_izin;?></span></p>
@@ -270,7 +270,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         </li>
                                         <li class="odd">
                                             <a href="menu_cuti.php">
-                                                <div class="user_img"><img src="images/in.jpg" alt=""></div>
+                                                <div class="user_img"><img src="images/kalender.jpg" alt=""></div>
                                                 <div class="notification_desc">
                                                     <p>Anda memiliki <?php echo $jml_cuti;?> notifikasi cuti</p>
                                                     <p><span><?php echo $notif_cuti;?></span></p>
