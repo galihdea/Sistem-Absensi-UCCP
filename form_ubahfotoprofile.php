@@ -18,19 +18,18 @@
     <h3 class="inner-tittle two">Contoh Form Ubah Foto Profile</h3>
     <div class="grid-1">
         <div class="form-body">
-            <form method="POST" action="functions/ubah_foto.php?id_pegawai=<?php echo $id_pegawai;?>"
+            <form method="POST" action="functions/ubah_foto.php?id_user=<?php echo $id_user;?>"
                 class="form-horizontal" data-toggle="validator" role="form" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="focusedinput" class="col-sm-2 control-label">Foto baru</label>
+                    <label for="focusedinput" class="col-sm-2" style="padding-left: 26px;width: 10.666667%;">Foto baru</label>
                     <div class="col-sm-8">
-					<br>
-                        <input type="file" name="gambar" id="fileToUpload">
+                        <input type="file" name="gambar" id="fileToUpload" style="background:#FFFFFF;border:1px solid #FFFFFF;color:#000000">
                     </div>
                 </div>
 
 
                 <a href="form_profile.php?id_user=<?php echo $id_user;?>" class="btn blue four bgred tombol-back">Cancel</a>
-                <button type="submit" class="btn btn-default" Value="Upload Image" >Upload</button>
+                <button type="submit" class="btn btn-default" Value="Upload Image" style="margin-left: 21px;">Upload</button>
             </form>
         </div>
     </div>

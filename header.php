@@ -326,8 +326,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             else if(date01-sekarang<=0-86400000){//Tidak boleh izin dari kemarin. Utk kolom dari
                                 alert("Tidak boleh izin dari tanggal kemarin")
                             }
-                            else{
-                                load_page();
-                            }
+
                         }
                     </script>
