@@ -21,7 +21,7 @@ if ($_SESSION['jenis_user'] == "Super Admin" || $_SESSION['jenis_user'] == "Admi
             <i class="fa fa-filter"></i>
             &nbspFilter
         </button>
-        <a href="cetak_kinerja.php?tanggal_awal='<?php echo $tanggal_awal;?>'&tanggal_akhir='<?php echo $tanggal_akhir;?>'&jumlah_hari='<?php echo $jumlah_hari;?>'" onclick="load_page()">
+        <a href="cetak_kinerja.php?tanggal_awal=<?php echo $tanggal_awal;?>&tanggal_akhir=<?php echo $tanggal_akhir;?>&jumlah_hari=<?php echo $jumlah_hari;?>" target="_blank">
         <button type="button" class="btn btn-success" style="margin-left: 5px;">
             <i class="fa fa-print"></i>
             &nbspPrint
