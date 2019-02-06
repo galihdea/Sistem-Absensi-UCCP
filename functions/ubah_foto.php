@@ -13,7 +13,8 @@
 		$query_simpan = $conn->query("UPDATE user SET gambar='$image',nama_gambar='$upload_image' WHERE id_user='$id_user'");
 		if($query_simpan){
 			$folder = "../images/";
-			move_uploaded_file($image, "../images/".$upload_image);
+			$target_file = $folder . basename($_FILES['gambar']['tmp_name']);
+			move_uploaded_file($image,$target_file);
 			$loco = 'location:../form_profile.php?id_user='.$id_user.'';
 			header($loco);
 		}
