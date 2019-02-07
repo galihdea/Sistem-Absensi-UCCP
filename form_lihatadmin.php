@@ -8,19 +8,21 @@
 	?>
     <div class="modal fade" id="modalLihat<?php echo $id_luar;?>">
 		<div class="col-sm-2"></div>
-		<div class="grid-1 col-sm-9">
+		<div class="col-sm-9">
 			<!-- Modal Header -->
-		    <h2 class="header-modal">Lihat Admin</h2>
+		    
 			<div class="grid-1">
+			<h3 class="inner-tittle two">Contoh Form Lihat Admin</h3>
 				<div class="form-body margin-form">
 					<form action="menu_kelolaadmin.php" class="form-horizontal">
-						<div class="form-group">
-							<label for="focusedinput" class="col-sm-2 control-label ratakiri">Username Admin</label>
-							<label class="col-sm-3 control-label lihat-data" id="user-admin"><?php echo $lihat['user_admin'];?></label>
+						<div class="form-group" align="left">
+							<label for="focusedinput" class="col-sm-3 control-label">Username Admin</label>
+							<label class=" control-label ratakiri lihat-data" id="user-admin"><?php echo $lihat['user_admin'];?></label>
 						</div>
-						<div class="form-group">
-							<label for="focusedinput" class="col-sm-2 control-label ratakiri">Nama Admin</label>
-							<label class="col-sm-3 control-label lihat-data" id="nama-admin"><?php echo $lihat['nama_admin'];?></label>
+						
+						<div class="form-group" align="left">
+							<label for="focusedinput" class="col-sm-3 control-label">Nama Admin</label>
+							<label class=" control-label lihat-data" id="nama-admin"><?php echo $lihat['nama_admin'];?></label>
 						</div>
 						
 						<div  align="right">

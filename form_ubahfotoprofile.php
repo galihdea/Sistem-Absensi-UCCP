@@ -15,8 +15,9 @@
     </script>
     <!--custom-widgets-->
     <div class="modal fade" id="modalFoto">
-    <h3 class="inner-tittle two">Contoh Form Ubah Foto Profile</h3>
-    <div class="grid-1">
+    <div class="col-sm-2"></div>
+		<div class="grid-1 col-sm-9">
+        <h2 class="header-modal">Ubah Foto</h2>
         <div class="form-body">
             <form method="POST" enctype="multipart/form-data" action="upload.php?id_user=<?php echo $id_user;?>"
                 class="form-horizontal" data-toggle="validator" role="form" enctype="multipart/form-data">
