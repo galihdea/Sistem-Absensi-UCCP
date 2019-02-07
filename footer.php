@@ -19,8 +19,8 @@
     <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
     <!--/down-->
     <div class="down">
-        <a href="admin_dashboard.php"><img src="images/admin.jpg"></a>
-        <a href="admin_dashboard.php"><span class=" name-caret">
+        <a href="menu_dashboard.php"><img width="100px" height="100px" src="<?php echo $gambar;?>"></a>
+        <a href="menu_dashboard.php"><span class=" name-caret">
                 <?php echo $nama;?></span></a>
         <p>
             <?php echo $_SESSION['jenis_user'];

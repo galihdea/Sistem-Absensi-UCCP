@@ -84,6 +84,12 @@
         $notif_cuti =  waktu_lalu($tanggal['waktu']);
     else
         $notif_cuti = " ";
+
+    //gambar
+    $query_ambi_gambar = $conn->query("SELECT * FROM user WHERE id_user='$id_user'");
+    $ambi_gambar = $query_ambi_gambar->fetch_array();
+    $gambar = "uploads/".$ambi_gambar['nama_gambar'];
+
 ?>
 
     <head>
