@@ -15,14 +15,15 @@
     </script>
     <!--custom-widgets-->
     <div class="modal fade" id="modalFoto">
-    <h3 class="inner-tittle two">Contoh Form Ubah Foto Profile</h3>
-    <div class="grid-1">
+    <div class="col-sm-2"></div>
+		<div class="grid-1 col-sm-9">
+        <h2 class="header-modal">Ubah Foto</h2>
         <div class="form-body">
             <form method="POST" action="functions/ubah_foto.php?id_user=<?php echo $id_user;?>"
                 class="form-horizontal" data-toggle="validator" role="form" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="focusedinput" class="col-sm-2" style="padding-left: 26px;width: 10.666667%;">Foto baru</label>
-                    <div class="col-sm-8">
+                    <label for="focusedinput" class="col-sm-3" style="padding-left: 26px;width: 10.666667%;">Foto baru</label>
+                    <div class="col-sm-9">
                         <input type="file" name="gambar" id="fileToUpload" style="background:#FFFFFF;border:1px solid #FFFFFF;color:#000000">
                     </div>
                 </div>

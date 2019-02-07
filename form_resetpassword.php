@@ -27,7 +27,7 @@
 		}
 	?>
 	<div class="modal fade" id="modalResetPass">
-		<div class="col-sm-2"></div>>
+		<div class="col-sm-2"></div>
 		<div class="grid-1 col-sm-9">
 			<!-- Modal Header -->
 		    <h2 class="header-modal">Reset Password</h2>
