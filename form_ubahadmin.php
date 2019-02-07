@@ -16,18 +16,18 @@
 	<div class="col-sm-2"></div>
 	<div class="col-sm-9">
 		<div class="grid-1">
-		<h3 class="inner-tittle two">Contoh Form Ubah Admin</h3>
+		<h3 class="inner-tittle two">Contoh Form Ubah Admin</h3><hr>
 			<div class="form-body margin-form">
 				<form method="POST" action="functions/ubah_admin.php?id_admin=<?php echo $id_admin;?>" class="form-horizontal" data-toggle="validator" role="form">
 					<div class="form-group">
-						<label for="focusedinput" class="col-sm-2 control-label ratakiri">Username Admin</label>
+						<label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Username Admin</label>
 						<div class="col-sm-10">
 							<input name="username" type="text" class="form-control1" id="focusedinput" placeholder="Username" value="<?php echo $lihat['user_admin'];?>" disabled="">
 						</div>
 					</div>
 					
 					<div class="form-group">
-						<label for="focusedinput" class="col-sm-2 control-label ratakiri">Nama Admin</label>
+						<label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Nama Admin</label>
 						<div class="col-sm-10">
 							<input name="namaadmin" type="text" class="form-control1" id="inputName" placeholder="Nama" value="<?php echo $lihat['nama_admin'];?>" required>
 						</div>

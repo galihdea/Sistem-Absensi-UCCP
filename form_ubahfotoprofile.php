@@ -17,7 +17,7 @@
     <div class="modal fade" id="modalFoto">
     <div class="col-sm-2"></div>
 		<div class="grid-1 col-sm-9">
-        <h2 class="header-modal">Ubah Foto</h2>
+        <h2 class="header-modal" style="padding-left: 9px;">Ubah Foto</h2><hr>
         <div class="form-body">
             <form method="POST" enctype="multipart/form-data" action="upload.php?id_user=<?php echo $id_user;?>"
                 class="form-horizontal" data-toggle="validator" role="form" enctype="multipart/form-data">

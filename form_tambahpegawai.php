@@ -15,19 +15,19 @@
 	<div class="col-sm-7">
 
             <div class="grid-1"style="margin-left:10px;width: 1052px;height: 438px;">
-                <h3 class="inner-tittle two">Contoh Form Tambah Pegawai</h3>
+                <h3 class="inner-tittle two">Contoh Form Tambah Pegawai</h3><hr>
                 <div class="form-body margin-form">
                     <form method="POST" action="functions/tambah_pegawai.php" class="form-horizontal"
                         data-toggle="validator" role="form">
                         <div class="form-group">
-                            <label for="focusedinput" class="col-sm-2 control-label ratakiri">Username Pegawai</label>
+                            <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Username Pegawai</label>
                             <div class="col-sm-10">
                                 <input name="username" type="text" class="form-control1" id="inputName"
                                     placeholder="Username" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="focusedinput" class="col-sm-2 control-label ratakiri">Password Pegawai</label>
+                            <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Password Pegawai</label>
                             <div class="col-sm-10">
                                 <input name="password" type="password" data-minlength="6" class="form-control"
                                     id="inputPassword" placeholder="Password" required>
@@ -35,14 +35,14 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="focusedinput" class="col-sm-2 control-label ratakiri">Nama Pegawai</label>
+                            <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Nama Pegawai</label>
                             <div class="col-sm-10">
                                 <input name="namapegawai" type="text" class="form-control1" id="inputName"
                                     placeholder="Nama" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="selector1" class="col-sm-2 control-label ratakiri">Divisi Pegawai</label>
+                            <label for="selector1" class="col-sm-2 control-label ratakiri konten-modal">Divisi Pegawai</label>
                             <div class="col-sm-10">
                                 <select name="divisipegawai" id="selector1" class="form-control1" required>
                                     <option value="A">A</option>
@@ -52,7 +52,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="selector1" class="col-sm-2 control-label ratakiri">Status Pegawai</label>
+                            <label for="selector1" class="col-sm-2 control-label ratakiri konten-modal">Status Pegawai</label>
                             <div class="col-sm-10">
                                 <select name="statuspegawai" id="selector1" class="form-control1" required>
                                     <option value="Manager Divisi">Manager Divisi</option>

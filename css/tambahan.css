@@ -208,3 +208,8 @@ a:hover {
         min-height: 1px;
     }
 }
+
+.konten-modal{
+    padding-left: 30px!important;
+    padding-right: 0px!important;
+}

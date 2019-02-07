@@ -12,16 +12,16 @@
 			<!-- Modal Header -->
 		    
 			<div class="grid-1">
-			<h3 class="inner-tittle two">Contoh Form Lihat Admin</h3>
+			<h3 class="inner-tittle two">Contoh Form Lihat Admin</h3><hr>
 				<div class="form-body margin-form">
 					<form action="menu_kelolaadmin.php" class="form-horizontal">
 						<div class="form-group" align="left">
-							<label for="focusedinput" class="col-sm-3 control-label">Username Admin</label>
+							<label for="focusedinput" class="col-sm-3 control-label konten-modal">Username Admin</label>
 							<label class=" control-label ratakiri lihat-data" id="user-admin"><?php echo $lihat['user_admin'];?></label>
 						</div>
 						
 						<div class="form-group" align="left">
-							<label for="focusedinput" class="col-sm-3 control-label">Nama Admin</label>
+							<label for="focusedinput" class="col-sm-3 control-label konten-modal">Nama Admin</label>
 							<label class=" control-label lihat-data" id="nama-admin"><?php echo $lihat['nama_admin'];?></label>
 						</div>
 						
