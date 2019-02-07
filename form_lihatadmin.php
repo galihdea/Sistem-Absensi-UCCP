@@ -24,13 +24,12 @@
 						</div>
 						
 						<div  align="right">
-							<button type="submit" class="btn btn-default">Kembali</button>
+							<button data-dismiss="modal" type="submit" class="btn btn-default">Kembali</button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
- <?php include 'footer.php'; ?>
 </body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-	<?php include 'header.php'; 
-		$id_admin = $_GET['id_admin'];
+	<?php
+		$id_admin = $id_luar;
 		$querylihat = $conn->query("SELECT * FROM admin WHERE id_admin='$id_admin'");
 		$lihat = $querylihat->fetch_array();
 	?>
@@ -12,6 +12,7 @@
         let page_header="Ubah Admin"
     </script>
 	<!--custom-widgets-->
+	<div class="modal fade" id="modalUbah<?php echo $id_luar;?>">
 		<h3 class="inner-tittle two">Contoh Form Ubah Admin</h3>
 		<div class="grid-1">
 			<div class="form-body margin-form">
@@ -30,12 +31,12 @@
 						</div>
 					</div>
 					<div  align="right">
-                        <a href="menu_kelolaadmin.php" class="btn blue four bgred tombol-back">Cancel</a>
+                        <a data-dismiss="modal" class="btn blue four bgred tombol-back">Cancel</a>
 						<button type="submit" class="btn btn-default">Submit</button>
 					</div>
 				</form>
 			</div>
 		</div>
- <?php include 'footer.php'; ?>
+	</div>
 </body>
 </html>

@@ -11,7 +11,7 @@
 	<!--custom-widgets-->
 		<h3 class="inner-tittle two" style="margin-bottom:5px;"><i class="fa fa-users"></i> &nbsp Kelola Pegawai </h3>
 			<div>
-				<a class="btn blue four marginl20 bgblue" href="form_tambahpegawai.php" data-toggle="tooltip" data-placement="bottom" title="Tambah Pegawai">Tambah &nbsp <i class="fa fa-plus"> </i></a>
+				<a class="btn blue four marginl20 bgblue" data-toggle="modal" data-target="#modalTambah" data-placement="bottom" title="Tambah Pegawai">Tambah &nbsp <i class="fa fa-plus"> </i></a>
 			</div>
 			<div style="margin-top:20px;">
 			<table id="example" class="table table-striped table-bordered" style="width:100%; font-size: 15px;">
@@ -36,14 +36,17 @@
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$user['username'].'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td>
 						<td align="center" class="isitabel" style="max-width: 10px; padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">
-							<a class="btn blue four mini-btn bggreen" href="form_lihatpegawai.php?id_pegawai='.$id_luar.'" data-toggle="tooltip" data-placement="bottom" title="Lihat"><i class="fa fa-eye"></i></a>
-							<a class="btn blue four mini-btn bgorange" href="form_ubahpegawai.php?id_pegawai='.$id_luar.'" data-toggle="tooltip" data-placement="bottom" title="Ubah"><i class="fa fa-edit"></i></a>';
+							<a class="btn blue four mini-btn bggreen" data-toggle="modal" data-target="#modalLihat'.$id_luar.'" data-toggle="tooltip" data-placement="bottom" title="Lihat"><i class="fa fa-eye"></i></a>
+							<a class="btn blue four mini-btn bgorange" data-toggle="modal" data-target="#modalUbah'.$id_luar.'" data-placement="bottom" title="Ubah"><i class="fa fa-edit"></i></a>';
 							//allert hapus
 							$t1 = "'untuk menghapus username `".$user['username']."`?'";
 							$tanya = 'onclick="return konfirmasi('.$t1.')"';
 							echo '<a '.$tanya.' class="btn blue four mini-btn bgred" href="functions/hapus_pegawai.php?id_pegawai='.$id_luar.'" data-toggle="tooltip" data-placement="bottom" title="Hapus"><i class="fa fa-trash-o"></i></a>
 						</td>  
 					</tr>';
+					include 'form_ubahpegawai.php';
+					include 'form_tambahpegawai.php';
+					include 'form_lihatpegawai.php';
 							$i++;
 						}
 					?>  

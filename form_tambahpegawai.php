@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-	<?php include 'header.php'; ?>
     <script src="js/validator.js">//script validasi form. Source: http://1000hz.github.io/bootstrap-validator/</script>
 	<script>
         //Value untuk mengisi Home / ....
         let page_header="Tambah Pegawai"
     </script>
 	<!--custom-widgets-->
+	<div class="modal fade" id="modalTambah">
 		<h3 class="inner-tittle two">Contoh Form Tambah Pegawai</h3>
 		<div class="grid-1">
 			<div class="form-body">
@@ -51,11 +51,11 @@
 							</select>
 						</div>
 					</div>
-                    <a href="menu_kelolapegawai.php" class="btn blue four bgred tombol-back">Cancel</a>
+                    <a data-dismiss="modal" class="btn blue four bgred tombol-back">Cancel</a>
 					<button type="submit" class="btn btn-default">Submit</button>
 				</form>
 			</div>
 		</div>
- <?php include 'footer.php'; ?>
+	</div>
 </body>
 </html>

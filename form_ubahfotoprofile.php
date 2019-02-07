@@ -2,8 +2,7 @@
 <html>
 
 <body>
-    <?php include 'header.php';
-		$id_user = $_GET['id_user'];
+    <?php
 		//$querylihat = $conn->query("SELECT * FROM pegawai WHERE id_pegawai='$id_pegawai'");
 		//$lihat = $querylihat->fetch_array();
 	 ?>
@@ -15,6 +14,7 @@
     let page_header = "Ubah Pegawai"
     </script>
     <!--custom-widgets-->
+    <div class="modal fade" id="modalFoto">
     <h3 class="inner-tittle two">Contoh Form Ubah Foto Profile</h3>
     <div class="grid-1">
         <div class="form-body">
@@ -33,7 +33,7 @@
             </form>
         </div>
     </div>
-    <?php include 'footer.php'; ?>
+    </div>
 </body>
 
 </html>

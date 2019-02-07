@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-	<?php include 'header.php'; 
-		$id_pegawai = $_GET['id_pegawai'];
+	<?php
+		$id_pegawai = $id_luar;
 		$querylihat = $conn->query("SELECT * FROM pegawai WHERE id_pegawai='$id_pegawai'");
 		$lihat = $querylihat->fetch_array();
 	?>
@@ -11,6 +11,7 @@
         let page_header="Lihat Pegawai"
     </script>
 	<!--custom-widgets-->
+	<div class="modal fade" id="modalLihat<?php echo $id_luar;?>">
 		<h3 class="inner-tittle two">Contoh Form Lihat Pegawai</h3>
 		<div class="grid-1">
 			<div class="form-body">
@@ -31,10 +32,10 @@
 						<label for="selector1" class="col-sm-2 control-label lihat-data">Jabatan Pegawai</label>
 						<label class="col-sm-3 control-label lihat-data" id="stat-pegawai"><?php echo $lihat['jabatan_pegawai'];?></label>
 					</div>
-					<button type="submit" class="btn btn-default">Kembali</button>
+					<button data-dismiss="modal" type="submit" class="btn btn-default">Kembali</button>
 				</form>
 			</div>
 		</div>
- <?php include 'footer.php'; ?>
+	</div>
 </body>
 </html>
