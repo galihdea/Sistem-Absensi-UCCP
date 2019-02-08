@@ -16,7 +16,7 @@
 	<div class="col-sm-2"></div>
 	<div class="col-sm-9">
 		<div class="grid-1">
-		<h3 class="inner-tittle two">Contoh Form Ubah Admin</h3><hr>
+		<h3 class="inner-tittle two"> Form Ubah Admin</h3><hr>
 			<div class="form-body margin-form">
 				<form method="POST" action="functions/ubah_admin.php?id_admin=<?php echo $id_admin;?>" class="form-horizontal" data-toggle="validator" role="form">
 					<div class="form-group">

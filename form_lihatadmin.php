@@ -12,7 +12,7 @@
 			<!-- Modal Header -->
 		    
 			<div class="grid-1">
-			<h3 class="inner-tittle two">Contoh Form Lihat Admin</h3><hr>
+			<h3 class="inner-tittle two"> Form Lihat Admin</h3><hr>
 				<div class="form-body margin-form">
 					<form action="menu_kelolaadmin.php" class="form-horizontal">
 						<div class="form-group" align="left">

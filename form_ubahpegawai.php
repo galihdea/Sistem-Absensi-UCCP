@@ -16,7 +16,7 @@
 	<div class="col-sm-2"></div>
 	<div class="col-sm-9">
 	<div class="grid-1" style="margin-left:10px;width: 1052px;height: 438px;" >
-		<h3 class="inner-tittle two">Contoh Form Ubah Pegawai</h3><hr>
+		<h3 class="inner-tittle two"> Form Ubah Pegawai</h3><hr>
 			<div class="form-body margin-form">
 				<form method="POST" action="functions/ubah_pegawai.php?id_pegawai=<?php echo $id_pegawai;?>" class="form-horizontal" data-toggle="validator" role="form">
 					<div class="form-group">

@@ -14,7 +14,7 @@
         <div class="col-sm-2"></div>
         <div class="col-sm-9">
             <div class="grid-1" style="padding-right: 30px;padding-left: 20px;margin-right:31px; margin-left:10px;">
-                <h3 class="inner-tittle one" algin="left">Contoh Form Tambah Admin</h3><hr>
+                <h3 class="inner-tittle one" algin="left"> Form Tambah Admin</h3><hr>
                 <div class="form-body margin-form">
                     <form method="POST" action="functions/tambah_admin.php" class="form-horizontal"
                         data-toggle="validator" role="form">

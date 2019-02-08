@@ -3,7 +3,7 @@
 <body>
 	<?php include 'header.php'; ?>
 	<!--custom-widgets-->
-		<h3 class="inner-tittle two">Contoh Form Tambah Admin</h3>
+		<h3 class="inner-tittle two"> Form Tambah Admin</h3>
 		<div class="grid-1">
 			<div class="form-body">
 				<form class="form-horizontal">

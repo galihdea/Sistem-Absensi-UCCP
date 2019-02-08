@@ -15,7 +15,7 @@
 	<div class="col-sm-7">
 
             <div class="grid-1"style="margin-left:10px;width: 1052px;height: 460px;">
-                <h3 class="inner-tittle two">Contoh Form Tambah Pegawai</h3><hr>
+                <h3 class="inner-tittle two"> Form Tambah Pegawai</h3><hr>
                 <div class="form-body margin-form">
                     <form method="POST" action="functions/tambah_pegawai.php" class="form-horizontal"
                         data-toggle="validator" role="form">

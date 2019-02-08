@@ -16,7 +16,7 @@
 		<div class="col-sm-2"></div>
 		<div class="col-sm-9">
 		<div class="grid-1">
-		<h3 class="inner-tittle two">Contoh Form Lihat Pegawai</h3><hr>
+		<h3 class="inner-tittle two"> Form Lihat Pegawai</h3><hr>
 			<div class="form-body margin-form">
 				<form action="menu_kelolapegawai.php" class="form-horizontal">
 					<div class="form-group" align="left">
