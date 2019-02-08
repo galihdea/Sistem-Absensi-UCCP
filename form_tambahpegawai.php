@@ -14,7 +14,7 @@
 	<div class="col-sm-2"></div>
 	<div class="col-sm-7">
 
-            <div class="grid-1"style="margin-left:10px;width: 1052px;height: 438px;">
+            <div class="grid-1"style="margin-left:10px;width: 1052px;height: 460px;">
                 <h3 class="inner-tittle two">Contoh Form Tambah Pegawai</h3><hr>
                 <div class="form-body margin-form">
                     <form method="POST" action="functions/tambah_pegawai.php" class="form-horizontal"
