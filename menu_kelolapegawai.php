@@ -13,6 +13,7 @@
 			<div>
 				<a class="btn blue four marginl20 bgblue" data-toggle="modal" data-target="#modalTambah" data-placement="bottom" title="Tambah Pegawai">Tambah &nbsp <i class="fa fa-plus"> </i></a>
 			</div>
+			<?php include 'form_tambahpegawai.php';?>
 			<div style="margin-top:20px;">
 			<table id="example" class="table table-striped table-bordered" style="width:100%; font-size: 15px;">
 				<thead> 
@@ -36,8 +37,8 @@
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$user['username'].'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td>
 						<td align="center" class="isitabel" style="max-width: 10px; padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">
-							<a class="btn blue four mini-btn bggreen" data-toggle="modal" data-target="#modalLihat'.$id_luar.'" data-toggle="tooltip" data-placement="bottom" title="Lihat"><i class="fa fa-eye"></i></a>
-							<a class="btn blue four mini-btn bgorange" data-toggle="modal" data-target="#modalUbah'.$id_luar.'" data-placement="bottom" title="Ubah"><i class="fa fa-edit"></i></a>';
+							<a class="btn blue four mini-btn bggreen" data-toggle="modal" data-target="#modalLihat'.$id_luar.'" title="Lihat"><i class="fa fa-eye"></i></a>';
+							echo '<a class="btn blue four mini-btn bgorange" data-toggle="modal" data-target="#modalUbah'.$id_luar.'" data-placement="bottom" title="Ubah"><i class="fa fa-edit"></i></a>';
 							//allert hapus
 							$t1 = "'untuk menghapus username `".$user['username']."`?'";
 							$tanya = 'onclick="return konfirmasi('.$t1.')"';
@@ -45,7 +46,6 @@
 						</td>  
 					</tr>';
 					include 'form_ubahpegawai.php';
-					include 'form_tambahpegawai.php';
 					include 'form_lihatpegawai.php';
 							$i++;
 						}

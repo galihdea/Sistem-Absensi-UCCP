@@ -23,13 +23,14 @@
         }
     }
     // Check if file already exists
-    if (file_exists($target_file)) {
+    /*if (file_exists($target_file)) {
         echo "Sorry, file already exists.";
         $uploadOk = 0;
-    }
+    }*/
     // Check file size
     if ($_FILES["fileToUpload"]["size"] > 500000) {
-        echo "Sorry, your file is too large.";
+        $msg = "Sorry, your file is too large.";
+        echo '<script type="text/javascript">alert("' . $msg . '")</script>';
         $uploadOk = 0;
     }
     // Allow certain file formats
@@ -43,12 +44,12 @@
         echo "Sorry, your file was not uploaded.";
     // if everything is ok, try to upload file
     } else {
-        $query_simpan = $conn->query("UPDATE user SET gambar='$image',nama_gambar='$upload_image' WHERE id_user='$id_user'");
+        $query_simpan = $conn->query("UPDATE user SET nama_gambar='$upload_image' WHERE id_user='$id_user'");
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             echo "The file ".basename( $upload_image). " has been uploaded.";
             //move_uploaded_file($image,$target_file);
-            $loco = 'location:form_profile.php?id_user='.$id_user.'';
-            header($loco);
+            /*$loco = 'location:form_profile.php?id_user='.$id_user.'';
+            header($loco);*/
 
         } else {
             echo "Sorry, there was an error uploading your file.";

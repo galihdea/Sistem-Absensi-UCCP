@@ -14,5 +14,7 @@
 
 		return $output;
 	}
+
+	var_dump(ambilIP($_SERVER['REMOTE_ADDR']));
 	
 ?>
