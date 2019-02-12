@@ -3,12 +3,14 @@
 
     $id_user = $_GET['id_user'];    
 
-    $upload_image = $_FILES['fileToUpload']['name'];
+    $filename = $_FILES['fileToUpload']['name'];
+    $extension= strtolower(substr(strrchr($filename, '.'), 1));
+    $upload_image = $id_user .".".$extension;
     $image = $_FILES['fileToUpload']['tmp_name'];
     $image = addslashes(file_get_contents($image));
 
     $target_dir = "uploads/";
-    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $target_file = $target_dir . $upload_image;
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
     // Check if image file is a actual image or fake image
@@ -48,8 +50,8 @@
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             echo "The file ".basename( $upload_image). " has been uploaded.";
             //move_uploaded_file($image,$target_file);
-            /*$loco = 'location:form_profile.php?id_user='.$id_user.'';
-            header($loco);*/
+            $loco = 'location:form_profile.php?id_user='.$id_user.'';
+            header($loco);
 
         } else {
             echo "Sorry, there was an error uploading your file.";

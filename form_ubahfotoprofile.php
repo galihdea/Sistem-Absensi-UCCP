@@ -24,7 +24,7 @@
                 <div class="form-group">
                     <label for="focusedinput" class="col-sm-2" style="padding-left: 26px;width: 10.666667%;">Foto baru</label>
                     <div class="col-sm-8">
-                        <input type="file" name="fileToUpload" id="fileToUpload" style="background:#FFFFFF;border:1px solid #FFFFFF;color:#000000">
+                        <input type="file" name="fileToUpload" id="fileToUpload" style="background:#FFFFFF;border:1px solid #FFFFFF;color:#000000" required accept="image/*">
                     </div>
                 </div>
                 <a href="form_profile.php?id_user=<?php echo $id_user;?>" class="btn blue four bgred tombol-back">Cancel</a>
