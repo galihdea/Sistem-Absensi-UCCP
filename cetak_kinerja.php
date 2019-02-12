@@ -1,9 +1,12 @@
 <?php
-	include 'functions/koneksi.php';
+    //fungsi tanggal_indo dipindahkan ke file /functions/convert_tanggal.php , karena di php gabisa import specific function dari file php
 
+    include 'functions/koneksi.php';
+	include 'functions/convert_tanggal.php';
 	$tanggal_awal = $_GET['tanggal_awal'];
 	$tanggal_akhir = $_GET['tanggal_akhir'];
 	$jumlah_hari = $_GET['jumlah_hari'];
+
 ?>
 
 <!DOCTYPE html>
@@ -11,13 +14,20 @@
 <head>
 	<title>Cetak Kinerja Pegawai</title>
 	<script type="text/javascript">window.print()</script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type='text/css'>
 </head>
 <body>
-    <div><img src="assets/logo/Logo%20UCCP%202%20(800x800).png" align="left" height="50px" style="margin-top: 4px;"></div>
-    <div><h3 class="inner-tittle two" style="margin-bottom:5px;"> &nbsp Riwayat Kinerja</h3></div>
-    <div><h3 class="inner-tittle two" style="margin-bottom:5px;margin-top: 0px;"> &nbsp Periode <?php echo $tanggal_awal .' s.d '. $tanggal_akhir?></h3></div>
-    <hr><br>
-	<table width="100%">
+
+    <div style="margin-left: 10px;">
+        <div><img src="assets/logo/Logo%20UCCP%202%20(800x800).png" align="left" height="50px" style="margin-top: 4px;"></div>
+        <div><h3 class="inner-tittle two" style="margin-bottom:5px;"> &nbsp Riwayat Kinerja</h3></div>
+        <div><h3 class="inner-tittle two" style="margin-bottom:5px;margin-top: 0px;"> &nbsp Periode
+                <?php echo tanggal_indo($tanggal_awal) .' s.d '. tanggal_indo($tanggal_akhir)?>
+            </h3></div>
+    </div>
+    <hr style="border-width: 5px;margin-left: 10px;margin-right: 10px;margin-top: 20px;margin-bottom: 15px;">
+	<div style="margin-left: 10px;margin-right: 10px;">
+        <table class="table table-bordered table-striped" width="100%">
 		<tr>
 			<th>No</th>
 			<th>Nama Pegawai</th>
@@ -72,5 +82,6 @@
         	}
 		?>
 	</table>
+    </div>
 </body>
 </html>

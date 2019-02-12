@@ -1,24 +1,10 @@
 <?php
-	function tanggal_indo($tanggal)
-	{
-		$bulan = array (1 =>   'Januari',
-					'Februari',
-					'Maret',
-					'April',
-					'Mei',
-					'Juni',
-					'Juli',
-					'Agustus',
-					'September',
-					'Oktober',
-					'November',
-					'Desember'
-				);
-		$split = explode('-', $tanggal);
-		return $split[2] . ' ' . $bulan[ (int)$split[1] ] . ' ' . $split[0];
-	}
 
-echo tanggal_indo('2016-03-20'); // 20 Maret 2016
+    //fungsi tanggal_indo dipindahkan ke file /functions/convert_tanggal.php , karena di php gabisa import specific function dari file php
+
+    include 'convert_tanggal.php';
+
+    echo tanggal_indo('2016-03-20'); // 20 Maret 2016
 	session_start();
 	include 'koneksi.php';
 	$id_user = $_SESSION['id_user'];
