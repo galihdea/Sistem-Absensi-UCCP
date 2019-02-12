@@ -13,6 +13,10 @@
 	<script type="text/javascript">window.print()</script>
 </head>
 <body>
+    <div><img src="assets/logo/Logo%20UCCP%202%20(800x800).png" align="left" height="50px" style="margin-top: 4px;"></div>
+    <div><h3 class="inner-tittle two" style="margin-bottom:5px;"> &nbsp Riwayat Kinerja</h3></div>
+    <div><h3 class="inner-tittle two" style="margin-bottom:5px;margin-top: 0px;"> &nbsp Periode <?php echo $tanggal_awal .' s.d '. $tanggal_akhir?></h3></div>
+    <hr><br>
 	<table width="100%">
 		<tr>
 			<th>No</th>
@@ -22,10 +26,8 @@
 			<th>Kinerja</th>
 		</tr>
 		<?php
-            echo'
-            <img src="assets/logo/Logo%20UCCP%20(112x344).png"><br><hr><br>
-            ';
-			$i = 1;
+			echo'';
+            $i = 1;
     		$ambil_daftar_pegawai = $conn->query("SELECT * FROM pegawai");
     		while ($pegawai = $ambil_daftar_pegawai->fetch_array()) {
         		$id_luar = $pegawai['id_pegawai'];
