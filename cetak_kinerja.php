@@ -22,6 +22,9 @@
 			<th>Kinerja</th>
 		</tr>
 		<?php
+            echo'
+            <img src="assets/logo/Logo%20UCCP%20(112x344).png"><br><hr><br>
+            ';
 			$i = 1;
     		$ambil_daftar_pegawai = $conn->query("SELECT * FROM pegawai");
     		while ($pegawai = $ambil_daftar_pegawai->fetch_array()) {
