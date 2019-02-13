@@ -256,12 +256,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </li>
                                 <!-- ini yang diubah biar cuma 3 notifikasi aja --> 
                                 <li class="dropdown note" style="margin-left:200px; <?php if ($_SESSION['jenis_user'] == "Pegawai") echo "visibility: hidden;"?>">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i> <span class="badge"><?php echo $jml_total;?></span></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i> <span class="badge"><?php if($jml_total>0){echo $jml_total;}?></span></a>
 
                                     <ul class="dropdown-menu two" style="height:auto;" >
                                         <li>
                                             <div class="notification_header" >
+                                                
                                                 <h3>Anda memiliki <?php echo $jml_total;?> notifikasi</h3>
+                                               
                                             </div>
                                         </li>
                                         <li>
