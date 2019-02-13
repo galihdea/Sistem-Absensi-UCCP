@@ -25,6 +25,7 @@ if ($_SESSION['jenis_user'] == "Pegawai") {
                     <div class="grid-1">
                         <div class="form-body">
                             <form method="POST" action="functions/absen_izin.php" class="form-horizontal" role="form" data-toggle="validator">
+                                <input name="izin" value="cuti" type="hidden">
                                 <div class="form-group"><label class="col-sm-2 control-label" style="text-align:left;">Dari</label>
                                     <div class="col-sm-8"><input name="keterangan_cuti_awal" id="date-01" type="date"
                                                                  class="form-control1 ng-invalid ng-invalid-required"

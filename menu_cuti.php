@@ -2,7 +2,7 @@
 <html>
 <body>
 <?php include 'header.php'; 
-include 'functions/fungsi_cek_ip2.php';
+include 'functions/ip_check_function.php';
 	if ($_SESSION['jenis_user'] == "Super Admin" || $_SESSION['jenis_user'] == "Admin"){
 ?>
 	<script>
