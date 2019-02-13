@@ -45,7 +45,7 @@
 					<div class="form-group">
 						<label for="selector1" class="col-sm-2 control-label ratakiri konten-modal">Jabatan Pegawai</label>
 						<div class="col-sm-10">
-							<select name="divisipegawai" id="selector1" class="form-control1" required>
+							<select name="jabatanpegawai" id="selector1" class="form-control1" required>
 								<option value="Manager Divisi" <?php if($lihat['jabatan_pegawai']=='Manager Divisi') echo "selected";?>>Manager Divisi</option>
 								<option value="Staf Divisi" <?php if($lihat['jabatan_pegawai']=='Staf Divisi') echo "selected";?>>Staf Divisi</option>
 								<option value="Intern" <?php if($lihat['jabatan_pegawai']=='Intern') echo "selected";?>>Intern</option>

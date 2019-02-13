@@ -28,7 +28,7 @@
             ?>
         </p>
         <ul>
-            <li><a onclick="load_page()" class="tooltips" href="form_profile.php?id_user=<?php echo $id_us;?>"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
+            <li><a onclick="load_page()" class="tooltips" href="form_profile.php"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
             <li><a onclick="load_page()" class="tooltips" href="logout.php"><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>
         </ul>
     </div>

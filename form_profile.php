@@ -2,7 +2,7 @@
 <html>
 <body>
 	<?php include 'header.php'; 
-		 $id_user = $_GET['id_user'];
+		 $id_user = $_SESSION['id_user'];
 		$querylihat = $conn->query("SELECT * FROM user WHERE id_user='$id_user'");
 		$lihat = $querylihat->fetch_array();
 		$id_luar = $lihat['id_luar'];
