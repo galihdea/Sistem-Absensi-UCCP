@@ -1,6 +1,6 @@
 <!--footer section start-->
 <footer class="marginl-20">
-    <p>&copy 2016 Augment . All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts.</a></p>
+    <p align="centre">&copy 2019 UCCP . All Rights Reserved</p>
 </footer>
 <!--footer section end-->
 </div>

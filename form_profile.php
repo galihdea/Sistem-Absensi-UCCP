@@ -1,5 +1,8 @@
 <!DOCTYPE HTML>
 <html>
+<head>
+<link rel="icon" href="images/ok.ico" type="image/ico" />
+</head>
 <body>
 	<?php include 'header.php'; 
 		 $id_user = $_SESSION['id_user'];

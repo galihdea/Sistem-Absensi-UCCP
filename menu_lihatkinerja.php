@@ -1,5 +1,8 @@
 <!DOCTYPE HTML>
 <html>
+<head>
+<link rel="icon" href="images/ok.ico" type="image/ico" />
+</head>
 <body>
 <?php include 'header.php';
 if ($_SESSION['jenis_user'] == "Super Admin" || $_SESSION['jenis_user'] == "Admin") {

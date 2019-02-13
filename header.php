@@ -93,7 +93,9 @@
 ?>
 
     <head>
-        <title>SAUCCP</title>
+        
+        <title>UCCP</title>
+        <link rel="icon" href="images/ok.ico" type="image/ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -172,6 +174,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <link href="css/css-loader.css" rel='stylesheet' type='text/css' />
         <!-- Tambahan CSS -->
         <link href="css/tambahan.css" rel='newer stylesheet' type='text/css' />
+        <link rel="icon" href="images/ok.ico" type="image/ico" />
     </head>
 	<div class="posfixed">
 		<header class="logo" style="background-color: #00C6D7;">

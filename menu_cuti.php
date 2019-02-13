@@ -1,5 +1,8 @@
 <!DOCTYPE HTML>
 <html>
+<head>
+<link rel="icon" href="images/ok.ico" type="image/ico" />
+</head>
 <body>
 <?php include 'header.php'; 
 include 'functions/ip_check_function.php';
