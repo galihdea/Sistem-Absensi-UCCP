@@ -22,7 +22,7 @@
 					<div class="form-group">
 						<label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Username Admin</label>
 						<div class="col-sm-10">
-							<input name="username" type="text" class="form-control1" id="focusedinput" placeholder="Username" value="<?php echo $lihat['user_admin'];?>" disabled="">
+							<input name="username" type="text" class="form-control1 bgdisable" id="focusedinput" placeholder="Username" value="<?php echo $lihat['user_admin'];?>" disabled="">
 						</div>
 					</div>
 					

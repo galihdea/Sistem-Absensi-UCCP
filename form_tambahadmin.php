@@ -21,25 +21,26 @@
                         <div class="form-group">
                             <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Username Admin</label>
                             <div class="col-sm-10">
-                                <input name="username" type="text" class="form-control1" id="inputName"
-                                    placeholder="Username" required>
+                                <input name="username" data-minlength="6" type="text" class="form-control1" id="inputName" data-error="Maaf, username minimal 6 karakter."placeholder="Username" required>
+                                <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Password Admin</label>
                             <div class="col-sm-10">
                                 <input name="password" type="password" data-minlength="6" class="form-control"
-                                    id="inputPassword" placeholder="Password" required>
-                                <div class="help-block">Minimum of 6 characters</div>
+                                    id="inputPassword" placeholder="Password" data-error="Maaf, password minimal 6 karakter." required>
+                                <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Nama Admin</label>
                             <div class="col-sm-10">
                                 <input name="namaadmin" type="text" class="form-control1" id="inputName"
-                                    placeholder="Nama" required>
+                                data-error="Maaf, nama admin tidak boleh kosong." placeholder="Nama" required>
+                                <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                             </div>
-                        </div>
+                        </div><!-- 
                         <div class="form-group">
                             <label for="selector1" class="col-sm-2 control-label ratakiri konten-modal">Status Admin</label>
                             <div class="col-sm-10">
@@ -48,7 +49,7 @@
                                     <option value="Admin">Admin</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
                         <div align="right">
                             <a data-dismiss="modal" class="btn blue four bgred tombol-back">Cancel</a>
                             <button type="submit" class="btn btn-default">Submit</button>

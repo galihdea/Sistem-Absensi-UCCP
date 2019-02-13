@@ -48,21 +48,22 @@
 					<div class="form-group"> 
 						<label for="focusedinput" class="col-sm-3 control-label" style="text-align: left !important">Password Lama</label>
 						<div class="col-sm-9">
-							<input name="passwordlama" type="password" class="form-control" id="focusedinput" placeholder="Password Lama" required>
+							<input name="passwordlama" type="password" data-minlength="6" class="form-control" id="focusedinput" placeholder="Password Lama" data-error="Maaf, password minimal 6 karakter." required>
+							<div class="help-block with-errors" style="color: #a94442 !important;"></div>
 						</div>
 					</div>
 					<div class="form-group"> 
 						<label for="focusedinput" class="col-sm-3 control-label" style="text-align: left !important">Password Baru</label>
 						<div class="col-sm-9">
-							<input name="passwordbaru" type="password" class="form-control" id="inputPassword" placeholder="Password Baru" data-minlength="6" required>
-                            <div class="help-block">Minimum of 6 characters</div>
+							<input name="passwordbaru" type="password" class="form-control" id="inputPassword" placeholder="Password Baru" data-minlength="6" data-error="Maaf, password minimal 6 karakter." required>
+                            <div class="help-block with-errors" style="color: #a94442 !important;"></div>
 						</div>
 					</div>
 					<div class="form-group"> 
 						<label for="focusedinput" class="col-sm-3 control-label" style="text-align: left !important">Retype Password</label>
 						<div class="col-sm-9">
-							<input name="passwordbaruconfirm" type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Retype Password Baru" required>
-                            <div class="help-block with-errors"></div>
+							<input name="passwordbaruconfirm" type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Maaf, password tidak sesuai" placeholder="Retype Password Baru" required>
+                            <div class="help-block with-errors" style="color: #a94442 !important;"></div>
 						</div>
 					</div>
                     <div class="form-group" align="right">

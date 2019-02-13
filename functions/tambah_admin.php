@@ -4,7 +4,7 @@
 	$username = $_POST['username'];
 	$password = md5($_POST['password']);
 	$nama = $_POST['namaadmin'];
-	$status = $_POST['statusadmin'];
+	$status = "Admin";
 	if(empty($username)||empty($password)||empty($nama)){
 		header('location:../form_tambahadmin.php');
 	}

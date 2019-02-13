@@ -22,7 +22,7 @@
 					<div class="form-group">
 						<label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Username Pegawai</label>
 						<div class="col-sm-10">
-							<input name="username" type="text" class="form-control1" id="focusedinput" placeholder="Username" value="<?php echo $lihat['user_pegawai'];?>" disabled>
+							<input name="username" type="text" class="form-control1 bgdisable" id="focusedinput" placeholder="Username" value="<?php echo $lihat['user_pegawai'];?>" disabled>
 						</div>
 					</div>
 					
@@ -53,7 +53,7 @@
 						</div>
 					</div>
 					<div  align="right">
-                    <a href="menu_kelolapegawai.php" class="btn blue four bgred tombol-back">Cancel</a>
+                    <a  data-dismiss="modal" class="btn blue four bgred tombol-back">Cancel</a>
 					<button type="submit" class="btn btn-default">Submit</button>
 					</div>
 				</form>

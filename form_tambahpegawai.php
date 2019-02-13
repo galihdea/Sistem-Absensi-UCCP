@@ -12,8 +12,8 @@
     <!--custom-widgets-->
     <div class="modal fade" id="modalTambah">
 	<div class="col-sm-2"></div>
-	<div class="col-sm-7">
-            <div class="grid-1"style="margin-left:10px;width: 1052px;height: 460px;">
+	<div class="col-sm-9">
+            <div class="grid-1" style="padding-right: 30px;padding-left: 20px;margin-right:31px; margin-left:10px;">
                 <h3 class="inner-tittle two"> Form Tambah Pegawai</h3><hr>
                 <div class="form-body margin-form">
                     <form method="POST" action="functions/tambah_pegawai.php" class="form-horizontal"
@@ -21,23 +21,24 @@
                         <div class="form-group">
                             <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Username Pegawai</label>
                             <div class="col-sm-10">
-                                <input name="username" type="text" class="form-control1" id="inputName"
-                                    placeholder="Username" required>
+                                <input name="username" data-minlength="6" type="text" class="form-control1" id="inputName" data-error="Maaf, username minimal 6 karakter."placeholder="Username" required>
+                                <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Password Pegawai</label>
                             <div class="col-sm-10">
                                 <input name="password" type="password" data-minlength="6" class="form-control"
-                                    id="inputPassword" placeholder="Password" required>
-                                <div class="help-block">Minimum of 6 characters</div>
+                                    id="inputPassword" placeholder="Password" data-error="Maaf, password minimal 6 karakter." required>
+                                <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Nama Pegawai</label>
                             <div class="col-sm-10">
                                 <input name="namapegawai" type="text" class="form-control1" id="inputName"
-                                    placeholder="Nama" required>
+                                data-error="Maaf, nama admin tidak boleh kosong." placeholder="Nama" required>
+                                <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -67,8 +68,8 @@
                     </form>
                 </div>
             </div>
-			</div>
-        </div>
+		</div>
+    </div>
 	
 </body>
 

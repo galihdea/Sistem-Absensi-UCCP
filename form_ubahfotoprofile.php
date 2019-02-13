@@ -27,7 +27,7 @@
                         <input type="file" name="fileToUpload" id="fileToUpload" style="background:#FFFFFF;border:1px solid #FFFFFF;color:#000000" required accept="image/*">
                     </div>
                 </div>
-                <a href="form_profile.php?id_user=<?php echo $id_user;?>" class="btn blue four bgred tombol-back">Cancel</a>
+                <a data-dismiss="modal" class="btn blue four bgred tombol-back">Cancel</a>
                 <button type="submit" class="btn btn-default" Value="Upload Image" style="margin-left: 21px;">Upload</button>
             </form>
         </div>
