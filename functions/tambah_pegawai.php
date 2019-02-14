@@ -1,12 +1,13 @@
 <?php
 	include 'koneksi.php';
 
+	$email = $_POST['email'];
 	$username = $_POST['username'];
 	$password = md5($_POST['password']);
 	$nama = $_POST['namapegawai'];
 	$divisi = $_POST['divisipegawai'];
 	$status = $_POST['statuspegawai'];
-	if(empty($username)||empty($password)||empty($nama)){
+	if(empty($email)||empty($username)||empty($password)||empty($nama)){
 		header('location:../form_tambahpegawai.php');
 	}
 	else{
@@ -18,7 +19,7 @@
 			if($querycek){
 				$hasil = $querycek->fetch_array();
 				$id_pegawai = $hasil['id_pegawai'];
-				$querytambahuser = $conn->query("INSERT INTO user (username,password,status,id_luar) VALUES ('$username','$password','Pegawai','$id_pegawai')");
+				$querytambahuser = $conn->query("INSERT INTO user (email,username,password,status,id_luar) VALUES ('$email','$username','$password','Pegawai','$id_pegawai')");
 				if($querytambahuser){
 					header('location:../menu_kelolapegawai.php');
 				}

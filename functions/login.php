@@ -4,7 +4,7 @@
 	$username = $_POST['username'];
 	$password = md5($_POST['password']);
 
-	$login = $conn->query("SELECT * FROM user WHERE username='$username' AND password='$password'");
+	$login = $conn->query("SELECT * FROM user WHERE (username='$username' OR email='$username') AND password='$password'");
 	if($login){
 		$hasil = $login->fetch_array();
 		session_start();

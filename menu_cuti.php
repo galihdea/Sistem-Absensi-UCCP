@@ -31,6 +31,12 @@ include 'functions/ip_check_function.php';
 				<tbody> 
 					<?php
 						$i = 1;
+						if($_SESSION['jenis_user']=="Super Admin"){
+							$jenis = "Manajer Divisi";
+						}
+						else if($_SESSION['jenis_user']=="Admin"){
+							$jenis = "Pegawai";
+						}
 						$ambil_daftar_pegawai = $conn->query("SELECT * FROM absensi WHERE status_absensi='cuti' ORDER BY id_absensi DESC");
 						while($pegawaiuser=$ambil_daftar_pegawai->fetch_array()){
 							$id_absensi = $pegawaiuser['id_absensi'];
@@ -48,6 +54,7 @@ include 'functions/ip_check_function.php';
 							$id_pegawai = $user['id_luar'];
 							$ambil_pegawai = $conn->query("SELECT * FROM pegawai WHERE id_pegawai='$id_pegawai'");
 							$pegawai = $ambil_pegawai->fetch_array();
+							if($jenis==$pegawai['jabatan_pegawai']){
 							echo '<tr class="tabel"> 
 						<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$i.'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td> 
@@ -88,6 +95,7 @@ include 'functions/ip_check_function.php';
 	</div>
 						</td>
 						<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;">';
+					}
 						if ($pegawaiuser['status_acc']=="Approved" ){
 							echo '<a style="width:70px;cursor:default;" class="btn blue four mini-btn bggreen"> Approved</a>';
 						}elseif ($pegawaiuser['status_acc']=="Decline" ){
