@@ -1,11 +1,12 @@
 <?php
 	include 'koneksi.php';
 
+	$email = $_POST['email'];
 	$username = $_POST['username'];
 	$password = md5($_POST['password']);
 	$nama = $_POST['namaadmin'];
 	$status = "Admin";
-	if(empty($username)||empty($password)||empty($nama)){
+	if(empty($email)||empty($username)||empty($password)||empty($nama)){
 		header('location:../form_tambahadmin.php');
 	}
 	else{
@@ -32,7 +33,7 @@
 				else{
 					$id_adm = $hasil['id_admin'];
 				}
-				$querytambahuser = $conn->query("INSERT INTO user (username,password,status,id_luar) VALUES ('$username','$password','$status','$id_adm')");
+				$querytambahuser = $conn->query("INSERT INTO user (email,username,password,status,id_luar) VALUES ('$email','$username','$password','$status','$id_adm')");
 				if($querytambahuser){
 					header('location:../menu_kelolaadmin.php');
 				}
