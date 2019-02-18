@@ -54,69 +54,74 @@ include 'functions/ip_check_function.php';
 							$id_pegawai = $user['id_luar'];
 							$ambil_pegawai = $conn->query("SELECT * FROM pegawai WHERE id_pegawai='$id_pegawai'");
 							$pegawai = $ambil_pegawai->fetch_array();
-							if($jenis==$pegawai['jabatan_pegawai']){
-							echo '<tr class="tabel"> 
-						<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$i.'</td> 
-						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td> 
-						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['keterangan'].'</td>
-						<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;"> 
-							<a style="width:70px;" class="btn blue four mini-btn bglblue" data-toggle="modal" data-target="#myModal'.$id_absensi.'"> View</a> 
-							<!-- The Modal -->
-	  <div class="modal fade" id="myModal'.$id_absensi.'">
-	    <div class="modal-dialog">
-	      <div class="modal-content">
-	      
-	        <!-- Modal Header -->
-	        <div class="modal-header">
-	          <h4 class="modal-title">Filter</h4>
-	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        </div>
-	        
-	        <!-- Modal body -->
-	        <form method="POST" action="" class="form-horizontal">
-				<div class="form-group">
-					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Alamat IP</label>
-					<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[0].'</label>
-					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Provinsi</label>
-					<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[2].'</label>
-					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Kota</label>
-					<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[3].'</label>
-					<label for="focusedinput" class="col-sm-2 control-label ratakiri">Lokasi</label>
-					<a href="https://www.google.com/maps/search/?api=1&query='.$latlon.'"><label for="focusedinput" class="col-sm-10 control-label ratakiri">Lihat di Google Maps</label></a>
-				</div>
-				<!-- Modal footer -->
-		        <div class="modal-footer">
-		          	<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+							if (($pegawai['jabatan_pegawai']=="Intern") || ($pegawai['jabatan_pegawai']=="Staf Divisi")){
+								$jenis_pegawai="Pegawai";
+							}else{
+								$jenis_pegawai="Manajer Divisi";
+							}
+							if($jenis==$jenis_pegawai){
+								echo '<tr class="tabel"> 
+							<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$i.'</td> 
+							<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td> 
+							<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawaiuser['keterangan'].'</td>
+							<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;"> 
+								<a style="width:70px;" class="btn blue four mini-btn bglblue" data-toggle="modal" data-target="#myModal'.$id_absensi.'"> View</a> 
+								<!-- The Modal -->
+		  <div class="modal fade" id="myModal'.$id_absensi.'">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header">
+		          <h4 class="modal-title">Filter</h4>
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
 		        </div>
-			</form>
-	        
-	      </div>
-	    </div>
-	  </div>
-	</div>
-						</td>
-						<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;">';
-					}
-						if ($pegawaiuser['status_acc']=="Approved" ){
-							echo '<a style="width:70px;cursor:default;" class="btn blue four mini-btn bggreen"> Approved</a>';
-						}elseif ($pegawaiuser['status_acc']=="Decline" ){
-							echo '<a style="width:70px;cursor:default;" class="btn blue four mini-btn bgred"> Decline</a>';
-						}elseif ($pegawaiuser['status_acc']=="Pending" ){
-							echo '<a style="width:70px;cursor:default;" class="btn blue four mini-btn bgorange"> Pending</a>';
-						}
-						echo '</td>
-						<td align="center" class="isitabel" style="max-width: 10px; padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">';
-						if ($pegawaiuser['status_acc'] !="Pending"){
-							echo '<a style="cursor:default;" class="btn blue four mini-btn bgblue" href="#" data-toggle="tooltip" data-placement="bottom" title="Done">Done</a>
-						</td>  
-					</tr>';
-						}else{	
-							echo '<a onclick="return konfirmasi1()" class="btn blue four mini-btn bggreen" href="functions/ubah_status_acc_izin.php?status=Approved&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Approved"><i class="fa fa-check"></i></a>
-							<a onclick="return konfirmasi2()" class="btn blue four mini-btn bgred" href="functions/ubah_status_acc_izin.php?status=Decline&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Decline"><i class="fa fa-times"></i></a>
-						</td>  
-					</tr>';
-						}
-							$i++;
+		        
+		        <!-- Modal body -->
+		        <form method="POST" action="" class="form-horizontal">
+					<div class="form-group">
+						<label for="focusedinput" class="col-sm-2 control-label ratakiri">Alamat IP</label>
+						<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[0].'</label>
+						<label for="focusedinput" class="col-sm-2 control-label ratakiri">Provinsi</label>
+						<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[2].'</label>
+						<label for="focusedinput" class="col-sm-2 control-label ratakiri">Kota</label>
+						<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[3].'</label>
+						<label for="focusedinput" class="col-sm-2 control-label ratakiri">Lokasi</label>
+						<a href="https://www.google.com/maps/search/?api=1&query='.$latlon.'"><label for="focusedinput" class="col-sm-10 control-label ratakiri">Lihat di Google Maps</label></a>
+					</div>
+					<!-- Modal footer -->
+			        <div class="modal-footer">
+			          	<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			        </div>
+				</form>
+		        
+		      </div>
+		    </div>
+		  </div>
+		</div>
+							</td>
+							<td align="center" class="isitabel" style="width: 20px; padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;">';
+								if ($pegawaiuser['status_acc']=="Approved" ){
+									echo '<a style="width:70px;cursor:default;" class="btn blue four mini-btn bggreen"> Approved</a>';
+								}elseif ($pegawaiuser['status_acc']=="Decline" ){
+									echo '<a style="width:70px;cursor:default;" class="btn blue four mini-btn bgred"> Decline</a>';
+								}elseif ($pegawaiuser['status_acc']=="Pending" ){
+									echo '<a style="width:70px;cursor:default;" class="btn blue four mini-btn bgorange"> Pending</a>';
+								}
+								echo '</td>
+								<td align="center" class="isitabel" style="max-width: 10px; padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">';
+								if ($pegawaiuser['status_acc'] !="Pending"){
+									echo '<a style="cursor:default;" class="btn blue four mini-btn bgblue" href="#" data-toggle="tooltip" data-placement="bottom" title="Done">Done</a>
+								</td>  
+							</tr>';
+								}else{	
+									echo '<a onclick="return konfirmasi1()" class="btn blue four mini-btn bggreen" href="functions/ubah_status_acc_izin.php?status=Approved&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Approved"><i class="fa fa-check"></i></a>
+									<a onclick="return konfirmasi2()" class="btn blue four mini-btn bgred" href="functions/ubah_status_acc_izin.php?status=Decline&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Decline"><i class="fa fa-times"></i></a>
+								</td>  
+							</tr>';
+								}
+								$i++;
+							}
 						}
 					?>  
 				</tbody> 

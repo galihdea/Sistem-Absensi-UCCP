@@ -152,6 +152,7 @@
 		</a>
 		<div class="col-sm-2"></div>
 	</div>
+	<!-- Absen Cuti pegawai -->
 	<?php } if ($_SESSION['jenis_user'] == "Pegawai"){?>
 	<div class="col-sm-12">
 		<div class="col-sm-2"></div>
@@ -163,10 +164,10 @@
 			<div class="col-sm-6">
 				<p style="font-size:20px; margin:10px 0px 0px 5px; color:white; text-align:left;">Ambil</p>
 				<p style="font-size:40px; margin:5px; color:white; text-align:left;">Cuti</p>
-			</div><!-- 
-			<div class="col-sm-3">
-				<p style="font-size:60px; margin:12px; color:white;">99</p>
-			</div> -->
+			</div>
+			<div class="col-sm-12">
+				<p class="dashboard-detail">Klik disini..</p>
+			</div>
 		</div>
 		</a>
 		<div class="col-sm-2"></div>
