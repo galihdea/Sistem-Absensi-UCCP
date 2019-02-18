@@ -15,8 +15,8 @@
 	<div class="modal fade" id="modalUbah<?php echo $id_luar;?>">
 	<div class="col-sm-2"></div>
 	<div class="col-sm-9">
-	<div class="grid-1" style="margin-left:10px;width: 1052px;height: 438px;" >
-		<h3 class="inner-tittle two"> Form Ubah Pegawai</h3><hr>
+		<div class="grid-1" style="padding-right: 30px;padding-left: 20px;margin-right:31px; margin-left:10px;">
+			<h3 class="inner-tittle two"> Form Ubah Pegawai</h3><hr>
 			<div class="form-body margin-form">
 				<form method="POST" action="functions/ubah_pegawai.php?id_pegawai=<?php echo $id_pegawai;?>" class="form-horizontal" data-toggle="validator" role="form">
 					<div class="form-group">

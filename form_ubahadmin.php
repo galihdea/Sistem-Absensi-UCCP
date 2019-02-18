@@ -19,6 +19,13 @@
 		<h3 class="inner-tittle two"> Form Ubah Admin</h3><hr>
 			<div class="form-body margin-form">
 				<form method="POST" action="functions/ubah_admin.php?id_admin=<?php echo $id_admin;?>" class="form-horizontal" data-toggle="validator" role="form">
+                    <div class="form-group">
+                        <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Email</label>
+                        <div class="col-sm-10">
+                            <input name="email" type="email" class="form-control1" id="inputName" data-error="Maaf, format email tidak sesuai." placeholder="Email" required>
+                            <div class="help-block with-errors" style="color: #a94442 !important;"></div>
+                        </div>
+                    </div>
 					<div class="form-group">
 						<label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Username Admin</label>
 						<div class="col-sm-10">
