@@ -31,7 +31,7 @@
         $image = $_FILES['fileToUpload']['tmp_name'];
         $image = addslashes(file_get_contents($image));
 
-        $target_dir = "uploads/";
+        $target_dir = "attachments/";
         $target_file = $target_dir . $upload_image;
         $uploadOk = 1;
 
