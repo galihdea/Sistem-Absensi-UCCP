@@ -26,7 +26,7 @@
                     <h3 class="inner-tittle two">Pengajuan Izin</h3>
                     <div class="grid-1">
                         <div class="form-body">
-                            <form method="POST" action="functions/absen_izin.php" class="form-horizontal" role="form" data-toggle="validator">
+                            <form method="POST" enctype="multipart/form-data" action="functions/absen_izin.php" class="form-horizontal" role="form" data-toggle="validator">
                                 <div class="form-group">
                                     <label for="selector1" class="col-sm-2 control-label" style="text-align:left;">Jenis
                                         Izin</label>
