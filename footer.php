@@ -53,12 +53,19 @@
             <?php } if ($_SESSION['jenis_user'] == "Pegawai"){?>
             <li id="menu-academico"><a href="#"><i class="fa fa-table"></i> <span> Absensi</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                 <ul id="menu-academico-sub">
-			<?php } if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_absen == "Boleh"){?>
+            <!-- absen_sakit_izin -->
+            <?php } if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_absen == "Boleh"){?>
                     <li id="menu-academico-avaliacoes"><a onclick="load_page()" href="menu_absenkaryawan.php"> Masuk</a></li>
                     <li id="menu-academico-boletim"><a onclick="load_page()" href="menu_absenizin.php">Izin</a></li>
-			<?php }else if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_absen == "Tidak"){?>
-					<li id="menu-academico-avaliacoes"><a style="cursor: no-drop;"> Masuk</a></li>
+            <?php }else if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_absen == "Tidak"){?>
+                    <li id="menu-academico-avaliacoes"><a style="cursor: no-drop;"> Masuk</a></li>
                     <li id="menu-academico-boletim"><a style="cursor: no-drop;">Izin</a></li>
+            <!-- absen_cuti -->
+			<?php } if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_cuti == "Boleh"){?>
+                    <li id="menu-academico-avaliacoes"><a onclick="load_page()" href="menu_absencuti.php"> Cuti</a></li>
+			<?php }else if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_cuti == "Tidak"){?>
+					<li id="menu-academico-avaliacoes"><a style="cursor: no-drop;"> Cuti</a></li>
+            <!-- lihat_histori -->
 			<?php } if ($_SESSION['jenis_user'] == "Pegawai"){?>
                     <li id="menu-academico-avaliacoes"><a onclick="load_page()" href="menu_historikaryawan.php">Lihat Histori</a></li>
                 </ul>

@@ -21,12 +21,21 @@
 		$nama = $ambil['nama_pegawai'];
 	}
     $id_user = $_SESSION['id_user'];
-    $querycekabsen = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND (status_acc='Approved' OR status_acc='Pending') AND DATE(tanggal)=CURDATE()");
+    // absen_izin_sakit
+    $querycekabsen = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND (status_absensi='sakit' OR status_absensi='izin') AND (status_acc='Approved' OR status_acc='Pending') AND DATE(tanggal)=CURDATE()");
     if(mysqli_num_rows($querycekabsen)>0){
         $boleh_absen = "Tidak";
     }
     else{
         $boleh_absen = "Boleh";
+    }
+    // absen_cuti
+    $querycekabsen = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND status_absensi='cuti' AND (status_acc='Approved' OR status_acc='Pending') AND DATE(tanggal)=CURDATE()");
+    if(mysqli_num_rows($querycekabsen)>0){
+        $boleh_cuti = "Tidak";
+    }
+    else{
+        $boleh_cuti = "Boleh";
     }
     $read = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND DATE(tanggal)=CURDATE() ORDER BY id_absensi DESC");
     $ambil = $read->fetch_array();

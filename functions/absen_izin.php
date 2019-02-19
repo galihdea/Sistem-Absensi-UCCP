@@ -44,7 +44,7 @@
 			header('location:../menu_absencuti.php');
 			$cek = 'salah';
 		}
-		elseif((cuti_awal-$sekarang)<=0-86400000){
+		elseif(($cuti_awal-$sekarang)<=0-86400000){
 			header('location:../menu_absencuti.php');
 			$cek = 'salah';
 		}
