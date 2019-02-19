@@ -45,7 +45,7 @@
 										switch(form_param){
 										case "sakit":
 										    form_izin.innerHTML='';form_sakit.innerHTML='';
-											form_sakit.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Sakit</label><div class="col-sm-8"><textarea name="keterangan_sakit" id="txtarea1" cols="50" rows="4" class="form-control1" required></textarea></div></div><div class="form-group"><button type="submit" class="btn blue four bglblue hover">Ajukan Izin</button></div>';
+                                            form_sakit.innerHTML='<div class="form-group"><label for="txtarea1" class="col-sm-2 control-label" style="text-align:left;">Keterangan Sakit</label><div class="col-sm-8" style="padding-top: 10px;"><input type="file" name="fileToUpload" id="fileToUpload" style="background:#FFFFFF;border:1px solid #FFFFFF;color:#000000" required accept="image/*"></div></div><div class="form-group"><button type="submit" class="btn blue four bglblue hover">Ajukan Izin</button></div>';
 											break;
 										case "izin":
 											form_sakit.innerHTML='';form_izin.innerHTML='';
