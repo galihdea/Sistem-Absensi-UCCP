@@ -7,6 +7,7 @@
 		header('Location: login.php');
 	}
 	$id = $_SESSION['id_pegawai'];
+    $manajer = 'Manajer Divisi';
 	if ($_SESSION['jenis_user'] == "Admin"){
 		$ambilnama = $conn->query("SELECT * FROM admin WHERE id_admin='$id'");
 		$ambil = $ambilnama->fetch_array();
@@ -21,8 +22,8 @@
 		$nama = $ambil['nama_pegawai'];
 	}
     $id_user = $_SESSION['id_user'];
-    // absen_izin_sakit
-    $querycekabsen = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND (status_absensi='sakit' OR status_absensi='izin') AND (status_acc='Approved' OR status_acc='Pending') AND DATE(tanggal)=CURDATE()");
+    // absen_izin_sakit_MASUK
+    $querycekabsen = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND (status_absensi='masuk' OR status_absensi='sakit' OR status_absensi='izin') AND (status_acc='Approved' OR status_acc='Pending') AND DATE(tanggal)=CURDATE()");
     if(mysqli_num_rows($querycekabsen)>0){
         $boleh_absen = "Tidak";
     }
@@ -37,17 +38,44 @@
     else{
         $boleh_cuti = "Boleh";
     }
-    $read = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND DATE(tanggal)=CURDATE() ORDER BY id_absensi DESC");
+    /*status_acc_masukizinsakit*/
+    $read = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND (status_absensi='masuk' OR status_absensi='sakit' OR status_absensi='izin') AND DATE(tanggal)=CURDATE() ORDER BY id_absensi DESC");
     $ambil = $read->fetch_array();
     $status_acc = $ambil['status_acc'];
+    /*status_acc_cuti*/
+    $read = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND status_absensi='cuti' ORDER BY id_absensi DESC");
+    $ambil = $read->fetch_array();
+    $status_acc_cuti = $ambil['status_acc'];
 
-    $query_izin = $conn->query("SELECT * FROM absensi WHERE dibaca='belum' AND status_absensi='izin' AND DATE(tanggal)=CURDATE()");
-    $ambil_izin = $query_izin->fetch_array();
-    $jml_izin = mysqli_num_rows($query_izin);
+    $jml_izin = 0;
+    $jml_cuti = 0;
+    $jml_total = 0;
 
-    $query_cuti = $conn->query("SELECT * FROM absensi WHERE dibaca='belum' AND status_absensi='cuti'");
-    $ambil_cuti = $query_cuti->fetch_array();
-    $jml_cuti = mysqli_num_rows($query_cuti);
+    if($_SESSION['jenis_user']=='Super Admin'){
+        $query_izin = $conn->query("SELECT * FROM absensi,user,pegawai WHERE absensi.id_user=user.id_user AND user.id_luar=pegawai.id_pegawai AND pegawai.jabatan_pegawai='Manajer Divisi' AND absensi.dibaca='belum' AND status_absensi='izin' AND DATE(tanggal)=CURDATE()");
+        $ambil_izin = $query_izin->fetch_array();
+        $jml_izin = mysqli_num_rows($query_izin);
+    }
+    elseif($_SESSION['jenis_user']=='Admin'){
+        $query_izin = $conn->query("SELECT * FROM absensi,user,pegawai WHERE absensi.id_user=user.id_user AND user.id_luar=pegawai.id_pegawai AND pegawai.jabatan_pegawai<>'Manajer Divisi' AND absensi.dibaca='belum' AND status_absensi='izin' AND DATE(tanggal)=CURDATE()");
+        $ambil_izin = $query_izin->fetch_array();
+        $jml_izin = mysqli_num_rows($query_izin);
+    }
+    // $ambil_izin = $query_izin->fetch_array();
+    // $jml_izin = mysqli_num_rows($query_izin);
+
+    if($_SESSION['jenis_user']=='Super Admin'){
+        $query_cuti = $conn->query("SELECT * FROM absensi,user,pegawai WHERE absensi.id_user=user.id_user AND user.id_luar=pegawai.id_pegawai AND pegawai.jabatan_pegawai='Manajer Divisi' AND absensi.dibaca='belum' AND status_absensi='cuti'");
+        $ambil_cuti = $query_cuti->fetch_array();
+        $jml_cuti = mysqli_num_rows($query_cuti);
+    }
+    elseif($_SESSION['jenis_user']=='Admin'){
+        $query_cuti = $conn->query("SELECT * FROM absensi,user,pegawai WHERE absensi.id_user=user.id_user AND user.id_luar=pegawai.id_pegawai AND pegawai.jabatan_pegawai<>'Manajer Divisi' AND absensi.dibaca='belum' AND status_absensi='cuti'");
+        $ambil_cuti = $query_cuti->fetch_array();
+        $jml_cuti = mysqli_num_rows($query_cuti);
+    }
+    /*$ambil_cuti = $query_cuti->fetch_array();
+    $jml_cuti = mysqli_num_rows($query_cuti);*/
 
     $jml_total = $jml_izin + $jml_cuti;  
 
