@@ -130,7 +130,7 @@
 ?>
 
     <head>
-        
+        <meta http-equiv="Refresh" content="300">
         <title>UCCP</title>
         <link rel="icon" href="images/ok.ico" type="image/ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -376,4 +376,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             }
 
                         }
+                        // renderTime();
+                        // function renderTime(){
+
+                        //     setTimeout ('renderTime()',1000);
+                        // }
                     </script>

@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php include 'header.php';
-if ($_SESSION['jenis_user'] == "Pegawai") {
+if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_cuti=='Boleh') {
     ?>
     <!--/sub-heard-part-->
     <script>
