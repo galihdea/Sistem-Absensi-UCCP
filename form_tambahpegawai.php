@@ -28,7 +28,7 @@
                         <div class="form-group">
                             <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Username Pegawai</label>
                             <div class="col-sm-10">
-                                <input name="username" data-minlength="6" type="text" class="form-control1" id="inputName" data-error="Maaf, username minimal 6 karakter."placeholder="Username" required>
+                                <input name="username" data-minlength="1" type="text" class="form-control1" id="inputName" data-error="Maaf, username minimal 1 karakter."placeholder="Username" required>
                                 <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                             </div>
                         </div>

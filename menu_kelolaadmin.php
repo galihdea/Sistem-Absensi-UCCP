@@ -23,6 +23,7 @@
 					<tr> 
 						<th class="headerno">No</th> 
 						<th class="header">Username</th> 
+						<th class="header">Email</th>
 						<th class="header">Nama Admin</th> 
 						<th class="header">Aksi</th> 
 					</tr> 
@@ -38,6 +39,7 @@
 							echo '<tr class="tabel"> 
 						<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$i.'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$user['username'].'</td> 
+						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$user['email'].'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$admin['nama_admin'].'</td>
 						<td align="center" class="isitabel" style="max-width: 10px; padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">
 							<a class="btn blue four mini-btn bggreen" data-toggle="modal" data-target="#modalLihat'.$id_luar.'" title="Lihat"><i class="fa fa-eye"></i></a>';

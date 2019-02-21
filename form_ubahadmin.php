@@ -5,6 +5,8 @@
 		$id_admin = $id_luar;
 		$querylihat = $conn->query("SELECT * FROM admin WHERE id_admin='$id_admin'");
 		$lihat = $querylihat->fetch_array();
+		$querylihat2 = $conn->query("SELECT * FROM user WHERE status='Admin' AND id_luar='$id_admin'");
+		$lihat2 = $querylihat2->fetch_array();
 	?>
     <script src="js/validator.js">//script validasi form. Source: http://1000hz.github.io/bootstrap-validator/</script>
 	<script>
@@ -22,7 +24,7 @@
                     <div class="form-group">
                         <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Email</label>
                         <div class="col-sm-10">
-                            <input name="email" type="email" class="form-control1" id="inputName" data-error="Maaf, format email tidak sesuai." placeholder="Email" required>
+                            <input name="email" type="email" class="form-control1"  data-error="Maaf, format email tidak sesuai." placeholder="Email" value="<?php echo $lihat2['email'];?>" required>
                             <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                         </div>
                     </div>
