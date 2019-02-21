@@ -1,6 +1,7 @@
 <?php
 	include 'koneksi.php';
 
+	session_start();
 	$id_pegawai = $_GET['id_pegawai'];
 	$nama = $_POST['namapegawai'];
 	$divisi = $_POST['divisipegawai'];

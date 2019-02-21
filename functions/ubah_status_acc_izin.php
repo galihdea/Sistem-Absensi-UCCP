@@ -1,6 +1,7 @@
 <?php
 	include 'koneksi.php';
 
+	session_start();
 	$status = $_GET['status'];
 	$id_absensi = $_GET['id_absensi'];
 
