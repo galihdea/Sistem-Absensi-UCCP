@@ -109,20 +109,24 @@
 	}
 	$querycekizinhariini = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND DATE(tanggal)=CURDATE() AND status_acc='Approved' AND (status_absensi=='izin' OR status_absensi='sakit' OR status_absensi='masuk')");
 	if(mysqli_num_rows($querycekizinhariini)>0&&(($izin=='izin')||($izin=='sakit'))){
+        $_SESSION['peringatan'] = 'Anda sudah izin hari ini';
 		header('location:../menu_absenizin.php');
 	}
 	if($cek=='benar'){
 		$queryizin = $conn->query("INSERT INTO absensi (id_user,status_absensi,status_acc,keterangan,ip_address,dibaca) VALUES ('$id_user','$izin','$acc','$keterangan','$ip_address','$dibaca')");
 
 		if($queryizin){
+            $_SESSION['peringatan'] = 'Input absen berhasil';
 			header('location:../menu_dashboard.php');
 		}
 	}
 	elseif($cek=='salah'){
 		if($izin=='cuti'){
+            $_SESSION['peringatan'] = 'Input absen gagal';
 			header('location:../menu_absencuti.php');
 		}
 		else{
+            $_SESSION['peringatan'] = 'Input absen gagal';
 			header('location:../menu_absenizin.php');
 		}	
 	}

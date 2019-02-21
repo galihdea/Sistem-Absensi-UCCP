@@ -12,19 +12,24 @@
 		$_SESSION['id_pegawai'] = $hasil['id_luar'];
 		$_SESSION['jenis_user'] = $hasil['status'];
 		if($_SESSION['jenis_user']=='Super Admin'){
+			$_SESSION['peringatan'] = 'Login sebagai Super Admin';
 			header('location:../menu_dashboard.php');
 		}
 		elseif($_SESSION['jenis_user']=='Admin'){
+			$_SESSION['peringatan'] = 'Login sebagai Admin';
 			header('location:../menu_dashboard.php');
 		}
 		elseif($_SESSION['jenis_user']=='Pegawai'){
+			$_SESSION['peringatan'] = 'Login sebagai Pegawai';
 			header('location:../menu_dashboard.php');
 		}
 		else{
+			//$_SESSION['peringatan'] = 'Gagal login';
 			header('location:../login.php');
 		}
 	}
 	else{
+		//$_SESSION['peringatan'] = 'Gagal login';
 		header('location:../login.php');
 	}
 ?>

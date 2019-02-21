@@ -1,6 +1,7 @@
 <?php
 	include 'koneksi.php';
 
+	session_start();
 	$id_user = $_GET['id_user'];
 
 	if(getimagesize($_FILES['gambar']['tmp_name'])==FALSE){
@@ -16,6 +17,7 @@
 			$target_file = $folder.basename($_FILES['gambar']['name']);
 			echo $target_file;
 			//move_uploaded_file($image,$target_file);
+			$_SESSION['peringatan'] = 'Ubah foto berhasil';
 			$loco = 'location:../form_profile.php?id_user='.$id_user.'';
 			header($loco);
 		}

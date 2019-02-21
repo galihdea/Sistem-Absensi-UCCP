@@ -1,6 +1,7 @@
 <?php
 	include 'koneksi.php';
 
+	session_start();
 	$email = $_POST['email'];
 	$username = $_POST['username'];
 	$password = md5($_POST['password']);
@@ -8,6 +9,7 @@
 	$divisi = $_POST['divisipegawai'];
 	$status = $_POST['statuspegawai'];
 	if(empty($email)||empty($username)||empty($password)||empty($nama)){
+		$_SESSION['peringatan'] = 'Form masih kosong';
 		header('location:../form_tambahpegawai.php');
 	}
 	else{
@@ -21,9 +23,11 @@
 				$id_pegawai = $hasil['id_pegawai'];
 				$querytambahuser = $conn->query("INSERT INTO user (email,username,password,status,id_luar) VALUES ('$email','$username','$password','Pegawai','$id_pegawai')");
 				if($querytambahuser){
+					$_SESSION['peringatan'] = 'Tambah pegawai berhasil';
 					header('location:../menu_kelolapegawai.php');
 				}
 				else{
+					$_SESSION['peringatan'] = 'Tambah pegawai gagal';
 					header('location:../form_tambahpegawai.php');
 				}
 			}

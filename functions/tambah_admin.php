@@ -1,12 +1,14 @@
 <?php
 	include 'koneksi.php';
 
+	session_start();
 	$email = $_POST['email'];
 	$username = $_POST['username'];
 	$password = md5($_POST['password']);
 	$nama = $_POST['namaadmin'];
 	$status = "Admin";
 	if(empty($email)||empty($username)||empty($password)||empty($nama)){
+		$_SESSION['peringatan'] = 'Form masih kosong';
 		header('location:../form_tambahadmin.php');
 	}
 	else{
@@ -35,9 +37,11 @@
 				}
 				$querytambahuser = $conn->query("INSERT INTO user (email,username,password,status,id_luar) VALUES ('$email','$username','$password','$status','$id_adm')");
 				if($querytambahuser){
+					$_SESSION['peringatan'] = 'Tambah admin berhasil';
 					header('location:../menu_kelolaadmin.php');
 				}
 				else{
+					$_SESSION['peringatan'] = 'Tambah admin gagal';
 					header('location:../form_tambahadmin.php');
 				}
 			}
