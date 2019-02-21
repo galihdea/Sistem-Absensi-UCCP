@@ -28,6 +28,7 @@
                             <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                         </div>
                     </div>
+
 					<div class="form-group">
 						<label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Username Admin</label>
 						<div class="col-sm-10">
@@ -41,6 +42,7 @@
 							<input name="namaadmin" type="text" class="form-control1" id="inputName" placeholder="Nama" value="<?php echo $lihat['nama_admin'];?>" required>
 						</div>
 					</div>
+					
 					<div  align="right">
                         <a data-dismiss="modal" class="btn blue four bgred tombol-back">Cancel</a>
 						<button type="submit" class="btn btn-default">Submit</button>
