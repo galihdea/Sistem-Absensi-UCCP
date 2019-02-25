@@ -17,29 +17,30 @@
 	<div class="modal fade" id="modalUbah<?php echo $id_luar;?>">
 	<div class="col-sm-2"></div>
 	<div class="col-sm-9">
-		<div class="grid-1">
+		<div class="grid-1" style="padding-right: 30px;padding-left: 20px;margin-right:31px; margin-left:10px;">
 		<h3 class="inner-tittle two"> Form Ubah Admin</h3><hr>
 			<div class="form-body margin-form">
 				<form method="POST" action="functions/ubah_admin.php?id_admin=<?php echo $id_admin;?>" class="form-horizontal" data-toggle="validator" role="form">
                     <div class="form-group">
-                        <label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Email</label>
-                        <div class="col-sm-10">
-                            <input name="email" type="email" class="form-control1"  data-error="Maaf, format email tidak sesuai." placeholder="Email" value="<?php echo $lihat2['email'];?>" required>
-                            <div class="help-block with-errors" style="color: #a94442 !important;"></div>
+                        <label for="focusedinput" class="col-sm-3 control-label ratakiri konten-modal">Email</label>
+                        <div class="col-sm-9">
+                            <input name="email" type="email" class="form-control1"  data-error="Maaf, format email tidak sesuai." placeholder="Email" value="<?php echo $lihat2['email'];?>" required style="margin-bottom: 0;">
+                            <input name="hidden1" type="text" class="invicible">
                         </div>
                     </div>
-
 					<div class="form-group">
-						<label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Username Admin</label>
-						<div class="col-sm-10">
-							<input name="username" type="text" class="form-control1 bgdisable" id="focusedinput" placeholder="Username" value="<?php echo $lihat['user_admin'];?>" disabled="">
+						<label for="focusedinput" class="col-sm-3 control-label ratakiri konten-modal">Username Admin</label>
+						<div class="col-sm-9">
+							<input name="username" type="text" class="form-control1 bgdisable" id="focusedinput" placeholder="Username" value="<?php echo $lihat['user_admin'];?>" disabled style="margin-bottom: 0;">
+                            <input name="hidden1" type="text" class="invicible">
 						</div>
 					</div>
 					
 					<div class="form-group">
-						<label for="focusedinput" class="col-sm-2 control-label ratakiri konten-modal">Nama Admin</label>
-						<div class="col-sm-10">
-							<input name="namaadmin" type="text" class="form-control1" id="inputName" placeholder="Nama" value="<?php echo $lihat['nama_admin'];?>" required>
+						<label for="focusedinput" class="col-sm-3 control-label ratakiri konten-modal">Nama Admin</label>
+						<div class="col-sm-9">
+							<input name="namaadmin" type="text" class="form-control1" id="inputName" placeholder="Nama" value="<?php echo $lihat['nama_admin'];?>" required style="margin-bottom: 0;">
+                            <input name="hidden1" type="text" class="invicible">
 						</div>
 					</div>
 					

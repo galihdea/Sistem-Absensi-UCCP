@@ -28,7 +28,8 @@
 	?>
 	<div class="modal fade" id="modalResetPass">
 		<div class="col-sm-2"></div>
-		<div class="grid-1 col-sm-9">
+		<div class="col-sm-9">
+		<div class="grid-1" style="padding-right: 30px;padding-left: 20px;margin-right:31px; margin-left:10px;">
 			<!-- Modal Header -->
 		    <h2 class="header-modal">Reset Password</h2>
 			<div class="form-body">
@@ -72,6 +73,7 @@
 					</div>
 				</form>
 			</div>
+		</div>
 		</div>
 	</div>
 </body>

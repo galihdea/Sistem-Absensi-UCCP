@@ -200,6 +200,13 @@ a:hover {
     padding:6px 12px!important;
 }
 
+.invicible{
+    visibility: hidden; 
+    height: 0; 
+    border:0; 
+    padding:0;
+}
+
 @media (min-width: 768px){
     .col-sm-3_5{
         width: 32.83%;
