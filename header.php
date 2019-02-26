@@ -125,7 +125,13 @@
     //gambar
     $query_ambi_gambar = $conn->query("SELECT * FROM user WHERE id_user='$id_user'");
     $ambi_gambar = $query_ambi_gambar->fetch_array();
-    $gambar = "uploads/".$ambi_gambar['nama_gambar'];
+    if(!isset($ambi_gambar['nama_gambar'])){
+        $ambi_gambar['nama_gambar'] = "empty_profile.jpg";
+        $gambar = "images/".$ambi_gambar['nama_gambar'];
+    }
+    else{
+        $gambar = "uploads/".$ambi_gambar['nama_gambar'];
+    }
 
 ?>
 
