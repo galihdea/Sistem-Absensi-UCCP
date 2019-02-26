@@ -1,5 +1,11 @@
 <!DOCTYPE HTML>
 <html>
+<style type="text/css">
+    .marginLR0{
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+</style>
 
 <body>
     <script src="js/validator.js">
@@ -18,21 +24,21 @@
                 <div class="form-body margin-form">
                     <form method="POST" action="functions/tambah_pegawai.php" class="form-horizontal"
                         data-toggle="validator" role="form">
-                        <div class="form-group">
+                        <div class="form-group marginLR0">
                             <label for="focusedinput" class="col-sm-3 control-label ratakiri konten-modal">Email</label>
                             <div class="col-sm-9">
                                 <input name="email" type="email" class="form-control1" id="inputName" data-error="Maaf, format email tidak sesuai." placeholder="Email" required>
                                 <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group marginLR0">
                             <label for="focusedinput" class="col-sm-3 control-label ratakiri konten-modal">Username Pegawai</label>
                             <div class="col-sm-9">
                                 <input name="username" data-minlength="1" type="text" class="form-control1" id="inputName" data-error="Maaf, username minimal 1 karakter."placeholder="Username" required>
                                 <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group marginLR0">
                             <label for="focusedinput" class="col-sm-3 control-label ratakiri konten-modal">Password Pegawai</label>
                             <div class="col-sm-9">
                                 <input name="password" type="password" data-minlength="6" class="form-control"
@@ -40,7 +46,7 @@
                                 <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group marginLR0">
                             <label for="focusedinput" class="col-sm-3 control-label ratakiri konten-modal">Nama Pegawai</label>
                             <div class="col-sm-9">
                                 <input name="namapegawai" type="text" class="form-control1" id="inputName"
@@ -48,7 +54,7 @@
                                 <div class="help-block with-errors" style="color: #a94442 !important;"></div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group marginLR0">
                             <label for="selector1" class="col-sm-3 control-label ratakiri konten-modal">Divisi Pegawai</label>
                             <div class="col-sm-9">
                                 <select name="divisipegawai" id="selector1" class="form-control1" required>
@@ -58,7 +64,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group marginLR0">
                             <label for="selector1" class="col-sm-3 control-label ratakiri konten-modal">Status Pegawai</label>
                             <div class="col-sm-9">
                                 <select name="statuspegawai" id="selector1" class="form-control1" required>
