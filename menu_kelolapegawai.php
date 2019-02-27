@@ -42,6 +42,7 @@
 							$id_luar = $pegawai['id_pegawai'];
 							$ambil_user_pegawai = $conn->query("SELECT * FROM user WHERE id_luar='$id_luar' AND status='Pegawai' ");
 							$user = $ambil_user_pegawai->fetch_array();
+							$id_user = $user['id_user'];
 							echo '<tr class="tabel"> 
 						<td class="notabel" style="padding: 5px 15px 5px 15px !important; border-bottom-width: 2px !important;" scope="row">'.$i.'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$user['username'].'</td>
@@ -51,7 +52,7 @@
 							//alert reset
 							$t1 = "' mereset password username `".$user['username']."`?'";
 							$tanya = 'onclick="return konfirmasi('.$t1.')"';
-							echo '<a '.$tanya.' class="btn blue four mini-btn bgyellow" href="#" data-toggle="tooltip" data-placement="bottom" title="Reset Password"><i class="fa fa-eye"></i></a>';
+							echo '<a '.$tanya.' class="btn blue four mini-btn bgyellow" href="functions/reset_password_pegawai.php?id_user='.$id_user.'" data-toggle="tooltip" data-placement="bottom" title="Reset Password"><i class="fa fa-eye"></i></a>';
 							echo '<a class="btn blue four mini-btn bggreen" data-toggle="modal" data-target="#modalLihat'.$id_luar.'" title="Lihat"><i class="fa fa-eye"></i></a>';
 							echo '<a class="btn blue four mini-btn bgorange" data-toggle="modal" data-target="#modalUbah'.$id_luar.'" data-placement="bottom" title="Ubah"><i class="fa fa-edit"></i></a>';
 							//allert hapus
