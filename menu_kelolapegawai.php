@@ -31,7 +31,7 @@
 						<th class="header">Username</th>
 						<th class="header">Email</th> 
 						<th class="header">Nama Pegawai</th> 
-						<th class="header">Aksi</th> 
+						<th class="header" style="min-width: 53px;">Aksi</th> 
 					</tr> 
 				</thead> 
 				<tbody> 
@@ -47,13 +47,17 @@
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$user['username'].'</td>
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$user['email'].'</td> 
 						<td class="isitabel" style="padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">'.$pegawai['nama_pegawai'].'</td>
-						<td align="center" class="isitabel" style="max-width: 10px; padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">
-							<a class="btn blue four mini-btn bggreen" data-toggle="modal" data-target="#modalLihat'.$id_luar.'" title="Lihat"><i class="fa fa-eye"></i></a>';
+						<td align="center" class="isitabel" style="max-width: 10px; padding: 5px 5px 5px 15px !important; border-bottom-width: 2px !important;">';
+							//alert reset
+							$t1 = "' mereset password username `".$user['username']."`?'";
+							$tanya = 'onclick="return konfirmasi('.$t1.')"';
+							echo '<a '.$tanya.' class="btn blue four mini-btn bgyellow" href="#" data-toggle="tooltip" data-placement="bottom" title="Reset Password"><i class="fa fa-eye"></i></a>';
+							echo '<a class="btn blue four mini-btn bggreen" data-toggle="modal" data-target="#modalLihat'.$id_luar.'" title="Lihat"><i class="fa fa-eye"></i></a>';
 							echo '<a class="btn blue four mini-btn bgorange" data-toggle="modal" data-target="#modalUbah'.$id_luar.'" data-placement="bottom" title="Ubah"><i class="fa fa-edit"></i></a>';
 							//allert hapus
-							$t1 = "'untuk menghapus username `".$user['username']."`?'";
-							$tanya = 'onclick="return konfirmasi('.$t1.')"';
-							echo '<a '.$tanya.' class="btn blue four mini-btn bgred" href="functions/hapus_pegawai.php?id_pegawai='.$id_luar.'" data-toggle="tooltip" data-placement="bottom" title="Hapus"><i class="fa fa-trash-o"></i></a>
+							$t2 = "'untuk menghapus username `".$user['username']."`?'";
+							$tanya2 = 'onclick="return konfirmasi('.$t2.')"';
+							echo '<a '.$tanya2.' class="btn blue four mini-btn bgred" href="functions/hapus_pegawai.php?id_pegawai='.$id_luar.'" data-toggle="tooltip" data-placement="bottom" title="Hapus"><i class="fa fa-trash-o"></i></a>
 						</td>  
 					</tr>';
 					include 'form_ubahpegawai.php';
