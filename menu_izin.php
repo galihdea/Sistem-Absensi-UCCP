@@ -12,6 +12,12 @@ include 'functions/ip_check_function.php';
         //Value untuk mengisi Home / ....
         let page_header="Approval Izin"
     </script>
+    <!-- ALERT -->
+    <?php if ($_SESSION['peringatan']!=""){?>
+    <div class="alert1">
+        <p class="alert-text"><?php echo $_SESSION['peringatan'];?></p>
+    </div>
+	<?php }?>
 	<!--custom-widgets-->
 		<h3 class="inner-tittle two" style="margin-bottom:5px;"><i class="fa fa-book"></i> &nbsp Approval Izin &nbsp 
 			<a href="menu_cuti.php" onclick="load_page()" data-toggle="tooltip" data-placement="bottom" title="Approval Cuti"><i class="fa fa-caret-right"></i></a> 

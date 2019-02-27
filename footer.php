@@ -106,3 +106,4 @@
 		//document.getElementById("demo").innerHTML = "??";
 	//}
 </script>
+<?php $_SESSION['peringatan']="";?>

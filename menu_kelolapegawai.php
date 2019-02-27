@@ -11,6 +11,12 @@
         //Value untuk mengisi Home / ....
         let page_header="Kelola Pegawai"
     </script>
+    <!-- ALERT -->
+    <?php if ($_SESSION['peringatan']!=""){?>
+    <div class="alert1">
+        <p class="alert-text"><?php echo $_SESSION['peringatan'];?></p>
+    </div>
+	<?php }?>
 	<!--custom-widgets-->
 		<h3 class="inner-tittle two" style="margin-bottom:5px;"><i class="fa fa-users"></i> &nbsp Kelola Pegawai </h3>
 			<div>

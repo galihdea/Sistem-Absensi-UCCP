@@ -16,6 +16,12 @@
         //Value untuk mengisi Home / ....
         let page_header="..."
     </script>
+    <!-- ALERT -->
+    <?php if ($_SESSION['peringatan']!=""){?>
+    <div class="alert1">
+        <p class="alert-text"><?php echo $_SESSION['peringatan'];?></p>
+    </div>
+	<?php }?>
 	<!--Dashboard Admin and Super Admin-->
 	<?php if ($_SESSION['jenis_user'] == "Super Admin" || $_SESSION['jenis_user'] == "Admin"){?>
 	<div class="col-sm-12">

@@ -12,6 +12,12 @@
         let page_header="Kelola Admin"
     </script>
 	<!--custom-widgets-->
+    <!-- ALERT -->
+    <?php if ($_SESSION['peringatan']!=""){?>
+    <div class="alert1">
+        <p class="alert-text"><?php echo $_SESSION['peringatan'];?></p>
+    </div>
+	<?php }?>
 		<h3 class="inner-tittle two" style="margin-bottom:5px;"><i class="fa fa-user"></i> &nbsp Kelola Admin </h3>
 			<div>
 				<a class="btn blue four marginl20 bgblue" data-toggle="modal" data-target="#modalTambah" data-placement="bottom" title="Tambah Admin">Tambah &nbsp <i class="fa fa-plus"> </i></a>

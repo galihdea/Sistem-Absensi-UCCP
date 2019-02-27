@@ -12,8 +12,12 @@ if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_cuti=='Boleh') {
         //Value untuk mengisi Home / ....
         let page_header = "Pengajuan Cuti"
     </script>
-    <!--/sub-heard-part-->
-    <!--/sub-heard-part-->
+    <!-- ALERT -->
+    <?php if ($_SESSION['peringatan']!=""){?>
+    <div class="alert1">
+        <p class="alert-text"><?php echo $_SESSION['peringatan'];?></p>
+    </div>
+    <?php }?>
     <!--/forms-->
     <div class="forms-main">
 

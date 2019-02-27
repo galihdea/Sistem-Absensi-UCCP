@@ -12,7 +12,12 @@
         //Value untuk mengisi Home / ....
         let page_header="Absen Karyawan"
     </script>
-    <!--/sub-heard-part-->
+    <!-- ALERT -->
+    <?php if ($_SESSION['peringatan']!=""){?>
+    <div class="alert1">
+        <p class="alert-text"><?php echo $_SESSION['peringatan'];?></p>
+    </div>
+    <?php }?>
     <!--/tabs-->
     <div class="tab-main">
         <!--/tabs-inner-->

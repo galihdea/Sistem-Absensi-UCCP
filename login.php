@@ -43,15 +43,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- CSS Loading -->
     <link href="css/css-loader.css" rel='stylesheet' type='text/css' />
 </head>
-
-<body style="background-image:url(assets/images/blue-background.png);">
-<div class="loader loader-default is-active" id="load-page" data-text="Loading..." style="display:none;">
-        </div>
+<style type="text/css">
+    body{
+        background-image:url(images/background_login.jpg);
+    }
+</style>
+<body>
+    <div class="loader loader-default is-active" id="load-page" data-text="Loading..." style="display:none;"></div>
     <!--/login-->
-
-    <div class="error_page" style="background-image:url(assets/images/blue-background.png);">
-
-
+    <div class="error_page" style="background-image:url(images/background_login.jpg);">
         <div class="error-top">
             <!-- <h2 class="inner-tittle page"></h2> -->
             <div class="login">
@@ -64,10 +64,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </form>
             </div>
         </div>
-
-        <!--//login-top-->
-    </div>
-
     <!--//login-->
     <!--footer section start-->
     <div class="footer">
