@@ -31,7 +31,7 @@
 						<th class="header">Username</th>
 						<th class="header">Email</th> 
 						<th class="header">Nama Pegawai</th> 
-						<th class="header" style="min-width: 53px;">Aksi</th> 
+						<th class="header" style="width: 123px;">Aksi</th> 
 					</tr> 
 				</thead> 
 				<tbody> 
@@ -52,7 +52,7 @@
 							//alert reset
 							$t1 = "' mereset password username `".$user['username']."`?'";
 							$tanya = 'onclick="return konfirmasi('.$t1.')"';
-							echo '<a '.$tanya.' class="btn blue four mini-btn bgyellow" href="functions/reset_password_pegawai.php?id_user='.$id_user.'" data-toggle="tooltip" data-placement="bottom" title="Reset Password"><i class="fa fa-eye"></i></a>';
+							echo '<a '.$tanya.' class="btn blue four mini-btn bgyellow" href="functions/reset_password_pegawai.php?id_user='.$id_user.'" data-toggle="tooltip" data-placement="bottom" title="Reset Password"><i class="fa fa-key"></i></a>';
 							echo '<a class="btn blue four mini-btn bggreen" data-toggle="modal" data-target="#modalLihat'.$id_luar.'" title="Lihat"><i class="fa fa-eye"></i></a>';
 							echo '<a class="btn blue four mini-btn bgorange" data-toggle="modal" data-target="#modalUbah'.$id_luar.'" data-placement="bottom" title="Ubah"><i class="fa fa-edit"></i></a>';
 							//allert hapus
