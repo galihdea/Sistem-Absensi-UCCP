@@ -14,14 +14,14 @@
 	?>
 	<script>
         //Value untuk mengisi Home / ....
-        let page_header="..."
+        let page_header="...";
     </script>
     <!-- ALERT -->
     <?php if ($_SESSION['peringatan']!=""){?>
     <div class="alert1">
         <p class="alert-text"><?php echo $_SESSION['peringatan'];?></p>
     </div>
-	<?php }?>
+	<?php } ?>
 	<!--Dashboard Admin and Super Admin-->
 	<?php if ($_SESSION['jenis_user'] == "Super Admin" || $_SESSION['jenis_user'] == "Admin"){?>
 	<div class="col-sm-12">
@@ -85,7 +85,7 @@
 		<div class="col-sm-2"></div>
 	</div>
 	<!--Dashboard Pegawai Belum Absen-->	
-	<?php } if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_absen == "Boleh"){?>
+	<?php } if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_absen == "Boleh" && $lagi_cuti == "Tidak"){?>
 	<div class="col-sm-12">
 		<div class="col-sm-2"></div>
 		<a href="menu_absenkaryawan.php" onclick="load_page()">
@@ -139,7 +139,7 @@
 			$tulisan = 'Pending!!!';
 			$icon = 'fa-clock-o';
 		};
-		if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_absen == "Tidak"){?>
+		if ($_SESSION['jenis_user'] == "Pegawai" && $boleh_absen == "Tidak" && $lagi_cuti == "Tidak"){?>
 	<div class="col-sm-12">
 		<div class="col-sm-2"></div>
 		<a>
@@ -178,7 +178,7 @@
 			$tulisan = 'Cuti';
 			$icon = 'fa-flag';
 		}
-		if ($_SESSION['jenis_user'] == "Pegawai"){?>
+		if ($_SESSION['jenis_user'] == "Pegawai" && $lagi_cuti == "Tidak"){?>
 	<div class="col-sm-12">
 		<div class="col-sm-2"></div>
 		<?php if ($boleh_cuti == 'Boleh'){?><a href="menu_absencuti.php" onclick="load_page()"><?php }?>
@@ -197,6 +197,22 @@
 		<?php }?>
 		</div>
 		</a>
+		<div class="col-sm-2"></div>
+	</div>
+	<!-- Pegawai sedang cuti -->
+	<?php }
+		if ($_SESSION['jenis_user'] == "Pegawai" && $lagi_cuti == "Ya"){?>
+	<div class="col-sm-12">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8 dashboard bgorange2" align="center" style="margin-bottom: 10px;">
+			<div class="col-sm-3">
+				<i class="fa fa-calendar" style="margin: 20px 0px !important; font-size:70px; margin:10px; color:white;"></i>
+			</div>
+			<div class="col-sm-6">
+				<p style="font-size:20px; margin:10px 0px 0px 5px; color:white; text-align:left;">Anda</p>
+				<p style="font-size:40px; margin:5px; color:white; text-align:left;"> Sedang Cuti</p>
+			</div>
+		</div>
 		<div class="col-sm-2"></div>
 	</div>
 <?php } include 'footer.php'; ?>

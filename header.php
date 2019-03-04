@@ -2,6 +2,7 @@
 <?php
 	session_start();
 	include 'functions/koneksi.php';
+    include 'functions/convert_tanggal.php';
 	//session_start();
 	if (!isset($_SESSION['id_pegawai'])){
 		header('Location: login.php');
@@ -133,6 +134,15 @@
         $gambar = "uploads/".$ambi_gambar['nama_gambar'];
     }
 
+    //boleh Cuti
+    $query_ambil_cuti = $conn->query("SELECT * FROM absensi WHERE id_user='$id_user' AND status_absensi='cuti' AND status_acc='Approved' ORDER BY id_absensi DESC LIMIT 1");
+    $ambil_cuti = $query_ambil_cuti->fetch_array();
+    $tgl_cuti = $ambil_cuti['keterangan'];
+
+    $tgl=tanggal_balik_semula($tgl_cuti); 
+    if ((date("m/d/Y")>=tanggal_semula_1($tgl))&&(date("m/d/Y")<=tanggal_semula_2($tgl))) 
+        $lagi_cuti="Ya"; 
+    else $lagi_cuti="Tidak"; 
 ?>
 
     <head>

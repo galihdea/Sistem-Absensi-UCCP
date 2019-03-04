@@ -93,7 +93,7 @@ include 'functions/ip_check_function.php';
 						<label for="focusedinput" class="col-sm-2 control-label ratakiri">Kota</label>
 						<label for="focusedinput" class="col-sm-10 control-label ratakiri">'.$data[3].'</label>
 						<label for="focusedinput" class="col-sm-2 control-label ratakiri">Lokasi</label>
-						<a href="https://www.google.com/maps/search/?api=1&query='.$latlon.'"><label for="focusedinput" class="col-sm-10 control-label ratakiri">Lihat di Google Maps</label></a>
+						<a target="_blank" href="https://www.google.com/maps/search/?api=1&query='.$latlon.'"><label  style="cursor: pointer;" for="focusedinput" class="col-sm-10 control-label ratakiri">Lihat di Google Maps</label></a>
 					</div>
 					<!-- Modal footer -->
 			        <div class="modal-footer">
@@ -121,8 +121,11 @@ include 'functions/ip_check_function.php';
 								</td>  
 							</tr>';
 								}else{	
-									echo '<a onclick="return konfirmasi1()" class="btn blue four mini-btn bggreen" href="functions/ubah_status_acc_izin.php?status=Approved&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Approved"><i class="fa fa-check"></i></a>
-									<a onclick="return konfirmasi2()" class="btn blue four mini-btn bgred" href="functions/ubah_status_acc_izin.php?status=Decline&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Decline"><i class="fa fa-times"></i></a>
+									$t1 = "'untuk mengubah status menjadi `Approved`?'";
+									$t2 = "'untuk mengubah status menjadi `Decline`?'";
+									$tanya = 'onclick="return konfirmasi('.$t1.')"';	
+									echo '<a '.$tanya.' class="btn blue four mini-btn bggreen" href="functions/ubah_status_acc_izin.php?status=Approved&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Approved"><i class="fa fa-check"></i></a>
+									<a '.$tanya.' class="btn blue four mini-btn bgred" href="functions/ubah_status_acc_izin.php?status=Decline&id_absensi='.$pegawaiuser['id_absensi'].'" data-toggle="tooltip" data-placement="bottom" title="Decline"><i class="fa fa-times"></i></a>
 								</td>  
 							</tr>';
 								}
