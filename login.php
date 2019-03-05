@@ -6,7 +6,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
 <html>
-
 <head>
 <link rel="icon" href="images/ok.ico" type="image/ico" />
     <title>LOGIN | UCCP</title>
@@ -42,6 +41,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--clock init-->
     <!-- CSS Loading -->
     <link href="css/css-loader.css" rel='stylesheet' type='text/css' />
+
+    <link rel="stylesheet" type="text/css" href="css/tambahan.css" />
 </head>
 <style type="text/css">
     body{
@@ -49,12 +50,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     }
 </style>
 <body>
+    <!-- ALERT -->
+    <?php 
+    session_start();
+    ?>
     <div class="loader loader-default is-active" id="load-page" data-text="Loading..." style="display:none;"></div>
     <!--/login-->
     <div class="error_page" style="background-image:url(images/background_login.jpg);">
         <div class="error-top">
             <!-- <h2 class="inner-tittle page"></h2> -->
             <div class="login">
+                <?php
+                    if(!(empty($_SESSION['peringatan']))){
+                        echo '<div class="alert2">';
+                        echo '   <p style="color: #763c3c !important; font-weight: bold; margin:0; padding:0; border:0;">'.$_SESSION["peringatan"].'</p>';
+                        echo '</div>';
+                        unset($_SESSION['peringatan']);
+                    }
+                ?>
                 <h3 class="inner-tittle t-inner"> <img src="assets/logo/Logo UCCP 2 (800x800).png" height="60px"></h3>
                 <form action="functions/login.php" method="POST">
                     <input name="username" type="text" class="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">

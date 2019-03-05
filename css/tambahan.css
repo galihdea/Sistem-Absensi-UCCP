@@ -235,6 +235,20 @@ a:hover {
     animation-duration: 3000ms;
     animation-fill-mode: forwards;
 }
+.alert2{
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    left: 115px;
+    color: #763c3c !important;
+    background-color: #f0d8da;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    animation-name: myAnimation;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
+}
 .alert-text{
     margin:0;
     padding:0;

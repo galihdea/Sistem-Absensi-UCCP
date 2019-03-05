@@ -10,6 +10,10 @@ if ($_SESSION['jenis_user'] == "Super Admin" || $_SESSION['jenis_user'] == "Admi
         $tanggal_awal = $_POST['tanggal1'];
         $tanggal_akhir = $_POST['tanggal2'];
         $jumlah_hari = $_POST['hari'];
+        $bisa_cetak = 'bisa';
+    }
+    else{
+        $bisa_cetak = 'tidak';
     }
     ?>
     <script>
@@ -30,12 +34,14 @@ if ($_SESSION['jenis_user'] == "Super Admin" || $_SESSION['jenis_user'] == "Admi
             <i class="fa fa-filter"></i>
             &nbspFilter
         </button>
+        <?php if($bisa_cetak=='bisa'){?>
         <a href="cetak_kinerja.php?tanggal_awal=<?php echo $tanggal_awal;?>&tanggal_akhir=<?php echo $tanggal_akhir;?>&jumlah_hari=<?php echo $jumlah_hari;?>" target="_blank">
         <button type="button" class="btn btn-success" style="margin-left: 5px;">
             <i class="fa fa-print"></i>
             &nbspPrint
         </button>
         </a>
+        <?php }?>
 
         <!-- The Modal -->
         <div class="modal fade" id="myModal">

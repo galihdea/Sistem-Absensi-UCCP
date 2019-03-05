@@ -139,10 +139,14 @@
     $ambil_cuti = $query_ambil_cuti->fetch_array();
     $tgl_cuti = $ambil_cuti['keterangan'];
 
-    $tgl=tanggal_balik_semula($tgl_cuti); 
-    if ((date("m/d/Y")>=tanggal_semula_1($tgl))&&(date("m/d/Y")<=tanggal_semula_2($tgl))) 
-        $lagi_cuti="Ya"; 
-    else $lagi_cuti="Tidak"; 
+    if (!(empty($tgl_cuti))){
+        $tgl=tanggal_balik_semula($tgl_cuti); 
+        if ((date("m/d/Y")>=tanggal_semula_1($tgl))&&(date("m/d/Y")<=tanggal_semula_2($tgl))) 
+            $lagi_cuti="Ya"; 
+        else $lagi_cuti="Tidak"; 
+    }else{
+        $lagi_cuti="Tidak";
+    }
 ?>
 
     <head>
