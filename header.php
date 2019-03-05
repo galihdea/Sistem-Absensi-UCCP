@@ -53,12 +53,12 @@
     $jml_total = 0;
 
     if($_SESSION['jenis_user']=='Super Admin'){
-        $query_izin = $conn->query("SELECT * FROM absensi,user,pegawai WHERE absensi.id_user=user.id_user AND user.id_luar=pegawai.id_pegawai AND pegawai.jabatan_pegawai='Manajer Divisi' AND absensi.dibaca='belum' AND status_absensi='izin' AND DATE(tanggal)=CURDATE()");
+        $query_izin = $conn->query("SELECT * FROM absensi,user,pegawai WHERE absensi.id_user=user.id_user AND user.id_luar=pegawai.id_pegawai AND pegawai.jabatan_pegawai='Manager Divisi' AND absensi.dibaca='belum' AND status_absensi='izin' AND DATE(tanggal)=CURDATE()");
         $ambil_izin = $query_izin->fetch_array();
         $jml_izin = mysqli_num_rows($query_izin);
     }
     elseif($_SESSION['jenis_user']=='Admin'){
-        $query_izin = $conn->query("SELECT * FROM absensi,user,pegawai WHERE absensi.id_user=user.id_user AND user.id_luar=pegawai.id_pegawai AND pegawai.jabatan_pegawai<>'Manajer Divisi' AND absensi.dibaca='belum' AND status_absensi='izin' AND DATE(tanggal)=CURDATE()");
+        $query_izin = $conn->query("SELECT * FROM absensi,user,pegawai WHERE absensi.id_user=user.id_user AND user.id_luar=pegawai.id_pegawai AND pegawai.jabatan_pegawai<>'Manager Divisi' AND absensi.dibaca='belum' AND status_absensi='izin' AND DATE(tanggal)=CURDATE()");
         $ambil_izin = $query_izin->fetch_array();
         $jml_izin = mysqli_num_rows($query_izin);
     }
@@ -66,12 +66,12 @@
     // $jml_izin = mysqli_num_rows($query_izin);
 
     if($_SESSION['jenis_user']=='Super Admin'){
-        $query_cuti = $conn->query("SELECT * FROM absensi,user,pegawai WHERE absensi.id_user=user.id_user AND user.id_luar=pegawai.id_pegawai AND pegawai.jabatan_pegawai='Manajer Divisi' AND absensi.dibaca='belum' AND status_absensi='cuti'");
+        $query_cuti = $conn->query("SELECT * FROM absensi,user,pegawai WHERE absensi.id_user=user.id_user AND user.id_luar=pegawai.id_pegawai AND pegawai.jabatan_pegawai='Manager Divisi' AND absensi.dibaca='belum' AND status_absensi='cuti'");
         $ambil_cuti = $query_cuti->fetch_array();
         $jml_cuti = mysqli_num_rows($query_cuti);
     }
     elseif($_SESSION['jenis_user']=='Admin'){
-        $query_cuti = $conn->query("SELECT * FROM absensi,user,pegawai WHERE absensi.id_user=user.id_user AND user.id_luar=pegawai.id_pegawai AND pegawai.jabatan_pegawai<>'Manajer Divisi' AND absensi.dibaca='belum' AND status_absensi='cuti'");
+        $query_cuti = $conn->query("SELECT * FROM absensi,user,pegawai WHERE absensi.id_user=user.id_user AND user.id_luar=pegawai.id_pegawai AND pegawai.jabatan_pegawai<>'Manager Divisi' AND absensi.dibaca='belum' AND status_absensi='cuti'");
         $ambil_cuti = $query_cuti->fetch_array();
         $jml_cuti = mysqli_num_rows($query_cuti);
     }
