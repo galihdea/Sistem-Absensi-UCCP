@@ -25,6 +25,12 @@
         //Value untuk mengisi Home / ....
         let page_header="Profile"
     </script>
+    <!-- ALERT -->
+    <?php if ($_SESSION['peringatan']!=""){?>
+    <div class="alert1" style="color: #763c3c; background-color: #f0d8da;">
+        <p class="alert-text"><?php echo $_SESSION['peringatan'];?></p>
+    </div>
+	<?php }?>
 	<!--custom-widgets-->
 		<h3 class="inner-tittle two">Profile User</h3>
 		<div class="grid-1">
