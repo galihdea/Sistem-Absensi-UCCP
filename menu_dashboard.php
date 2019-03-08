@@ -9,8 +9,19 @@
 		$jumlahpegawai = mysqli_num_rows($querypegawai);
 		$querymasuk = $conn->query("SELECT * FROM absensi WHERE status_absensi='masuk' AND DATE(tanggal)=CURDATE()");
 		$jumlahmasuk = mysqli_num_rows($querymasuk);
-		$querytidakmasuk = $conn->query("SELECT * FROM absensi WHERE (status_absensi='izin' OR status_absensi='cuti') AND status_acc='Approved' AND DATE(tanggal)=CURDATE()");
+		$querytidakmasuk = $conn->query("SELECT * FROM absensi WHERE (status_absensi='izin' OR status_absensi='sakit') AND status_acc='Approved' AND DATE(tanggal)=CURDATE()");
 		$jumlahtidakmasuk = mysqli_num_rows($querytidakmasuk);
+		/*cek disini*/
+		$querytidakmasuk2 = $conn->query("SELECT * FROM absensi WHERE status_absensi='cuti' AND status_acc='Approved'");
+	    $total_cuti = 0;
+	    while($cuti=$querytidakmasuk2->fetch_array()){
+	    	$keterangan = $cuti['keterangan'];
+	    	$cuti1 = tanggal_balik_semula($keterangan); 
+	    	if ((date("m/d/Y")>=tanggal_semula_1($cuti1))&&(date("m/d/Y")<=tanggal_semula_2($cuti1))){
+	    		$total_cuti = $total_cuti +1;
+	    	}
+	    }
+	    $jumlahtidakmasuk += $total_cuti;
 	?>
 	<script>
         //Value untuk mengisi Home / ....
